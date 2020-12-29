@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
@@ -22,8 +23,9 @@
 	<!-- CSS Global -->
 	<link rel="stylesheet" href="assets/css/theme.min.css">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
 	<!-- NAVBAR
 	================================================== -->
@@ -34,47 +36,37 @@
 			<a class="navbar-brand navbar-brand_2 d-lg-none" href="index.html">Touché</a>
 
 			<!-- Navbar: Toggler -->
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			
+
 			<!-- Navbar: Collapse -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 				<!-- Navbar navigation: Left -->
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="about-us.html">About Us</a>
+						<a class="nav-link" href="{{route('menu.index')}}">Daftar Menu</a>
 					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Menu
-						</a>
-						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
-							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
-							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
-						</div>
-					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="reservation.html">Reservation</a>
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('reservasi.index')}}">Reservasi</a>
 					</li>
 				</ul>
 
 				<!-- Brand name -->
-				<a class="navbar-brand navbar-brand_2 d-none d-lg-flex" href="index.html">
-					Touché
+				<a class="navbar-brand navbar-brand_2 d-none d-lg-flex" href="#">
+					Nusantara
 				</a>
 
 				<!-- Navbar navigation: Right -->
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="news-and-events.html">News & Events</a>
+						<a class="nav-link" href="{{route('artikel.index')}}">Artikel</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="gallery.html">Gallery</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact-us.html">Contact</a>
+						<a class="nav-link" href="{{route('home.tentang_kami')}}">Tentang Kami</a>
 					</li>
 				</ul>
 
@@ -85,14 +77,14 @@
 
 	<!-- HEADER
 	================================================== -->
-	<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/32.jpg">
+	<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/36.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					
+
 					<!-- Heading -->
 					<h1 class="section__heading section_header__heading text-center">
-						Reservation
+						Tentang Kami
 					</h1>
 
 				</div>
@@ -100,106 +92,124 @@
 		</div> <!-- / .container -->
 	</section>
 
-	<!-- RESERVATION
+	<!-- DISCOVER
 	================================================== -->
-	<section class="section section_reservation">
+	<section class="section section_discover">
 		<div class="container">
 			<div class="row">
-				<div class="col">
-	
-					<!-- Heading -->
-					<h2 class="section__heading text-center">
-						Online table reservation
-					</h2>
+				<div class="col-md-2 align-self-start">
 
-					<!-- Subheading -->
-					<p class="section__subheading text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.
+					<!-- Description -->
+					<p class="section_discover__description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					</p>
-	
+
 				</div>
-			</div> <!-- / .row -->
-			<div class="row justify-content-lg-center  section_reservation__row">
-				<div class="col-lg-8">
-					
-					<!-- Form -->
-					<form class="section_reservation__form" id="reservation__form">
-						<div class="row">
-							<div class="col-md-6">
+				<div class="col-md-4 align-self-start">
 
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__name">Full name</label>
-									<input type="text" class="form-control" id="reservation__form__name" name="reservation__form__name" placeholder="Full name">
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__phone">Phone number</label>
-									<input type="tel" class="form-control" id="reservation__form__phone" name="reservation__form__phone" placeholder="Phone number">
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__email">E-mail address</label>
-									<input type="email" class="form-control" id="reservation__form__email" name="reservation__form__email" placeholder="E-mail address">
-									<div class="invalid-feedback"></div>
-								</div>
+					<!-- Image -->
+					<div class="section_discover__img">
+						<img src="assets/img/2.jpg" class="img-fluid" alt="...">
+					</div>
 
-							</div>
-							<div class="col-md-6">
+				</div>
+				<div class="col-md-6 align-self-center">
 
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__people">People</label>
-									<select class="form-control" id="reservation__form__people" name="reservation__form__people">
-										<option value="1">1 person</option>
-										<option value="2" selected="">2 persons</option>
-										<option value="3">3 persons</option>
-										<option value="4">4 persons</option>
-										<option value="5">5 persons</option>
-									</select>
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__date">Date</label>
-									<input type="date" class="form-control" id="reservation__form__date" name="reservation__form__date" value="2016-12-31">
-									<div class="invalid-feedback"></div>
-								</div>
-								<div class="form-group">
-									<label class="sr-only" for="reservation__form__time">Time</label>
-									<input type="time" class="form-control" id="reservation__form__time" name="reservation__form__time" value="18:00">
-									<div class="invalid-feedback"></div>
-								</div>
-
-							</div>
-							<div class="col">
-
-								<div class="text-center">
-									<button type="submit" class="btn btn-primary">
-										Reserve a table
-									</button>
-								</div>
-
-							</div>
-						</div> <!-- / .row -->
-					</form>
+					<!-- Content -->
+					<h2><em>Lorem ipsum</em> dolor sit amet</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis nisi, consequatur, laborum
+						libero a neque ducimus. Porro rem illum quo nostrum quisquam asperiores, blanditiis, consectetur. Possimus
+						facilis velit, voluptatibus!
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti non, voluptate architecto, harum
+						suscipit dignissimos eaque voluptatibus nobis natus error iure exercitationem. Officia facilis, maiores
+						atque delectus commodi rerum.
+					</p>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui, itaque, accusantium accusamus eum
+						voluptate ducimus eligendi laboriosam alias mollitia omnis harum et ut quaerat, minus repellendus sint.
+						Inventore, iure.
+					</p>
 
 				</div>
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
 	</section>
 
-	<!-- PHONE
+	<!-- QUOTE
 	================================================== -->
-	<section class="section section_phone section_no-padding_top">
+	<section class="section section_quote section_gray">
+		<div class="container section_quote__container">
+			<div class="row">
+				<div class="col col-md-8 ml-md-auto mr-md-auto">
+
+					<!-- Blockquote -->
+					<blockquote class="section_quote__blockquote">
+						<p class="text-center">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ab nobis cupiditate odit repudiandae
+							maiores in et autem voluptate cum.
+						</p>
+						<footer class="text-center">
+							George Bernard Shaw
+						</footer>
+					</blockquote>
+
+				</div>
+			</div> <!-- / .row -->
+		</div> <!-- / .container -->
+	</section>
+
+	<!-- INFO
+	================================================== -->
+	<section class="section section_info section_info_opposite">
 		<div class="container">
-			<div class="row justify-content-lg-center section_phone__row">
-				<div class="col-lg-8">
-	
-					<p class="font-small text-center">
-						or call us:
+			<div class="row">
+				<div class="col">
+
+					<!-- Heading -->
+					<h2 class="section__heading text-center">
+						Behind the scenes
+					</h2>
+
+					<!-- Subheading -->
+					<p class="section__subheading text-center">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia obcaecati sit odio velit culpa aspernatur
+						consectetur natus quidem minima veritatis.
 					</p>
-					<p class="section_phone__number text-center">
-						<a href="tel:+19876543210">+1 987 654 3210</a>
-					</p>
-	
+
+				</div>
+			</div> <!-- / .row -->
+			<div class="row align-items-justify">
+				<div class="col-md-6 order-md-3">
+
+					<div class="section_info__img">
+						<img src="assets/img/24.jpg" alt="...">
+					</div>
+
+				</div>
+				<div class="col-md-1 order-md-2"></div>
+				<div class="col-md-5 order-md-1">
+
+					<div class="section_info__body">
+						<p class="lead text-heading">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident sequi ratione, accusamus quo mollitia
+							architecto, explicabo obcaecati.
+						</p>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum enim saepe aperiam eius, quam blanditiis
+							necessitatibus dolorem dignissimos pariatur quas velit nihil tempora, libero unde molestiae! Illum,
+							inventore. Iusto, autem!
+						</p>
+						<br>
+						<p>
+							<a href="about-us.html#" class="btn btn-primary">
+								Contact Us
+							</a>
+						</p>
+					</div>
+
 				</div>
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
@@ -208,7 +218,9 @@
 	<!-- MAP
 	================================================== -->
 	<section class="section section_map">
-		<div class="section_map__map" data-lat="40.7590403" data-lng="-74.0392713" data-zoom="12" data-info="<h4 class='section_map__map__heading text-center'>Touche restaurant</h4><p class='section_map__map__content text-center text-muted'>1234 Altschul, New York, NY 10027-0000<br>+1 987 654 3210</p>"></div>
+		<div class="section_map__map" data-lat="40.7590403" data-lng="-74.0392713" data-zoom="12"
+			data-info="<h4 class='section_map__map__heading text-center'>Touche restaurant</h4><p class='section_map__map__content text-center text-muted'>1234 Altschul, New York, NY 10027-0000<br>+1 987 654 3210</p>">
+		</div>
 	</section>
 
 	<!-- FOOTER
@@ -217,18 +229,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-				
+
 					<!-- About Us -->
 					<h5 class="section_footer__heading">
 						About Us
 					</h5>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus unde eos vitae eius quasi saepe.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus
+						unde eos vitae eius quasi saepe.
 					</p>
 
 				</div>
 				<div class="col-sm-4">
-				
+
 					<!-- Contact info -->
 					<h5 class="section_footer__heading">
 						Contact info
@@ -247,7 +260,7 @@
 
 				</div>
 				<div class="col-sm-4">
-				
+
 					<!-- Opening hours -->
 					<h5 class="section_footer__heading">
 						Opening hours
@@ -265,7 +278,7 @@
 			</div> <!-- / .row -->
 			<div class="row">
 				<div class="col-12">
-				
+
 					<!-- Copyright -->
 					<div class="section_footer__copyright">
 						&copy; <span id="js-current-year"></span> Touché. All rights reserved.
@@ -297,5 +310,6 @@
 	<script src="assets/js/theme.min.js"></script>
 	<script src="assets/js/custom.js"></script>
 
-  </body>
+</body>
+
 </html>

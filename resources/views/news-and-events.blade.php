@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
@@ -12,7 +13,7 @@
 	<meta name="msapplication-config" content="assets/ico/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
 
-	<title>Touché - Café & Restaurant Template</title>
+	<title>Matteé - Restaurant Reservation</title>
 
 	<!-- CSS Plugins -->
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
@@ -22,8 +23,9 @@
 	<!-- CSS Global -->
 	<link rel="stylesheet" href="assets/css/theme.min.css">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
 	<!-- NAVBAR
 	================================================== -->
@@ -31,50 +33,40 @@
 		<div class="container">
 
 			<!-- Navbar: Brand -->
-			<a class="navbar-brand navbar-brand_2 d-lg-none" href="index.html">Touché</a>
+			<a class="navbar-brand navbar-brand_2 d-lg-none" href="index.html">Matteé</a>
 
 			<!-- Navbar: Toggler -->
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+				data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			
+
 			<!-- Navbar: Collapse -->
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 				<!-- Navbar navigation: Left -->
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="about-us.html">About Us</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Menu
-						</a>
-						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
-							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
-							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
-						</div>
+						<a class="nav-link" href="{{route('menu.index')}}">Daftar Menu</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="reservation.html">Reservation</a>
+						<a class="nav-link" href="{{route('reservasi.index')}}">Reservasi</a>
 					</li>
 				</ul>
 
 				<!-- Brand name -->
-				<a class="navbar-brand navbar-brand_2 d-none d-lg-flex" href="index.html">
-					Touché
+				<a class="navbar-brand navbar-brand_2 d-none d-lg-flex" href="#">
+					Nusantara
 				</a>
 
 				<!-- Navbar navigation: Right -->
 				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="news-and-events.html">News & Events</a>
+					<li class="nav-item">
+						<a class="nav-link" href="{{route('artikel.index')}}">Artikel</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="gallery.html">Gallery</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact-us.html">Contact</a>
+						<a class="nav-link" href="{{route('home.tentang_kami')}}">Tentang Kami</a>
 					</li>
 				</ul>
 
@@ -89,10 +81,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					
+
 					<!-- Heading -->
 					<h1 class="section__heading section_header__heading text-center">
-						News & Events
+						Artikel
 					</h1>
 
 				</div>
@@ -106,7 +98,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-	
+
 					<!-- Heading -->
 					<h2 class="section__heading text-center">
 						Our latest news
@@ -114,14 +106,15 @@
 
 					<!-- Subheading -->
 					<p class="section__subheading text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia obcaecati sit odio velit culpa aspernatur consectetur natus quidem minima veritatis.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia obcaecati sit odio velit culpa aspernatur
+						consectetur natus quidem minima veritatis.
 					</p>
-	
+
 				</div>
 			</div> <!-- / .row -->
 			<div class="row align-items-justify">
 				<div class="col-md-6 order-md-3">
-					
+
 					<div class="section_info__img">
 						<img src="assets/img/35.jpg" alt="...">
 					</div>
@@ -138,13 +131,15 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
 						</h2>
 						<p class="section__subheading">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet,
+							saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus
+							laudantium repudiandae labore!
 						</p>
 						<a href="news-and-events.html#" class="btn btn-primary">
 							Read more...
 						</a>
 					</div>
-					
+
 				</div>
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
@@ -156,7 +151,7 @@
 		<div class="container">
 			<div class="row align-items-justify">
 				<div class="col-md-6">
-					
+
 					<div class="section_info__img">
 						<img src="assets/img/34.jpg" alt="...">
 					</div>
@@ -173,13 +168,15 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
 						</h2>
 						<p class="section__subheading">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet, saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus laudantium repudiandae labore!
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet,
+							saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus
+							laudantium repudiandae labore!
 						</p>
 						<a href="news-and-events.html#" class="btn btn-primary">
 							Read more...
 						</a>
 					</div>
-					
+
 				</div>
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
@@ -193,7 +190,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-	
+
 					<!-- Heading -->
 					<h2 class="section__heading text-center">
 						Upcoming events
@@ -203,14 +200,14 @@
 					<p class="section__subheading text-center">
 						Commodi rem veritatis quis eaque mollitia.
 					</p>
-	
+
 				</div>
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
 
 		<!-- Events -->
 		<div class="section_events__items">
-		
+
 			<!-- Event #1 -->
 			<div class="section_events__item active">
 
@@ -224,7 +221,7 @@
 					<div class="section_events__item__content_lg">
 						<div class="row">
 							<div class="col-md-8 col-lg-5">
-								
+
 								<!-- Date -->
 								<h3 class="section__preheading text-primary">
 									<time datetime="2017-09-30">September 30, 2017</time>
@@ -237,7 +234,8 @@
 
 								<!-- Description -->
 								<p class="section__subheading">
-									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
+									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio,
+									voluptate molestias aspernatur impedit perferendis odit?
 								</p>
 
 								<!-- Button -->
@@ -253,7 +251,7 @@
 					<div class="section_events__item__content_sm">
 						<div class="row">
 							<div class="col-3 col-md-2 col-lg-1">
-								
+
 								<!-- Date -->
 								<time datetime="2017-09-30">
 									30 <small>Sep</small>
@@ -261,7 +259,7 @@
 
 							</div>
 							<div class="col-9 col-md-7 col-lg-8">
-								
+
 								<!-- Heading -->
 								<h4>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
@@ -269,7 +267,7 @@
 
 							</div>
 							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
+
 								<!-- Button -->
 								<a href="news-and-events.html#section_reservation" class="btn btn-primary">
 									Reserve a table
@@ -296,7 +294,7 @@
 					<div class="section_events__item__content_lg">
 						<div class="row">
 							<div class="col-md-8 col-lg-5">
-								
+
 								<!-- Date -->
 								<h3 class="section__preheading text-primary">
 									<time datetime="2017-09-29">September 29, 2017</time>
@@ -309,7 +307,8 @@
 
 								<!-- Description -->
 								<p class="section__subheading">
-									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
+									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio,
+									voluptate molestias aspernatur impedit perferendis odit?
 								</p>
 
 								<!-- Button -->
@@ -325,7 +324,7 @@
 					<div class="section_events__item__content_sm">
 						<div class="row">
 							<div class="col-3 col-md-2 col-lg-1">
-								
+
 								<!-- Date -->
 								<time datetime="2017-09-29">
 									29 <small>Sep</small>
@@ -333,7 +332,7 @@
 
 							</div>
 							<div class="col-9 col-md-7 col-lg-8">
-								
+
 								<!-- Heading -->
 								<h4>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
@@ -341,7 +340,7 @@
 
 							</div>
 							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
+
 								<!-- Button -->
 								<a href="news-and-events.html#section_reservation" class="btn btn-primary">
 									Reserve a table
@@ -368,7 +367,7 @@
 					<div class="section_events__item__content_lg">
 						<div class="row">
 							<div class="col-md-8 col-lg-5">
-								
+
 								<!-- Date -->
 								<h3 class="section__preheading text-primary">
 									<time datetime="2017-09-28">September 28, 2017</time>
@@ -381,7 +380,8 @@
 
 								<!-- Description -->
 								<p class="section__subheading">
-									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio, voluptate molestias aspernatur impedit perferendis odit?
+									Alias earum, labore doloremque iusto a modi et, dolorem veritatis iste quis ab. Facere est optio,
+									voluptate molestias aspernatur impedit perferendis odit?
 								</p>
 
 								<!-- Button -->
@@ -397,7 +397,7 @@
 					<div class="section_events__item__content_sm">
 						<div class="row">
 							<div class="col-3 col-md-2 col-lg-1">
-								
+
 								<!-- Date -->
 								<time datetime="2017-09-28">
 									28 <small>Sep</small>
@@ -405,7 +405,7 @@
 
 							</div>
 							<div class="col-9 col-md-7 col-lg-8">
-								
+
 								<!-- Heading -->
 								<h4>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
@@ -413,7 +413,7 @@
 
 							</div>
 							<div class="col-9 ml-auto col-md-3 text-md-right">
-								
+
 								<!-- Button -->
 								<a href="news-and-events.html#section_reservation" class="btn btn-primary">
 									Reserve a table
@@ -437,27 +437,32 @@
 		<div class="container">
 			<div class="row">
 				<div class="col">
-	
+
 					<!-- Heading -->
 					<h2 class="section__heading section_newsletter__heading text-center">
 						Newsletter
 					</h2>
 					<p class="section__subheading text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae
+						maiores quae qui.
 					</p>
-	
+
 				</div>
 			</div> <!-- / .row -->
 			<div class="row justify-content-center">
 				<div class="col-lg-6">
-					
+
 					<!-- Form -->
 					<div id="mc_embed_signup">
-						<form class="section_newsletter__form validate" action="https://simpleqode.us15.list-manage.com/subscribe/post-json?u=507744bbfd1cc2879036c7780&amp;id=4523d25e1b&amp;c=?" method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
+						<form class="section_newsletter__form validate"
+							action="https://simpleqode.us15.list-manage.com/subscribe/post-json?u=507744bbfd1cc2879036c7780&amp;id=4523d25e1b&amp;c=?"
+							method="get" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank"
+							novalidate="">
 							<div id="mc_embed_signup_scroll" class="row">
 								<div class="mc-field-group form-group col-md-9">
 									<label for="mce-EMAIL" class="sr-only">E-mail address</label>
-									<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email address">
+									<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL"
+										placeholder="Email address">
 								</div>
 								<div id="mce-responses" class="clear">
 									<div class="response"></div>
@@ -487,18 +492,19 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-				
+
 					<!-- About Us -->
 					<h5 class="section_footer__heading">
 						About Us
 					</h5>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus unde eos vitae eius quasi saepe.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus
+						unde eos vitae eius quasi saepe.
 					</p>
 
 				</div>
 				<div class="col-sm-4">
-				
+
 					<!-- Contact info -->
 					<h5 class="section_footer__heading">
 						Contact info
@@ -517,7 +523,7 @@
 
 				</div>
 				<div class="col-sm-4">
-				
+
 					<!-- Opening hours -->
 					<h5 class="section_footer__heading">
 						Opening hours
@@ -535,7 +541,7 @@
 			</div> <!-- / .row -->
 			<div class="row">
 				<div class="col-12">
-				
+
 					<!-- Copyright -->
 					<div class="section_footer__copyright">
 						&copy; <span id="js-current-year"></span> Touché. All rights reserved.
@@ -566,5 +572,6 @@
 	<script src="assets/js/theme.min.js"></script>
 	<script src="assets/js/custom.js"></script>
 
-  </body>
+</body>
+
 </html>

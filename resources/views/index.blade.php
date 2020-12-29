@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/ico/apple-touch-icon.png">
@@ -22,8 +23,9 @@
 	<!-- CSS Global -->
 	<link rel="stylesheet" href="assets/css/theme.min.css">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
 	<!-- NAVBAR
 	================================================== -->
@@ -34,7 +36,8 @@
 			<a class="navbar-brand d-lg-none" href="index.html">Nusantara</a>
 
 			<!-- Navbar: Toggler -->
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -44,37 +47,25 @@
 				<!-- Navbar navigation: Left -->
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="about-us.html">About Us</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="http://example.com" id="nav-item__menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Menu
-						</a>
-						<div class="dropdown-menu" aria-labelledby="nav-item__menu">
-							<a class="dropdown-item" href="menu.html">Menu: Standard</a>
-							<a class="dropdown-item" href="menu_no-images.html">Menu: No Images</a>
-						</div>
+						<a class="nav-link" href="{{route('menu.index')}}">Daftar Menu</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="reservation.html">Reservation</a>
+						<a class="nav-link" href="{{route('reservasi.index')}}">Reservasi</a>
 					</li>
 				</ul>
 
 				<!-- Navbar: Brand -->
-				<a class="navbar-brand d-none d-lg-flex" href="index.html">
+				<a class="navbar-brand d-none d-lg-flex" href="#">
 					Nusantara
 				</a>
 
 				<!-- Navbar navigation: Right -->
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="news-and-events.html">News & Events</a>
+						<a class="nav-link" href="{{route('artikel.index')}}">Artikel</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="gallery.html">Gallery</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact-us.html">Contact</a>
+						<a class="nav-link" href="{{route('home.tentang_kami')}}">Tentang Kami</a>
 					</li>
 				</ul>
 
@@ -85,7 +76,7 @@
 
 	<!-- WELCOME
 	================================================== -->
-	<section class="section section_welcome" data-parallax="scroll" data-image-src="assets/img/1.jpg">
+	<section class="section section_welcome" data-parallax="scroll" data-image-src="assets/img/15.jpg">
 
 		<!-- Content -->
 		<div class="section_welcome__main">
@@ -101,7 +92,8 @@
 							Nusantara
 						</h1>
 						<p class="section__subheading section_welcome__subheading text-center text-muted">
-							Restoran cita rasa Nusantara dengan berbagai macam pilihan makanan asli indonesia yang sudah dikenal di berbagai tradisi. Hadirkan kehangatan keluarga dalam setiap makanan!
+							Restoran cita rasa Nusantara dengan berbagai macam pilihan makanan asli indonesia yang sudah dikenal di
+							berbagai tradisi. Hadirkan kehangatan keluarga dalam setiap makanan!
 						</p>
 
 						<!-- Button -->
@@ -182,7 +174,9 @@
 					<!-- Content -->
 					<h2><em>Lorem ipsum</em> dolor sit amet</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis nisi, consequatur, laborum libero a neque ducimus. Porro rem illum quo nostrum quisquam asperiores, blanditiis, consectetur. Possimus facilis velit, voluptatibus!
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis nisi, consequatur, laborum
+						libero a neque ducimus. Porro rem illum quo nostrum quisquam asperiores, blanditiis, consectetur. Possimus
+						facilis velit, voluptatibus!
 					</p>
 
 				</div>
@@ -216,7 +210,8 @@
 					<!-- Content -->
 					<h2><em>Velit ipsa</em> quidem debitis amet</h2>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quae similique asperiores consequatur! Nihil temporibus qui enim, ab voluptates corporis commodi eum maxime. Accusamus voluptates a, et quidem! Quo, et?
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam quae similique asperiores consequatur! Nihil
+						temporibus qui enim, ab voluptates corporis commodi eum maxime. Accusamus voluptates a, et quidem! Quo, et?
 					</p>
 
 				</div>
@@ -288,7 +283,8 @@
 							<div class="col-7">
 								<h4>Nasi Goreng Spesial</h4>
 								<p>
-									Disajikan dengan nasi pilihan dan rempah asli Indonesia! Ditemani dengan taburan bawang goreng dan irisan ayam!
+									Disajikan dengan nasi pilihan dan rempah asli Indonesia! Ditemani dengan taburan bawang goreng dan
+									irisan ayam!
 								</p>
 							</div>
 							<div class="col-2">
@@ -310,7 +306,8 @@
 							<div class="col-7">
 								<h4>Mie Goreng Spesial</h4>
 								<p>
-									Disajikan dengan mie pilihan dan rempah asli Indonesia! Ditemani dengan sayuran, taburan bawang goreng, dan irisan ayam!
+									Disajikan dengan mie pilihan dan rempah asli Indonesia! Ditemani dengan sayuran, taburan bawang
+									goreng, dan irisan ayam!
 								</p>
 							</div>
 							<div class="col-2">
@@ -332,7 +329,8 @@
 							<div class="col-7">
 								<h4>Nasi Gudeg Ayam Khas Jogja</h4>
 								<p>
-									Nasi ditambah dengan gudeg manis khas Jogja, ditemani dengan ayam dan cecek! disajikan diatas daun pisang pilihan!
+									Nasi ditambah dengan gudeg manis khas Jogja, ditemani dengan ayam dan cecek! disajikan diatas daun
+									pisang pilihan!
 								</p>
 							</div>
 							<div class="col-2">
@@ -354,7 +352,8 @@
 							<div class="col-7">
 								<h4>Nasi Pecel Khas Madiun</h4>
 								<p>
-									Nasi ditambah Pecel khas madiun dengan bumbu kacang pilihan, sayuran segar, tempe hangat dan peyek renyah!
+									Nasi ditambah Pecel khas madiun dengan bumbu kacang pilihan, sayuran segar, tempe hangat dan peyek
+									renyah!
 								</p>
 							</div>
 							<div class="col-2">
@@ -383,12 +382,13 @@
 
 					<!-- Heading -->
 					<h2 class="section__heading text-center">
-					Make online reservation
+						Make online reservation
 					</h2>
 
 					<!-- Subheading -->
 					<p class="section__subheading text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae maiores quae qui.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae
+						maiores quae qui.
 					</p>
 
 				</div>
@@ -403,17 +403,20 @@
 
 								<div class="form-group">
 									<label class="sr-only" for="reservation__form__name">Full name</label>
-									<input type="text" class="form-control" id="reservation__form__name" name="reservation__form__name" placeholder="Full name">
+									<input type="text" class="form-control" id="reservation__form__name" name="reservation__form__name"
+										placeholder="Full name">
 									<div class="invalid-feedback"></div>
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="reservation__form__phone">Phone number</label>
-									<input type="tel" class="form-control" id="reservation__form__phone" name="reservation__form__phone" placeholder="Phone number">
+									<input type="tel" class="form-control" id="reservation__form__phone" name="reservation__form__phone"
+										placeholder="Phone number">
 									<div class="invalid-feedback"></div>
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="reservation__form__email">E-mail address</label>
-									<input type="email" class="form-control" id="reservation__form__email" name="reservation__form__email" placeholder="E-mail address">
+									<input type="email" class="form-control" id="reservation__form__email" name="reservation__form__email"
+										placeholder="E-mail address">
 									<div class="invalid-feedback"></div>
 								</div>
 
@@ -433,12 +436,14 @@
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="reservation__form__date">Date</label>
-									<input type="date" class="form-control" id="reservation__form__date" name="reservation__form__date" value="2016-12-31">
+									<input type="date" class="form-control" id="reservation__form__date" name="reservation__form__date"
+										value="2016-12-31">
 									<div class="invalid-feedback"></div>
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="reservation__form__time">Time</label>
-									<input type="time" class="form-control" id="reservation__form__time" name="reservation__form__time" value="18:00">
+									<input type="time" class="form-control" id="reservation__form__time" name="reservation__form__time"
+										value="18:00">
 									<div class="invalid-feedback"></div>
 								</div>
 
@@ -497,7 +502,9 @@
 									<!-- Blockquote -->
 									<blockquote class="section_testimonials__blockquote mx-auto">
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis
+											quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto
+											ratione deleniti sequi.
 										</p>
 										<footer class="text-muted">
 											Richard Roe
@@ -523,7 +530,9 @@
 									<!-- Blockquote -->
 									<blockquote class="section_testimonials__blockquote mx-auto">
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis
+											quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto
+											ratione deleniti sequi.
 										</p>
 										<footer class="text-muted">
 											Elisabeth Doe
@@ -549,7 +558,9 @@
 									<!-- Blockquote -->
 									<blockquote class="section_testimonials__blockquote mx-auto">
 										<p>
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto ratione deleniti sequi.
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis
+											quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto
+											ratione deleniti sequi.
 										</p>
 										<footer class="text-muted">
 											Monica Roe
@@ -578,7 +589,8 @@
 						About Us
 					</h5>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus unde eos vitae eius quasi saepe.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis nostrum, possimus
+						unde eos vitae eius quasi saepe.
 					</p>
 
 				</div>
@@ -652,5 +664,6 @@
 	<script src="assets/js/theme.min.js"></script>
 	<script src="assets/js/custom.js"></script>
 
-  </body>
+</body>
+
 </html>
