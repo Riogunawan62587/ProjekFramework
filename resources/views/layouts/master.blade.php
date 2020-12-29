@@ -13,7 +13,7 @@
   <meta name="msapplication-config" content="assets/ico/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <title>Matteé - Nusantara's Restaurant Reservation</title>
+  <title>Matteé - Nusantara's Restaurant Reservatio</title>
 
   <!-- CSS Plugins -->
   <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
