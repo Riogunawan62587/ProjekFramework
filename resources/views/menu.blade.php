@@ -77,7 +77,7 @@
 
 	<!-- HEADER
 	================================================== -->
-	<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/25.jpg">
+	<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/11.jpg">
 		<div class="container">
 			<div class="row">
 				<div class="col">
