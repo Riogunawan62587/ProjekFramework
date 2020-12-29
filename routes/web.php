@@ -31,6 +31,3 @@ Route::get('/reservasi', 'ReservationController@index')->name('reservasi.index')
 
 // Controller Artikel
 Route::get('/artikel', 'ArticleController@index')->name('artikel.index');
-
-
-// Route::get('/home', 'HomeController@index')->name('home');
