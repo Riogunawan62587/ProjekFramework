@@ -10,12 +10,4 @@ class ArticleController extends Controller
     {
         return view('news-and-events');
     }
-
-    public function create(){
-
-    }
-
-    public function edit(){
-      
-    }
 }
