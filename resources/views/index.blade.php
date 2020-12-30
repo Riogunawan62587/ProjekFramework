@@ -43,7 +43,7 @@
 					<a class="nav-link" href="{{route('artikel.index')}}">Artikel</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{route('home.tentang_kami')}}">Tentang Kami</a>
+					<a class="nav-link" href="{{route('reservasi.my_reservation')}}">Reservasi Saya</a>
 				</li>
 			</ul>
 			@endif

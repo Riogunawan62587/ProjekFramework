@@ -16,6 +16,7 @@ class AddTableReservations extends Migration
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('reservations_id')->unsigned();
+            $table->integer('nomor_meja');
         });
     }
 
@@ -27,6 +28,5 @@ class AddTableReservations extends Migration
     public function down()
     {
         Schema::dropIfExists('reservations');
-
     }
 }

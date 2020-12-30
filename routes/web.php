@@ -16,17 +16,17 @@ Route::get('/', function () {
   return view('index');
 });
 
-// Controller Home & Tentang Kami
+// Controller Home
 Route::get('/home', 'HomeController@index')->name('home.index');
-Route::get('/tentang_kami', 'HomeController@tentang_kami')->name('home.tentang_kami');
 
 
 // Controller Daftar Menu
 Route::get('/menu', 'MenuController@index')->name('menu.index');
 
 
-// Controller Reservasi
+// Controller Reservasi & My Reservation
 Route::get('/reservasi', 'ReservationController@index')->name('reservasi.index');
+Route::get('/reservasi_saya', 'ReservationController@my_reservation')->name('reservasi.my_reservation');
 
 
 // Controller Artikel

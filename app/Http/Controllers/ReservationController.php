@@ -10,4 +10,9 @@ class ReservationController extends Controller
     {
         return view('reservation');
     }
+
+    public function my_reservation()
+    {
+        return view('my_reservation');
+    }
 }
