@@ -15,6 +15,7 @@ class AddTableFoods extends Migration
     {
         Schema::create('foods', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama');
             $table->string('tipe');
             $table->string('deskripsi');
             $table->integer('harga');

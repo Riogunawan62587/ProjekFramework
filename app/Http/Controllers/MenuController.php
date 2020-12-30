@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Food;
 
 class MenuController extends Controller
 {
     public function index()
     {
-        return view('menu');
+        $daftar_menu = Food::all();
+        return view('menu', compact('daftar_menu'));
     }
 }

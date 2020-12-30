@@ -110,28 +110,31 @@
 		</div>
 		<div class="row section_menu__grid" id="menu_images">
 
+			@foreach ($daftar_menu as $daftar_mains)
 			<div class="col-md-6 section_menu__grid__item mains">
 				<div class="section_menu__item">
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="assets/img/26.jpg" alt="...">
+								<img src="{{$daftar_mains->gambar}}" alt="...">
 							</div>
 						</div>
 						<div class="col-7">
-							<h4>Lorem ipsum dolor sit amet</h4>
+							<h4>{{ $daftar_mains->nama }}</h4>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+								{{ $daftar_mains->deskripsi }}
 							</p>
 						</div>
 						<div class="col-2">
 							<div class="section_menu__item__price text-center">
-								$15
+								{{ $daftar_mains->harga }}
 							</div>
 						</div>
 					</div> <!-- / .row -->
 				</div>
 			</div>
+			@endforeach
+
 			<div class="col-md-6 section_menu__grid__item lunch">
 				<div class="section_menu__item">
 					<div class="row">
@@ -264,50 +267,6 @@
 					</div> <!-- / .row -->
 				</div>
 			</div>
-			<div class="col-md-6 section_menu__grid__item mains">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/27.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Fusce id ante ut arcu</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$23
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item mains">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/28.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Fusce sed dolor eget tortor</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$16
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
 			<div class="col-md-6 section_menu__grid__item lunch">
 				<div class="section_menu__item">
 					<div class="row">
@@ -369,28 +328,6 @@
 						<div class="col-2">
 							<div class="section_menu__item__price text-center">
 								$18
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item mains">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/29.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Lorem ipsum dolor sit amet</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$15
 							</div>
 						</div>
 					</div> <!-- / .row -->
@@ -523,50 +460,6 @@
 						<div class="col-2">
 							<div class="section_menu__item__price text-center">
 								$15
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item mains">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/30.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Fusce id ante ut arcu</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$23
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item mains">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/31.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Fusce sed dolor eget tortor</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$16
 							</div>
 						</div>
 					</div> <!-- / .row -->
