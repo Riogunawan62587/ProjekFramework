@@ -31,3 +31,9 @@ Route::get('/reservasi_saya', 'ReservationController@my_reservation')->name('res
 
 // Controller Artikel
 Route::get('/artikel', 'ArticleController@index')->name('artikel.index');
+
+
+Route::get('/admin/menu','MenuController@index_admin');
+Route::get('/admin/reservasi', 'ReservationController@index_admin');
+Route::get('/admin/meja', 'TableController@index_admin');
+Route::get('/admin/pengguna', 'UserController@index_admin');

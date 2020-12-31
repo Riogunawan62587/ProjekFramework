@@ -15,4 +15,8 @@ class ReservationController extends Controller
     {
         return view('my_reservation');
     }
+
+    public function index_admin(){
+      return view('admin.daftarReservasi');
+    }
 }

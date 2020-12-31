@@ -10,4 +10,9 @@ class MenuController extends Controller
     {
         return view('menu');
     }
+
+    public function index_admin()
+    {
+      return view('admin.daftarMenu');
+    }
 }
