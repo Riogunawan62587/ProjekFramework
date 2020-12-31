@@ -76,11 +76,11 @@
 
 				<!-- Heading -->
 				<h2 class="section__heading text-center">
-					Browse by categories
+					Pilih kategori makanan & minuman anda
 				</h2>
 				<p class="section__subheading text-center">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Ratione numquam eos perferendis itaque hic unde, ad, laudantium minima.
+					Tersedia berbagai macam makanan yang pastinya menggugah selera makan anda dan juga berbgai macam minuman
+					menyegarkan dari seluruh bagian nusantara.
 				</p>
 
 			</div>
@@ -110,7 +110,7 @@
 		</div>
 		<div class="row section_menu__grid" id="menu_images">
 
-			@foreach ($daftar_menu as $daftar_mains)
+			@foreach ($daftar_menu1 as $daftar_mains)
 			<div class="col-md-6 section_menu__grid__item mains">
 				<div class="section_menu__item">
 					<div class="row">
@@ -119,15 +119,15 @@
 								<img src="{{$daftar_mains->gambar}}" alt="...">
 							</div>
 						</div>
-						<div class="col-7">
+						<div class="col-6">
 							<h4>{{ $daftar_mains->nama }}</h4>
 							<p>
 								{{ $daftar_mains->deskripsi }}
 							</p>
 						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								{{ $daftar_mains->harga }}
+						<div class="col-3">
+							<div class="section_menu__item__price text-center mt-2">
+								<h4>Rp. {{number_format($daftar_mains->harga, 2,",",".") }}</h4>
 							</div>
 						</div>
 					</div> <!-- / .row -->
@@ -135,402 +135,80 @@
 			</div>
 			@endforeach
 
+			@foreach ($daftar_menu2 as $daftar_lunch)
 			<div class="col-md-6 section_menu__grid__item lunch">
 				<div class="section_menu__item">
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="assets/img/31.jpg" alt="...">
+								<img src="{{$daftar_lunch->gambar}}" alt="...">
 							</div>
 						</div>
-						<div class="col-7">
-							<h4>Fusce id ante ut arcu</h4>
+						<div class="col-6">
+							<h4>{{$daftar_lunch->nama}}</h4>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+								{{$daftar_lunch->deskripsi}}.
 							</p>
 						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$23
+						<div class="col-3">
+							<div class="section_menu__item__price text-center mt-2">
+								<h4> Rp. {{number_format($daftar_lunch->harga, 2,",",".")}} </h4>
 							</div>
 						</div>
 					</div> <!-- / .row -->
 				</div>
 			</div>
+			@endforeach
+
+			@foreach ($daftar_menu3 as $daftar_dinner)
 			<div class="col-md-6 section_menu__grid__item dinner">
 				<div class="section_menu__item">
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="assets/img/27.jpg" alt="...">
+								<img src="{{$daftar_dinner->gambar}}" alt="...">
 							</div>
 						</div>
-						<div class="col-7">
-							<h4>Fusce sed dolor eget tortor</h4>
+						<div class="col-6">
+							<h4>{{$daftar_dinner->nama}}</h4>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+								{{$daftar_dinner->deskripsi}}.
 							</p>
 						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$16
+						<div class="col-3">
+							<div class="section_menu__item__price text-center mt-2">
+								<h4> Rp. {{number_format($daftar_dinner->harga, 2,",",".")}} </h4>
 							</div>
 						</div>
 					</div> <!-- / .row -->
 				</div>
 			</div>
+			@endforeach
+
+			@foreach ($daftar_menu4 as $daftar_drinks)
 			<div class="col-md-6 section_menu__grid__item drinks">
 				<div class="section_menu__item">
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="assets/img/28.jpg" alt="...">
+								<img src="{{$daftar_drinks->gambar}}" alt="...">
 							</div>
 						</div>
-						<div class="col-7">
-							<h4>Phasellus non elit in dolor</h4>
+						<div class="col-6">
+							<h4>{{$daftar_drinks->nama}}</h4>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
+								{{$daftar_drinks->deskripsi}}.
 							</p>
 						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$10
+						<div class="col-3">
+							<div class="section_menu__item__price text-center mt-2">
+								<h4> Rp. {{number_format($daftar_drinks->harga, 2,",",".")}} </h4>
 							</div>
 						</div>
 					</div> <!-- / .row -->
 				</div>
 			</div>
-			<div class="col-md-6 section_menu__grid__item drinks">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/29.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>In vel odio eu massa semper</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$35
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item dinner">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/28.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Morbi ac est consectetur</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$18
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item lunch">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/30.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Lorem ipsum dolor sit amet</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$15
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item lunch">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/29.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Phasellus non elit in dolor</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$10
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item dinner">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/29.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>In vel odio eu massa semper</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$35
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item drinks">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/30.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Morbi ac est consectetur</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$18
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item lunch">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/28.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Fusce id ante ut arcu</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$23
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item dinner">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/30.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Fusce sed dolor eget tortor</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$16
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item drinks">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/31.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Phasellus non elit in dolor</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$10
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item drinks">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/26.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>In vel odio eu massa semper</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$35
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item dinner">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/31.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Morbi ac est consectetur</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$18
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item lunch">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/27.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Lorem ipsum dolor sit amet</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$15
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item lunch">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/26.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Phasellus non elit in dolor</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$10
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item dinner">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/26.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>In vel odio eu massa semper</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$35
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
-			<div class="col-md-6 section_menu__grid__item drinks">
-				<div class="section_menu__item">
-					<div class="row">
-						<div class="col-3 align-self-center">
-							<div class="section_menu__item__img">
-								<img src="assets/img/27.jpg" alt="...">
-							</div>
-						</div>
-						<div class="col-7">
-							<h4>Morbi ac est consectetur</h4>
-							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, obcaecati! Sapiente laudantium.
-							</p>
-						</div>
-						<div class="col-2">
-							<div class="section_menu__item__price text-center">
-								$18
-							</div>
-						</div>
-					</div> <!-- / .row -->
-				</div>
-			</div>
+			@endforeach
 
 		</div> <!-- / .row -->
 	</div> <!-- / .container -->
@@ -547,12 +225,12 @@
 
 				<!-- Heading -->
 				<h2 class="section__heading text-center">
-					Featured dishes
+					Menu favorit kami
 				</h2>
 
 				<!-- Subheading -->
 				<p class="section__subheading text-center">
-					Quibusdam in labore tempore quidem voluptatum ullam soluta! Maiores!
+					Makanan dan minuman terlaris kami sepanjang masa!
 				</p>
 
 			</div>
@@ -561,84 +239,21 @@
 
 	<!-- Carouse -->
 	<div class="section_dishes__carousel">
+		@foreach ($daftar_menu as $daftar)
 		<div class="section_dishes__carousel__item">
 
 			<!-- Image -->
-			<img src="assets/img/26.jpg" alt="..." class="section_dishes__carousel__item__img">
+			<img src="{{$daftar->gambar}}" alt="..." class="section_dishes__carousel__item__img">
 
 			<!-- Body -->
 			<div class="section_dishes__carousel__item__body">
 				<h5 class="section_dishes__carousel__item__body__heading mb-0">
-					Lorem ipsum dolor sit amet <span>$25</span>
+					{{$daftar->nama}}
 				</h5>
 			</div>
 
 		</div>
-		<div class="section_dishes__carousel__item">
-
-			<!-- Image -->
-			<img src="assets/img/27.jpg" alt="..." class="section_dishes__carousel__item__img">
-
-			<!-- Body -->
-			<div class="section_dishes__carousel__item__body">
-				<h5 class="section_dishes__carousel__item__body__heading mb-0">
-					Lorem ipsum dolor sit amet <span>$35</span>
-				</h5>
-			</div>
-
-		</div>
-		<div class="section_dishes__carousel__item">
-
-			<!-- Image -->
-			<img src="assets/img/28.jpg" alt="..." class="section_dishes__carousel__item__img">
-
-			<!-- Body -->
-			<div class="section_dishes__carousel__item__body">
-				<h5 class="section_dishes__carousel__item__body__heading mb-0">
-					Lorem ipsum dolor sit amet <span>$18</span>
-				</h5>
-			</div>
-
-		</div>
-		<div class="section_dishes__carousel__item">
-
-			<!-- Image -->
-			<img src="assets/img/29.jpg" alt="..." class="section_dishes__carousel__item__img">
-
-			<!-- Body -->
-			<div class="section_dishes__carousel__item__body">
-				<h5 class="section_dishes__carousel__item__body__heading mb-0">
-					Lorem ipsum dolor sit amet <span>$32</span>
-				</h5>
-			</div>
-
-		</div>
-		<div class="section_dishes__carousel__item">
-
-			<!-- Image -->
-			<img src="assets/img/30.jpg" alt="..." class="section_dishes__carousel__item__img">
-
-			<!-- Body -->
-			<div class="section_dishes__carousel__item__body">
-				<h5 class="section_dishes__carousel__item__body__heading mb-0">
-					Lorem ipsum dolor sit amet <span>$40</span>
-				</h5>
-			</div>
-
-		</div>
-		<div class="section_dishes__carousel__item">
-
-			<!-- Image -->
-			<img src="assets/img/31.jpg" alt="..." class="section_dishes__carousel__item__img">
-
-			<!-- Body -->
-			<div class="section_dishes__carousel__item__body">
-				<h5 class="section_dishes__carousel__item__body__heading mb-0">
-					Lorem ipsum dolor sit amet <span>$27</span>
-				</h5>
-			</div>
-
-		</div>
+		@endforeach
 	</div> <!-- / .section_dishes__carousel -->
 
 </section>

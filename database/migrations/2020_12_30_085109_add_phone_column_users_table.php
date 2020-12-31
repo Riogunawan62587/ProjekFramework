@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTableReservationsDetails extends Migration
+class AddPhoneColumnUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,9 @@ class AddTableReservationsDetails extends Migration
      */
     public function up()
     {
-        Schema::create('reservations_details', function (Blueprint $table) {
-            $table->bigIncrements('id');
+        Schema::table('users', function (Blueprint $table) {
             $table->string('nama_lengkap');
             $table->string('nomor_telepon');
-            $table->string('email');
-            $table->integer('jumlah_orang');
-            $table->date('tanggal');
-            $table->time('jam');
         });
     }
 
@@ -31,6 +26,6 @@ class AddTableReservationsDetails extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservations_details');
+        //
     }
 }
