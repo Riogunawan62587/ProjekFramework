@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTableReservationsArticles extends Migration
+class AddTableArticles extends Migration
 {
     /**
      * Run the migrations.
@@ -15,9 +15,9 @@ class AddTableReservationsArticles extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tanggal');
+            $table->date('tanggal');
             $table->string('judul');
-            $table->string('deskripsi');
+            $table->longText('deskripsi');
             $table->string('gambar');
         });
     }

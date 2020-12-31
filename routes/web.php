@@ -26,6 +26,7 @@ Route::get('/menu', 'MenuController@index')->name('menu.index');
 
 // Controller Reservasi & My Reservation
 Route::get('/reservasi', 'ReservationController@index')->name('reservasi.index');
+Route::post('/reservasi', 'ReservationController@simpan_reservasi')->name('reservasi.simpan');
 Route::get('/reservasi_saya', 'ReservationController@my_reservation')->name('reservasi.my_reservation');
 
 

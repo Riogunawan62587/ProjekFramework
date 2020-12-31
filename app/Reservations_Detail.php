@@ -6,12 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reservations_Detail extends Model
 {
+    public $timestamps = false;
+    protected $table = 'reservations_details';
+
     protected $fillable = [
         'user_id', 'jumlah_orang', 'tanggal', 'jam'
     ];
-
-    public function user()
-    {
-        return $this->belongsTo('App\User', 'user_id');
-    }
 }
