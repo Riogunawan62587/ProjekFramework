@@ -22,6 +22,54 @@ class MenuController extends Controller
 
     public function index_admin()
     {
-      return view('admin.daftarMenu');
+      $foods = Food::all();
+
+      return view('admin.daftarMenu', compact('foods'));
     }
+
+    public function create(Request $request)
+    {
+
+      $food = new Food;
+      $food->nama = $request->nama;
+      $food->tipe = $request->kategori;
+      $food->deskripsi = $request->deskripsi;
+      $food->harga = $request->harga;
+      if($request->hasFile('gambar')){
+        $request->file('gambar')->move('images/',$request->file('gambar')->getClientOriginalName());
+      }
+      $food->gambar = $request->file('gambar')->getClientOriginalName();
+      $food->save();
+
+      return redirect('/admin/menu')->with('success','Data lapangan berhasil ditambahkan!');
+    }
+
+    public function destroy(Request $request){
+      $food = Food::where('id',$request->menuid)->delete();
+
+      return redirect('/admin/menu')->with('success','Data berhasil dihapus');
+    }
+
+    public function edit(Request $request){
+      $food = Food::where('id',$request->menuid)->first();
+      return view('admin.editMenu',compact('food'));
+    }
+
+    public function update(Request $request){
+      $food = Food::where('id',$request->menuid)->first();
+
+      $food->nama = $request->nama;
+      $food->tipe = $request->kategori;
+      $food->deskripsi = $request->deskripsi;
+      $food->harga = $request->harga;
+      if($request->hasFile('gambar')){
+        $request->file('gambar')->move('images/',$request->file('gambar')->getClientOriginalName());
+        $food->gambar = $request->file('gambar')->getClientOriginalName();
+      }
+      $food->update();
+
+      return redirect('/admin/menu')->with('success','Data lapangan berhasil diupdate!');
+    }
+
+
 }

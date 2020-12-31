@@ -394,133 +394,33 @@
                 </tr>
               </thead>
               <tbody class="list">
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    081234567890
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
+                @foreach($users as $user)
+                  <tr>
+                    <th scope="row" class="text-center">
+                      {{$user->id}}
+                    </th>
+                    <td class="budget">
+                      {{$user->name}}
+                    </td>
+                    <td>
+                      {{$user->created_at}}
+                    </td>
+                    <td>
+                      {{$user->nomor_telepon}}
+                    </td>
+                    <td class="text-right">
+                      <div class="dropdown" data-toggle="dropdown">
+                        <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="far fa-ellipsis-h"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a href="table-listing.html#" class="dropdown-item">Lihat</a>
+                          <a href="table-listing.html#" class="dropdown-item">Hapus</a>
+                        </div>
                       </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    081234567890
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    081234567890
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    081234567890
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    081234567890
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-
-
+                    </td>
+                  </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

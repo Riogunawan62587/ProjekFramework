@@ -4,12 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Food extends Model
+class Table extends Model
 {
-    protected $table = 'foods';
+    //
+    protected $table = 'tables';
 
     protected $fillable = [
-        'nama','tipe', 'deskripsi', 'harga', 'gambar'
+        'nama','kapasitas'
     ];
 
     public $timestamps = true;

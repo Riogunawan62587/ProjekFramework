@@ -44,14 +44,14 @@
             <img alt="Image placeholder" src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/theme/light/team-1-800x800.jpg" class="">
           </a>
           <div class="mt-4">
-            <h5 class="mb-0 text-white">Matte</h5>
-            <span class="d-block text-sm text-white opacity-8 mb-3">Admin Restoran</span>
+            <h5 class="mb-0 text-white">Selamat Datang,</h5>
+            <span class="d-block text-sm text-white opacity-8 mb-3">John Snow</span>
           </div>
         </div>
       </div>
       <!-- Application nav -->
       <div class="nav-application clearfix">
-        <a href="/admin/dashboard" class="btn btn-square text-sm">
+        <a href="/admin/dashboard" class="btn btn-square text-sm active">
           <span class="btn-inner--icon d-block"><i class="far fa-home fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Dashboard</span>
         </a>
@@ -59,7 +59,7 @@
           <span class="btn-inner--icon d-block"><i class="far fa-project-diagram fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Menu</span>
         </a>
-        <a href="/admin/meja" class="btn btn-square text-sm active">
+        <a href="/admin/meja" class="btn btn-square text-sm">
           <span class="btn-inner--icon d-block"><i class="far fa-tasks fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Meja</span>
         </a>
@@ -248,124 +248,53 @@
       </nav>
       <!-- Omnisearch -->
 
-      <!-- delete modal -->
-      <div class="modal modal-danger fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modal_5" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-          <form action="/admin/meja/delete" method="post">
-            @csrf
-            <div class="modal-header">
-              <h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="py-3 text-center">
-                <i class="fas fa-exclamation-circle fa-4x"></i>
-                <h5 class="heading h4 mt-4">Should we stop now?</h5>
-                <p>
-                  You can easy create stackable modal boxes. For example, your inline content or Ajax response can contain a gallery:
-                </p>
-                <input type="hidden" name="tableid" id="tableid">
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-sm btn-primary">Hapus</button>
-              <button type="button" class="btn btn-sm btn-white" data-dismiss="modal">Batal</button>
-            </div>
-          </form>
-          </div>
-        </div>
-      </div>
-
       <!-- Page content -->
       <div class="page-content">
-        <!-- Create project modal -->
-        <div class="modal fade" id="modal-project-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- delete modal -->
+        <div class="modal modal-danger fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modal_5" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-              <form action="/admin/meja" method="post">
-                @csrf
-                <div class="modal-body">
-                  <!-- Project name -->
-                  <div class="form-group">
-                    <label class="form-control-label">
-                      Nama Meja
-                    </label>
-                    <input type="text" name="nama" class="form-control">
-                  </div>
-                  <!-- Project privacy -->
-                  <div class="form-group">
-                    <label class="form-control-label">
-                      Kapasitas Orang
-                    </label>
-                    <div class="row">
-                      <div class="col-2">
-                        <div class="custom-control custom-checkbox">
-                          <input type="radio" class="custom-control-input" name="kapasitas" value="1" id="radio-project-1">
-                          <label class="custom-control-label form-control-label text-muted" for="radio-project-1">1</label>
-                        </div>
-                      </div>
-                      <div class="col-2">
-                        <div class="custom-control custom-checkbox">
-                          <input type="radio" class="custom-control-input" name="kapasitas" value="2" id="radio-project-2">
-                          <label class="custom-control-label form-control-label text-muted" for="radio-project-2">2</label>
-                        </div>
-                      </div>
-                      <div class="col-2">
-                        <div class="custom-control custom-checkbox">
-                          <input type="radio" class="custom-control-input" name="kapasitas" value="3" id="radio-project-3">
-                          <label class="custom-control-label form-control-label text-muted" for="radio-project-3">3</label>
-                        </div>
-                      </div>
-                      <div class="col-2">
-                        <div class="custom-control custom-checkbox">
-                          <input type="radio" class="custom-control-input" name="kapasitas" value="4" id="radio-project-4">
-                          <label class="custom-control-label form-control-label text-muted" for="radio-project-4">4</label>
-                        </div>
-                      </div>
-                      <div class="col-2">
-                        <div class="custom-control custom-checkbox">
-                          <input type="radio" class="custom-control-input" name="kapasitas" value="5" id="radio-project-5">
-                          <label class="custom-control-label form-control-label text-muted" for="radio-project-5">5</label>
-                        </div>
-                      </div>
-                      <div class="col-2">
-                        <div class="custom-control custom-checkbox">
-                          <input type="radio" class="custom-control-input" name="kapasitas" value="6" id="radio-project-6">
-                          <label class="custom-control-label form-control-label text-muted" for="radio-project-6">6</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <form action="/admin/menu/delete" method="post">
+              @csrf
+              <div class="modal-header">
+                <h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="py-3 text-center">
+                  <i class="fas fa-exclamation-circle fa-4x"></i>
+                  <h5 class="heading h4 mt-4">Should we stop now?</h5>
+                  <p>
+                    You can easy create stackable modal boxes. For example, your inline content or Ajax response can contain a gallery:
+                  </p>
+                  <input type="hidden" name="menuid" id="menuid">
                 </div>
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-sm btn-primary rounded-pill mr-auto">Save</button>
-                  <button type="button" class="btn btn-sm btn-link text-danger px-2" data-dismiss="modal">Batal</button>
-                </div>
-              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-sm btn-primary">Hapus</button>
+                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal">Batal</button>
+              </div>
+            </form>
             </div>
           </div>
         </div>
+
+        <!-- Create project modal -->
+
         <!-- Page title -->
         <div class="page-title">
           <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+            <div class="col-md-12 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
               <!-- Page title + Go Back button -->
               <div class="d-inline-block">
-                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Daftar Meja</h5>
+                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Dashboard</h5>
               </div>
-            </div>
-            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
-              <a href="#modal-project-create" class="btn btn-sm btn-white rounded-pill ml-4" data-toggle="modal">
-                <span class="btn-inner--icon mr-2"><i class="far fa-plus"></i></span>
-                Tambah Meja
-              </a>
             </div>
           </div>
         </div>
-        <!-- alert message -->
+        <!-- Project cards -->
         @if(session('success'))
         <div class="row">
           <div class="col-xl-12">
@@ -377,74 +306,101 @@
           </div>
         </div>
         @endif
-        <!-- Project cards -->
+
         <div class="row">
-          @foreach($tables as $table)
-            <div class="col-xl-3 col-lg-4 col-sm-6">
-              <div class="card hover-shadow-lg">
-                <div class="card-body text-center">
-                  <a href="card-listing.html#" class="avatar rounded-circle avatar-lg hover-translate-y-n3 mb-3">
-                    <img alt="Image placeholder" src="/assets/admin/assets/img/theme/light/brand-avatar-1.png">
-                  </a>
-                  <h5 class="h2">{{$table->nama}}</h5>
-                  <h6><i class="fas fa-user-friends"></i> {{$table->kapasitas}}</h6>
-                  <span class="clearfix"></span>
-                  <span class="badge badge-pill badge-success">Aktif</span>
-                </div>
-                <div class="card-footer">
-                  <div class="actions d-flex justify-content-between px-4">
-                    <a href="#edit-modal-{{$table->id}}" class="action-item" data-toggle="modal">
-                      <i class="far fa-pencil"></i>
-                    </a>
-                    <a href="#delete-modal" class="action-item text-danger" id="delete-button" data-toggle="modal" data_tableid="{{$table->id}}">
-                      <i class="far fa-trash-alt"></i>
-                    </a>
+          <h5 class="col-xl-12 text-white">Summary</h5>
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-muted mb-1">Total Reservasi</h6>
+                    <span class="h3 font-weight-bold mb-0">{{$total_reservations}}</span>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- edit meja modal -->
-            <div class="modal fade" id="edit-modal-{{$table->id}}" tabindex="-1" role="dialog" aria-hidden="true">
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <form action="/admin/meja/update" method="post">
-                    @csrf
-                    <div class="modal-body">
-                      <!-- Project name -->
-                      <div class="form-group">
-                        <label class="form-control-label">
-                          Nama Meja
-                        </label>
-                        <input type="text" name="nama" value="{{$table->nama}}" class="form-control">
-                      </div>
-                      <!-- Project privacy -->
-                      <div class="form-group">
-                        <label class="form-control-label">
-                          Kapasitas Orang
-                        </label>
-                        <div id="kapasitas-select" class="tab-pane tab-example-result fade show active" role="tabpanel" aria-labelledby="select-menu-result-tab">
-                          <select class="custom-select" name="kapasitas">
-                            <option selected hidden>Pilih Kapasitas</option>
-                            <option value="1" @if($table->kapasitas == 1) selected @endif>1</option>
-                            <option value="2" @if($table->kapasitas == 2) selected @endif>2</option>
-                            <option value="3" @if($table->kapasitas == 3) selected @endif>3</option>
-                            <option value="4" @if($table->kapasitas == 4) selected @endif>4</option>
-                            <option value="5" @if($table->kapasitas == 5) selected @endif>5</option>
-                            <option value="6" @if($table->kapasitas == 6) selected @endif>6</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <input type="hidden" name="id" value="{{$table->id}}">
-                      <button type="submit" class="btn btn-sm btn-primary rounded-pill mr-auto">Save</button>
-                      <button type="button" class="btn btn-sm btn-link text-danger px-2" data-dismiss="modal">Batal</button>
-                    </div>
-                  </form>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-muted mb-1">Total Pengguna</h6>
+                    <span class="h3 font-weight-bold mb-0">{{$total_users}}</span>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-muted mb-1">Total Meja</h6>
+                    <span class="h3 font-weight-bold mb-0">{{$total_tables}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h6 class="text-muted mb-1">Total Menu</h6>
+                    <span class="h3 font-weight-bold mb-0">{{$total_foods}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center">
+          <h5 class="col-md-6 text-white mb-0">Pesanan Terbaru</h5>
+          <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+            <a href="/admin/reservasi" class="btn btn-sm btn-white rounded-pill">Lihat Selengkapnya</a>
+          </div>
+          <div class="col-md-12 mb-3"></div>
+          @foreach($reservations as $reservation)
+            @foreach($tables as $table)
+              @foreach($users as $user)
+                @if($reservation->user_id == $user->id && $reservation->table_id == $table->id)
+                  <div class="col-xl-12 col-md-12">
+                    <div class="card card-stats">
+                      <!-- Card body -->
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col">
+                            <div class="row align-items-center">
+                              <div class="col-auto">
+                                <h6 class="bg-primary rounded text-white p-2">{{$table->nama}}</h6>
+                              </div>
+                              <h6 class="col text-right">{{$reservation->tanggal}} {{$reservation->jam}}</h6>
+                            </div>
+                            <div class="row">
+                              <h6 class="text-muted mb-1 col-xl-6">Nomor Reservasi</h6>
+                              <h6 class="col-xl-6 text-right">{{$reservation->id}}</h6>
+                            </div>
+                            <div class="row">
+                              <h6 class="text-muted mb-1 col-xl-6">Nama Pemesan</h6>
+                              <h6 class="col-xl-6 text-right">{{$user->name}}</h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                @endif
+              @endforeach
+            @endforeach
           @endforeach
         </div>
         <!-- Load more -->
@@ -483,8 +439,8 @@
   </script>
   <script>
     $(document).on('click','#delete-button',function(){
-        var tableid=$(this).attr('data_tableid');
-        $('#tableid').val(tableid);
+        var menuid=$(this).attr('data_menuid');
+        $('#menuid').val(menuid);
         $('#delete-modal').modal('show');
     });
   </script>

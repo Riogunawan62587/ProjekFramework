@@ -15,8 +15,12 @@ class AddTableReservations extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('reservations_id')->unsigned();
-            $table->integer('nomor_meja');
+            $table->date('tanggal');
+            $table->time('jam');
+            $table->integer('jumlah_orang');
+            $table->boolean('status');
+            $table->unsignedBigInteger('table_id')->nullable();
+            $table->unsignedBigInteger('user_id');
         });
     }
 

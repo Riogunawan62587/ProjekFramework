@@ -20,6 +20,7 @@ class AddTableFoods extends Migration
             $table->string('deskripsi');
             $table->integer('harga');
             $table->string('gambar');
+            $table->timestamps();
         });
     }
 

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Reservation;
+use App\User;
+use App\Table;
 
 class ReservationController extends Controller
 {
@@ -16,7 +19,13 @@ class ReservationController extends Controller
         return view('my_reservation');
     }
 
-    public function index_admin(){
-      return view('admin.daftarReservasi');
+    public function reservations_list(){
+      $reservations = Reservation::all();
+      $users_id = Reservation::all()->pluck('user_id');
+      $tables_id = Reservation::all()->pluck('table_id');
+      $users = User::whereIn('id',$users_id)->get();
+      $tables = Table::whereIn('id',$tables_id)->get();
+
+      return view('admin.daftarReservasi',compact('reservations','users','tables'));
     }
 }

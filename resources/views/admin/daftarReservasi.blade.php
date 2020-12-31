@@ -395,146 +395,42 @@
                 </tr>
               </thead>
               <tbody class="list">
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    15.15 WIB
-                  </td>
-                  <td>
-                    Meja 5
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    15.15 WIB
-                  </td>
-                  <td>
-                    Meja 5
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    15.15 WIB
-                  </td>
-                  <td>
-                    Meja 5
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    15.15 WIB
-                  </td>
-                  <td>
-                    Meja 5
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" class="text-center">
-                    1
-                  </th>
-                  <td class="budget">
-                    Rio Gunawan Pratama
-                  </td>
-                  <td>
-                    28-12-2020
-                  </td>
-                  <td>
-                    15.15 WIB
-                  </td>
-                  <td>
-                    Meja 5
-                  </td>
-                  <td class="text-right">
-                    <div class="dropdown" data-toggle="dropdown">
-                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="far fa-ellipsis-h"></i>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-right">
-                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
+                @foreach($reservations as $reservation)
+                  @foreach($tables as $table)
+                    @foreach($users as $user)
+                      @if($reservation->user_id == $user->id && $reservation->table_id == $table->id)
+                        <tr>
+                          <th scope="row" class="text-center">
+                            {{$reservation->id}}
+                          </th>
+                          <td class="budget">
+                            {{$user->name}}
+                          </td>
+                          <td>
+                            {{$reservation->tanggal}}
+                          </td>
+                          <td>
+                            {{$reservation->jam}}
+                          </td>
+                          <td>
+                            {{$table->nama}}
+                          </td>
+                          <td class="text-right">
+                            <div class="dropdown" data-toggle="dropdown">
+                              <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-ellipsis-h"></i>
+                              </a>
+                              <div class="dropdown-menu dropdown-menu-right">
+                                <a href="table-listing.html#" class="dropdown-item">Lihat</a>
+                                <a href="table-listing.html#" class="dropdown-item">Hapus</a>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      @endif
+                    @endforeach
+                  @endforeach
+                @endforeach
 
               </tbody>
             </table>
