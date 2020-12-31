@@ -440,7 +440,6 @@
                 <h5 class="h2"><a href="card-listing.html#">{{$food->nama}}</a></h5>
                 <h5 class="h6"><a href="card-listing.html#">Rp. {{$food->harga}}</a></h5>
                 <span class="clearfix"></span>
-                <span class="badge badge-pill badge-success">Aktif</span>
               </div>
               <div class="card-footer">
                 <div class="actions d-flex justify-content-between px-4">

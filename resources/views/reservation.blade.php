@@ -96,19 +96,19 @@
 						<div class="col-md-6">
 
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__name">Full name</label>
+								<label class="sr-only" for="reservation__form__name">Nama Lengkap</label>
 								<input type="text" class="form-control" id="reservation__form__name" name="reservation__form__name"
 									value="{{Auth::user()->name}}" disabled>
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__phone">Phone number</label>
+								<label class="sr-only" for="reservation__form__phone">Nomor Telepon</label>
 								<input type="tel" class="form-control" id="reservation__form__phone" name="reservation__form__phone"
 									value="{{Auth::user()->nomor_telepon}}" disabled>
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__email">E-mail address</label>
+								<label class="sr-only" for="reservation__form__email">Alamat Email</label>
 								<input type="email" class="form-control" id="reservation__form__email" name="reservation__form__email"
 									value="{{Auth::user()->email}}" disabled>
 								<div class="invalid-feedback"></div>
@@ -118,23 +118,24 @@
 						<div class="col-md-6">
 
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__people">People</label>
+								<label class="sr-only" for="reservation__form__people">Jumlah Orang</label>
 								<select class="form-control" id="reservation__form__people" name="jumlah_orang">
-									<option value="1">1 person</option>
-									<option value="2">2 persons</option>
-									<option value="3">3 persons</option>
-									<option value="4">4 persons</option>
-									<option value="5">5 persons</option>
+									<option value="1">1 orang</option>
+									<option value="2">2 orang</option>
+									<option value="3">3 orang</option>
+									<option value="4">4 orang</option>
+									<option value="5">5 orang</option>
+									<option value="6">6 orang</option>
 								</select>
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__date">Date</label>
+								<label class="sr-only" for="reservation__form__date">Tanggal</label>
 								<input type="date" class="form-control" id="reservation__form__date" name="tanggal" value="2016-12-31">
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__time">Time</label>
+								<label class="sr-only" for="reservation__form__time">Jam</label>
 								<input type="time" class="form-control" id="reservation__form__time" name="jam" value="18:00">
 								<div class="invalid-feedback"></div>
 							</div>
