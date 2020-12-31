@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
   <meta name="author" content="Webpixels">
-  <title>Purpose – Application UI Kit</title>
+  <title>Nusantara Dashboard</title>
   <!-- Favicon -->
   <link rel="icon" href="/assets/admin/assets/img/brand/favicon.png" type="image/png">
   <!-- Font Awesome 5 -->
