@@ -67,52 +67,6 @@
 	</div> <!-- / .container -->
 </section>
 
-<!-- DISCOVER
-	================================================== -->
-<section class="section section_discover">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-2 align-self-start">
-
-				<!-- Description -->
-				<p class="section_discover__description">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-				</p>
-
-			</div>
-			<div class="col-md-4 align-self-start">
-
-				<!-- Image -->
-				<div class="section_discover__img">
-					<img src="assets/img/2.jpg" class="img-fluid" alt="...">
-				</div>
-
-			</div>
-			<div class="col-md-6 align-self-center">
-
-				<!-- Content -->
-				<h2><em>Lorem ipsum</em> dolor sit amet</h2>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias veritatis nisi, consequatur, laborum
-					libero a neque ducimus. Porro rem illum quo nostrum quisquam asperiores, blanditiis, consectetur. Possimus
-					facilis velit, voluptatibus!
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis deleniti non, voluptate architecto, harum
-					suscipit dignissimos eaque voluptatibus nobis natus error iure exercitationem. Officia facilis, maiores
-					atque delectus commodi rerum.
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur qui, itaque, accusantium accusamus eum
-					voluptate ducimus eligendi laboriosam alias mollitia omnis harum et ut quaerat, minus repellendus sint.
-					Inventore, iure.
-				</p>
-
-			</div>
-		</div> <!-- / .row -->
-	</div> <!-- / .container -->
-</section>
-
 <!-- INFO
 	================================================== -->
 <section class="section section_info section_info_opposite">
@@ -122,7 +76,7 @@
 
 				<!-- Heading -->
 				<h2 class="section__heading text-center">
-					Behind the scenes
+					Daftar & Riwayat Pesanan Saya
 				</h2>
 
 				<!-- Subheading -->
@@ -137,7 +91,7 @@
 			<div class="col-md-6 order-md-3">
 
 				<div class="section_info__img">
-					<img src="assets/img/24.jpg" alt="...">
+					<img src="assets/img/34.jpg" alt="...">
 				</div>
 
 			</div>

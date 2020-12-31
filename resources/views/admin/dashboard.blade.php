@@ -409,7 +409,7 @@
       <div class="footer pt-5 pb-4 footer-light" id="footer-main">
         <div class="row text-center text-sm-left align-items-sm-center">
           <div class="col-sm-6">
-            <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+            <p class="text-sm mb-0">&copy; 2021 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
           </div>
         </div>
       </div>

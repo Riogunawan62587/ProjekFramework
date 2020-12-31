@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Reservation;
 use App\User;
 use App\Table;
-use App\Reservations_Detail;
 use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
@@ -18,11 +17,12 @@ class ReservationController extends Controller
 
     public function simpan_reservasi(Request $request)
     {
-        $simpan = new Reservations_Detail;
-        $simpan->user_id         = Auth::user()->id;
-        $simpan->jumlah_orang    = $request->jumlah_orang;
+        $simpan = new Reservation;
         $simpan->tanggal         = $request->tanggal;
         $simpan->jam             = $request->jam;
+        $simpan->jumlah_orang    = $request->jumlah_orang;
+        $simpan->status          = 0;
+        $simpan->user_id         = Auth::user()->id;
         $simpan->save();
         return redirect('/reservasi_saya');
     }
@@ -32,13 +32,14 @@ class ReservationController extends Controller
         return view('my_reservation');
     }
 
-    public function reservations_list(){
-      $reservations = Reservation::all();
-      $users_id = Reservation::all()->pluck('user_id');
-      $tables_id = Reservation::all()->pluck('table_id');
-      $users = User::whereIn('id',$users_id)->get();
-      $tables = Table::whereIn('id',$tables_id)->get();
+    public function reservations_list()
+    {
+        $reservations = Reservation::all();
+        $users_id = Reservation::all()->pluck('user_id');
+        $tables_id = Reservation::all()->pluck('table_id');
+        $users = User::whereIn('id', $users_id)->get();
+        $tables = Table::whereIn('id', $tables_id)->get();
 
-      return view('admin.daftarReservasi',compact('reservations','users','tables'));
+        return view('admin.daftarReservasi', compact('reservations', 'users', 'tables'));
     }
 }

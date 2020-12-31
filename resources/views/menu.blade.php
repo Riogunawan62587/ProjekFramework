@@ -116,7 +116,7 @@
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="{{$daftar_mains->gambar}}" alt="...">
+								<img src="/assets/img/{{$daftar_mains->gambar}}" alt="...">
 							</div>
 						</div>
 						<div class="col-6">
@@ -141,7 +141,7 @@
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="{{$daftar_lunch->gambar}}" alt="...">
+								<img src="/assets/img/{{$daftar_lunch->gambar}}" alt="...">
 							</div>
 						</div>
 						<div class="col-6">
@@ -166,7 +166,7 @@
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="{{$daftar_dinner->gambar}}" alt="...">
+								<img src="/assets/img/{{$daftar_dinner->gambar}}" alt="...">
 							</div>
 						</div>
 						<div class="col-6">
@@ -191,7 +191,7 @@
 					<div class="row">
 						<div class="col-3 align-self-center">
 							<div class="section_menu__item__img">
-								<img src="{{$daftar_drinks->gambar}}" alt="...">
+								<img src="/assets/img/{{$daftar_drinks->gambar}}" alt="...">
 							</div>
 						</div>
 						<div class="col-6">
@@ -243,7 +243,7 @@
 		<div class="section_dishes__carousel__item">
 
 			<!-- Image -->
-			<img src="{{$daftar->gambar}}" alt="..." class="section_dishes__carousel__item__img">
+			<img src="/assets/img/{{$daftar->gambar}}" alt="..." class="section_dishes__carousel__item__img">
 
 			<!-- Body -->
 			<div class="section_dishes__carousel__item__body">

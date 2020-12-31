@@ -98,7 +98,7 @@
 							<div class="form-group">
 								<label class="sr-only" for="reservation__form__name">Full name</label>
 								<input type="text" class="form-control" id="reservation__form__name" name="reservation__form__name"
-									value="{{Auth::user()->nama_lengkap}}" disabled>
+									value="{{Auth::user()->name}}" disabled>
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
