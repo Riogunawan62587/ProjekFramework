@@ -370,7 +370,8 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>Heads up!</strong> This is a info alert with <a href="alerts.html#" class="alert-link">an example link</a> — check it out!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span>{{Session::get('success')}}</span>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>

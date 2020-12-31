@@ -41,13 +41,13 @@ class MenuController extends Controller
       $food->gambar = $request->file('gambar')->getClientOriginalName();
       $food->save();
 
-      return redirect('/admin/menu')->with('success','Data lapangan berhasil ditambahkan!');
+      return redirect('/admin/menu')->with('success','Data menu berhasil ditambahkan!');
     }
 
     public function destroy(Request $request){
       $food = Food::where('id',$request->menuid)->delete();
 
-      return redirect('/admin/menu')->with('success','Data berhasil dihapus');
+      return redirect('/admin/menu')->with('success','Data menu berhasil dihapus');
     }
 
     public function edit(Request $request){
@@ -68,7 +68,7 @@ class MenuController extends Controller
       }
       $food->update();
 
-      return redirect('/admin/menu')->with('success','Data lapangan berhasil diupdate!');
+      return redirect('/admin/menu')->with('success','Data menu berhasil diupdate!');
     }
 
 
