@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTableFoods extends Migration
+class AddTableReservationsDetails extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class AddTableFoods extends Migration
      */
     public function up()
     {
-        Schema::create('foods', function (Blueprint $table) {
+        Schema::create('reservations_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
-            $table->string('tipe');
-            $table->string('deskripsi');
-            $table->integer('harga');
-            $table->string('gambar');
+            $table->bigInteger('user_id');
+            $table->integer('jumlah_orang');
+            $table->date('tanggal');
+            $table->time('jam');
         });
     }
 
@@ -30,6 +29,6 @@ class AddTableFoods extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('foods');
+        Schema::dropIfExists('reservations_details');
     }
 }
