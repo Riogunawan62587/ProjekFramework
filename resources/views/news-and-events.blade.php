@@ -52,7 +52,7 @@
 
 <!-- HEADER
 	================================================== -->
-<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/33.jpg">
+<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/14.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -76,44 +76,14 @@
 
 				<!-- Heading -->
 				<h2 class="section__heading text-center">
-					Our latest news
+					Artikel terbaru kami
 				</h2>
 
 				<!-- Subheading -->
 				<p class="section__subheading text-center">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia obcaecati sit odio velit culpa aspernatur
-					consectetur natus quidem minima veritatis.
+					Artikel, berita, maupun info - info menarik seputar kuliner nusantara hingga dari seluruh dunia tersedia
+					disini.
 				</p>
-
-			</div>
-		</div> <!-- / .row -->
-		<div class="row align-items-justify">
-			<div class="col-md-6 order-md-3">
-
-				<div class="section_info__img">
-					<img src="assets/img/35.jpg" alt="...">
-				</div>
-
-			</div>
-			<div class="col-md-1 order-md-2"></div>
-			<div class="col-md-5 order-md-1">
-
-				<div class="section_info__body">
-					<h3 class="section__preheading text-primary">
-						<time datetime="2017-08-30">August 30, 2017</time>
-					</h3>
-					<h2 class="section__heading">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
-					</h2>
-					<p class="section__subheading">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet,
-						saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus
-						laudantium repudiandae labore!
-					</p>
-					<a href="news-and-events.html#" class="btn btn-primary">
-						Read more...
-					</a>
-				</div>
 
 			</div>
 		</div> <!-- / .row -->
@@ -122,30 +92,34 @@
 
 <!-- INFO
 	================================================== -->
-<section class="section section_info section_no-padding_top section_no-padding_bottom">
+@foreach ($data_artikel as $dt)
+@if ($dt->id % 2 == 1)
+<section class="section section_info section_info_opposite section_no-padding_top section_no-padding_bottom">
 	<div class="container">
 		<div class="row align-items-justify">
-			<div class="col-md-6">
+			<div class="col-md-6 order-md-3">
 
 				<div class="section_info__img">
-					<img src="assets/img/34.jpg" alt="...">
+					<img src="{{$dt->gambar}}" alt="...">
 				</div>
 
 			</div>
-			<div class="col-md-1"></div>
-			<div class="col-md-5">
+			<div class="col-md-1 order-md-2"></div>
+			<div class="col-md-5 order-md-1">
 
 				<div class="section_info__body">
 					<h3 class="section__preheading text-primary">
-						<time datetime="2017-08-29">August 29, 2017</time>
+						<?php
+							$time = strtotime($dt->tanggal);
+							$tanggal = date('F d, Y',$time);
+						?>
+						<time datetime="{{$tanggal}}">{{$tanggal}}</time>
 					</h3>
 					<h2 class="section__heading">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptas, aut ea quae!
+						{{$dt->judul}}
 					</h2>
 					<p class="section__subheading">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit accusamus corporis nam eveniet,
-						saepe, ipsum nostrum fugit, iste commodi expedita totam optio velit excepturi nemo, repellat doloribus
-						laudantium repudiandae labore!
+						{{$dt->deskripsi}}
 					</p>
 					<a href="news-and-events.html#" class="btn btn-primary">
 						Read more...
@@ -156,6 +130,46 @@
 		</div> <!-- / .row -->
 	</div> <!-- / .container -->
 </section>
+
+@else
+<section class="section section_info section_no-padding_top section_no-padding_bottom">
+	<div class="container">
+		<div class="row align-items-justify">
+			<div class="col-md-6">
+
+				<div class="section_info__img">
+					<img src="{{$dt->gambar}}" alt="...">
+				</div>
+
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-5">
+
+				<div class="section_info__body">
+					<h3 class="section__preheading text-primary">
+						<?php
+							$time = strtotime($dt->tanggal);
+							$tanggal = date('F d, Y',$time);
+						?>
+						<time datetime="{{$tanggal}}">{{$tanggal}}</time>
+					</h3>
+					<h2 class="section__heading">
+						{{$dt->judul}}
+					</h2>
+					<p class="section__subheading">
+						{{$dt->deskripsi}}
+					</p>
+					<a href="news-and-events.html#" class="btn btn-primary">
+						Read more...
+					</a>
+				</div>
+
+			</div>
+		</div> <!-- / .row -->
+	</div> <!-- / .container -->
+</section>
+@endif
+@endforeach
 
 <!-- EVENTS
 	================================================== -->
