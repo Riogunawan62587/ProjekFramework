@@ -64,7 +64,7 @@ class MenuController extends Controller
     $food->deskripsi = $request->deskripsi;
     $food->harga = $request->harga;
     if ($request->hasFile('gambar')) {
-      $request->file('gambar')->move('images/', $request->file('gambar')->getClientOriginalName());
+      $request->file('gambar')->move('assets/img', $request->file('gambar')->getClientOriginalName());
       $food->gambar = $request->file('gambar')->getClientOriginalName();
     }
     $food->update();
