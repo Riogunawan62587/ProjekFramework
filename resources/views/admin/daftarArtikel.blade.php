@@ -44,8 +44,8 @@
             <img alt="Image placeholder" src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/theme/light/team-1-800x800.jpg" class="">
           </a>
           <div class="mt-4">
-            <h5 class="mb-0 text-white">Matte</h5>
-            <span class="d-block text-sm text-white opacity-8 mb-3">Admin Restoran</span>
+            <h5 class="mb-0 text-white">Selamat Datang,</h5>
+            <span class="d-block text-sm text-white opacity-8 mb-3">John Snow</span>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
           <span class="btn-inner--icon d-block"><i class="far fa-tasks fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Meja</span>
         </a>
-        <a href="/admin/reservasi" class="btn btn-square text-sm active">
+        <a href="/admin/reservasi" class="btn btn-square text-sm">
           <span class="btn-inner--icon d-block"><i class="far fa-columns fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Reservasi</span>
         </a>
@@ -71,7 +71,7 @@
           <span class="btn-inner--icon d-block"><i class="far fa-users-cog fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Pengguna</span>
         </a>
-        <a href="/admin/artikel" class="btn btn-square text-sm">
+        <a href="/admin/artikel" class="btn btn-square text-sm active">
           <span class="btn-inner--icon d-block"><i class="far fa-newspaper fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Artikel</span>
         </a>
@@ -254,191 +254,105 @@
 
       <!-- Page content -->
       <div class="page-content">
-        <!-- Create project modal -->
-        <div class="modal fade" id="modal-project-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- delete modal -->
+        <div class="modal modal-danger fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modal_5" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
+            <form action="/admin/menu/delete" method="post">
+              @csrf
+              <div class="modal-header">
+                <h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
               <div class="modal-body">
-                <!-- Project name -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Nama Menu
-                  </label>
-                  <input type="text" class="form-control">
-                </div>
-                <!-- Project description -->
-                <div class="form-group">
-                  <label class="form-control-label mb-0">
-                    Deskripsi menu
-                  </label>
-                  <textarea class="form-control" data-toggle="autosize" rows="3"></textarea>
-                </div>
-                <!-- Project privacy -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Kategori Produk
-                  </label>
-                  <div class="row">
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-1">
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-1">Mains</label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-2">
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-2">Lunch</label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3" checked>
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-3">Dinner</label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3" checked>
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-3">Drinks</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project members -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Harga
-                  </label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                  <div>
-                    <label class="form-control-label">
-                      Upload Gambar Menu
-                    </label>
-                    <input type="file" name="file-1[]" id="file-1" class="custom-input-file" data-multiple-caption="{count} files selected" multiple="" />
-                    <label for="file-1">
-                      <i class="fa fa-upload"></i>
-                      <span>Choose a file…</span>
-                    </label>
-                  </div>
+                <div class="py-3 text-center">
+                  <i class="fas fa-exclamation-circle fa-4x"></i>
+                  <h5 class="heading h4 mt-4">Should we stop now?</h5>
+                  <p>
+                    You can easy create stackable modal boxes. For example, your inline content or Ajax response can contain a gallery:
+                  </p>
+                  <input type="hidden" name="menuid" id="menuid">
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-primary rounded-pill mr-auto">Save</button>
-                <button type="button" class="btn btn-sm btn-link text-danger px-2" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-sm btn-primary">Hapus</button>
+                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal">Batal</button>
               </div>
+            </form>
             </div>
           </div>
         </div>
+
+        <!-- Create project modal -->
+
         <!-- Page title -->
         <div class="page-title">
           <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+            <div
+              class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
               <!-- Page title + Go Back button -->
               <div class="d-inline-block">
-                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Daftar Reservasi</h5>
+                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Daftar Artikel</h5>
               </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+              <a href="/admin/artikel/tambah" class="btn btn-sm btn-white rounded-pill ml-4">
+                <span class="btn-inner--icon mr-2"><i class="far fa-plus"></i></span>
+                Tambah Artikel
+              </a>
             </div>
           </div>
         </div>
         <!-- Project cards -->
-        <div class="card">
-          <!-- Card header -->
-          <div class="card-header actions-toolbar border-0">
-            <div class="actions-search" id="actions-search">
-              <div class="input-group input-group-merge input-group-flush">
-                <div class="input-group-prepend">
-                  <span class="input-group-text bg-transparent"><i class="far fa-search"></i></span>
-                </div>
-                <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ...">
-                <div class="input-group-append">
-                  <a href="table-listing.html#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="far fa-times"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col">
-                <h6 class="d-inline-block mb-0">Reservasi</h6>
-              </div>
-              <div class="col text-right">
-                <div class="actions"><a href="table-listing.html#" class="action-item mr-3" data-action="search-open" data-target="#actions-search"><i class="far fa-search"></i></a>
-                  <div class="dropdown mr-3">
-                    <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="far fa-filter"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="table-listing.html#">
-                        <i class="far fa-sort-amount-down"></i>Newest
-                      </a>
-                      <a class="dropdown-item" href="table-listing.html#">
-                        <i class="far fa-sort-alpha-down"></i>From A-Z
-                      </a>
-                      <a class="dropdown-item" href="table-listing.html#">
-                        <i class="far fa-sort-alpha-up"></i>From Z-A
-                      </a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
+        @if(session('success'))
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <span>{{Session::get('success')}}</span>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
           </div>
-          <!-- Table -->
-          <div class="table-responsive">
-            <table class="table align-items-center">
-              <thead>
-                <tr>
-                  <th scope="col" class="sort text-center" data-sort="name">ID</th>
-                  <th scope="col" class="sort" data-sort="budget">Nama Pemesan</th>
-                  <th scope="col" class="sort" data-sort="status">Tanggal</th>
-                  <th scope="col">Jam</th>
-                  <th scope="col" class="sort" data-sort="completion">Nomor Meja</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody class="list">
-                @foreach($reservations as $reservation)
-                  @foreach($tables as $table)
-                    @foreach($users as $user)
-                      @if($reservation->user_id == $user->id && $reservation->table_id == $table->id)
-                        <tr>
-                          <th scope="row" class="text-center">
-                            {{$reservation->id}}
-                          </th>
-                          <td class="budget">
-                            {{$user->name}}
-                          </td>
-                          <td>
-                            {{$reservation->tanggal}}
-                          </td>
-                          <td>
-                            {{$reservation->jam}}
-                          </td>
-                          <td>
-                            {{$table->nama}}
-                          </td>
-                          <td class="text-right">
-                            <div class="dropdown" data-toggle="dropdown">
-                              <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="far fa-ellipsis-h"></i>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                                <a href="table-listing.html#" class="dropdown-item">Hapus</a>
+        </div>
+        @endif
+
+        <div class="row align-items-center">
+          @foreach($articles as $article)
+                  <div class="col-xl-12 col-md-12">
+                    <div class="card card-stats">
+                      <!-- Card body -->
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col">
+                            <div class="row align-items-center">
+                              <div class="col-auto">
+                                  <h6>{{$article->tanggal}}</h6>
                               </div>
                             </div>
-                          </td>
-                        </tr>
-                      @endif
-                    @endforeach
-                  @endforeach
-                @endforeach
-
-              </tbody>
-            </table>
-          </div>
+                            <div class="row">
+                                <h3 class="col-xl-12">{{$article->judul}}</h3>
+                            </div>
+                            <div class="row">
+                              <h6 class="text-muted mb-1 col-xl-12">{!! \Illuminate\Support\Str::words($article->deskripsi, 25,'')  !!}</h6>
+                            </div>
+                            <div class="row">
+                              <div class="col-auto">
+                                <form action="/admin/artikel/detail" method="post">
+                                  @csrf
+                                  <input type="hidden" name="article_id" value="{{$article->id}}">
+                                  <button type="submit" name="button" class="btn btn-primary btn-sm">Lihat Selengkapnya</button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            @endforeach
         </div>
         <!-- Load more -->
 
@@ -446,7 +360,7 @@
       <div class="footer pt-5 pb-4 footer-light" id="footer-main">
         <div class="row text-center text-sm-left align-items-sm-center">
           <div class="col-sm-6">
-            <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+            <p class="text-sm mb-0">&copy; 2021 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -473,6 +387,13 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-104437451-1');
+  </script>
+  <script>
+    $(document).on('click','#delete-button',function(){
+        var menuid=$(this).attr('data_menuid');
+        $('#menuid').val(menuid);
+        $('#delete-modal').modal('show');
+    });
   </script>
 </body>
 

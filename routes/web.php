@@ -52,3 +52,11 @@ Route::post('admin/meja/update', 'TableController@update');
 Route::get('/admin/pengguna', 'UserController@users_list');
 
 Route::get('/admin/reservasi', 'ReservationController@reservations_list');
+
+Route::get('/admin/artikel', 'ArticleController@articles_list');
+Route::get('/admin/artikel/tambah','ArticleController@show_create');
+Route::post('/admin/artikel/tambah','ArticleController@add_article');
+Route::post('/admin/artikel/detail','ArticleController@article_detail');
+Route::post('/admin/artikel/edit','ArticleController@show_edit');
+Route::post('/admin/artikel/update','ArticleController@update_article');
+Route::post('/admin/artikel/delete','ArticleController@destroy');

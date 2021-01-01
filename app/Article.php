@@ -9,4 +9,5 @@ class Article extends Model
     protected $fillable = [
         'tanggal', 'judul', 'deskripsi', 'gambar'
     ];
+    public $timestamps = false;
 }
