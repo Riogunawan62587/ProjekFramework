@@ -29,6 +29,8 @@ Route::get('/menu', 'MenuController@index')->name('menu.index');
 Route::get('/reservasi', 'ReservationController@index')->name('reservasi.index');
 Route::post('/reservasi', 'ReservationController@simpan_reservasi')->name('reservasi.simpan');
 Route::get('/reservasi_saya', 'ReservationController@my_reservation')->name('reservasi.my_reservation');
+Route::post('/reservasi_saya', 'ReservationController@simpan_bukti_pembayaran')->name('reservasi.my_reservation.simpan');
+Route::post('/reservasi_saya/delete', 'ReservationController@destroy')->name('reservasi.my_reservation.delete');
 
 
 // Controller Artikel

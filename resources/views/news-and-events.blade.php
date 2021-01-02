@@ -100,7 +100,7 @@
 			<div class="col-md-6 order-md-3">
 
 				<div class="section_info__img">
-					<img src="{{$dt->gambar}}" alt="...">
+					<img src="/assets/img/{{$dt->gambar}}" alt="...">
 				</div>
 
 			</div>
@@ -138,7 +138,7 @@
 			<div class="col-md-6">
 
 				<div class="section_info__img">
-					<img src="{{$dt->gambar}}" alt="...">
+					<img src="/assets/img/{{$dt->gambar}}" alt="...">
 				</div>
 
 			</div>

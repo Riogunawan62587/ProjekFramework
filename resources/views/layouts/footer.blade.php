@@ -85,6 +85,28 @@
 <script src="assets/js/theme.min.js"></script>
 <script src="assets/js/custom.js"></script>
 
+<script src="assets/admin/assets/js/purpose.core.js"></script>
+<!-- Page JS -->
+<script src="assets/admin/assets/libs/autosize/dist/autosize.min.js"></script>
+<script src="assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+<!-- Purpose JS -->
+<script src="assets/admin/assets/js/purpose.js"></script>
+
+<script>
+  $(document).on('click','#delete-button',function(){
+    var menuid=$(this).attr('data_menuid');
+    $('#menuid').val(menuid);
+    $('#delete-modal').modal('show');
+});
+</script>
+<script>
+  $(document).on('click','#delete-button',function(){
+    var reservasiid=$(this).attr('data_reservasiid');
+    $('#reservasiid').val(reservasiid);
+    $('#delete-modal').modal('show');
+});
+</script>
+
 </body>
 
 </html>
