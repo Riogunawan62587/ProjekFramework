@@ -8,7 +8,7 @@
 	<div class="container">
 
 		<!-- Navbar: Brand -->
-		<a class="navbar-brand navbar-brand_2 d-lg-none" href="index.html">Touché</a>
+		<a class="navbar-brand navbar-brand_2 d-lg-none" href="{{route('home.index')}}">Nusantara</a>
 
 		<!-- Navbar: Toggler -->
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -135,8 +135,25 @@
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
+
 								<label class="sr-only" for="reservation__form__time">Jam</label>
-								<input type="time" class="form-control" id="reservation__form__time" name="jam" value="18:00">
+								<select class="form-control" id="reservation__form__time" name="jam">
+									<option value="10:00">10:00</option>
+									<option value="11:00">11:00</option>
+									<option value="12:00">12:00</option>
+									<option value="13:00">13:00</option>
+									<option value="14:00">14:00</option>
+									<option value="15:00">15:00</option>
+									<option value="16:00">16:00</option>
+									<option value="17:00">17:00</option>
+									<option value="12:00">18:00</option>
+									<option value="13:00">19:00</option>
+									<option value="14:00">20:00</option>
+									<option value="15:00">21:00</option>
+									<option value="15:00">22:00</option>
+								</select>
+								{{-- <input type="time" class="form-control" id="reservation__form__time" name="jam" value="18:00"> --}}
+
 								<div class="invalid-feedback"></div>
 							</div>
 

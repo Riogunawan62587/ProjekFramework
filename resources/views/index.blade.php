@@ -8,7 +8,7 @@
 	<div class="container">
 
 		<!-- Navbar: Brand -->
-		<a class="navbar-brand d-lg-none" href="index.html">Nusantara</a>
+		<a class="navbar-brand d-lg-none" href="{{route('home.index')}}">Nusantara</a>
 
 		<!-- Navbar: Toggler -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -206,24 +206,6 @@
 					Penuhi nutrisi tubuh anda dengan kalori yang cukup, vitamin, protein hingga berbagai gizi yang lain. Jangan
 					biarkan tubuh anda
 					kekurangan itu semua agar tubuh selalu vit dimanapun dan kapanpun anda berada.
-				</p>
-
-			</div>
-		</div> <!-- / .row -->
-	</div> <!-- / .container -->
-</section>
-
-<!-- ABOUT
-	================================================== -->
-<section class="section section_about">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-
-				<!-- Description -->
-				<p class="section_about__description">
-					Let food be thy medicine and medicine be thy food.
-					<b>Hippocrates-</b>
 				</p>
 
 			</div>
