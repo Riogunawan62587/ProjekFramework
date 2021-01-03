@@ -8,7 +8,7 @@
 	<div class="container">
 
 		<!-- Navbar: Brand -->
-		<a class="navbar-brand d-lg-none" href="index.html">Nusantara</a>
+		<a class="navbar-brand d-lg-none" href="{{route('home.index')}}">Nusantara</a>
 
 		<!-- Navbar: Toggler -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -213,6 +213,7 @@
 	</div> <!-- / .container -->
 </section>
 
+<<<<<<< Updated upstream
 <!-- ABOUT
 	================================================== -->
 <section class="section section_about">
@@ -456,6 +457,8 @@
 	</div> <!-- / .container -->
 </section>
 
+=======
+>>>>>>> Stashed changes
 <!-- RESERVATION
 	================================================== -->
 @if (!Auth::check() && !Auth::user())
