@@ -8,7 +8,9 @@
 	<div class="container">
 
 		<!-- Navbar: Brand -->
+
 		<a class="navbar-brand navbar-brand_2 d-lg-none" href="{{route('home.index')}}">Nusantara</a>
+
 
 		<!-- Navbar: Toggler -->
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"

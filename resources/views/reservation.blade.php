@@ -41,7 +41,7 @@
 					<a class="nav-link" href="{{route('artikel.index')}}">Artikel</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="{{route('home.tentang_kami')}}">Tentang Kami</a>
+					<a class="nav-link" href="{{route('reservasi.my_reservation')}}">Reservasi Saya</a>
 				</li>
 			</ul>
 
@@ -52,7 +52,7 @@
 
 <!-- HEADER
 	================================================== -->
-<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/19.jpg">
+<section class="section section_header" data-parallax="scroll" data-image-src="assets/img/35.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col">
@@ -76,13 +76,12 @@
 
 				<!-- Heading -->
 				<h2 class="section__heading text-center">
-					Online table reservation
+					Pemesanan Meja
 				</h2>
 
 				<!-- Subheading -->
 				<p class="section__subheading text-center">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam illo praesentium sequi in cum, beatae
-					maiores quae qui.
+					Mohon isi form berikut untuk mengkonfirmasi pemesanan anda.
 				</p>
 
 			</div>
@@ -91,26 +90,27 @@
 			<div class="col-lg-8">
 
 				<!-- Form -->
-				<form class="section_reservation__form" id="reservation__form">
+				<form method="POST" action="{{route('reservasi.simpan')}}">
+					@csrf
 					<div class="row">
 						<div class="col-md-6">
 
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__name">Full name</label>
+								<label class="sr-only" for="reservation__form__name">Nama Lengkap</label>
 								<input type="text" class="form-control" id="reservation__form__name" name="reservation__form__name"
-									placeholder="Full name">
+									value="{{Auth::user()->name}}" disabled>
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__phone">Phone number</label>
+								<label class="sr-only" for="reservation__form__phone">Nomor Telepon</label>
 								<input type="tel" class="form-control" id="reservation__form__phone" name="reservation__form__phone"
-									placeholder="Phone number">
+									value="{{Auth::user()->nomor_telepon}}" disabled>
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__email">E-mail address</label>
+								<label class="sr-only" for="reservation__form__email">Alamat Email</label>
 								<input type="email" class="form-control" id="reservation__form__email" name="reservation__form__email"
-									placeholder="E-mail address">
+									value="{{Auth::user()->email}}" disabled>
 								<div class="invalid-feedback"></div>
 							</div>
 
@@ -118,28 +118,24 @@
 						<div class="col-md-6">
 
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__people">People</label>
-								<select class="form-control" id="reservation__form__people" name="reservation__form__people">
-									<option value="1">1 person</option>
-									<option value="2" selected="">2 persons</option>
-									<option value="3">3 persons</option>
-									<option value="4">4 persons</option>
-									<option value="5">5 persons</option>
+								<label class="sr-only" for="reservation__form__people">Jumlah Orang</label>
+								<select class="form-control" id="reservation__form__people" name="jumlah_orang">
+									<option value="1">1 orang</option>
+									<option value="2">2 orang</option>
+									<option value="3">3 orang</option>
+									<option value="4">4 orang</option>
+									<option value="5">5 orang</option>
+									<option value="6">6 orang</option>
 								</select>
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-								<label class="sr-only" for="reservation__form__date">Date</label>
-								<input type="date" class="form-control" id="reservation__form__date" name="reservation__form__date"
-									value="2016-12-31">
+								<label class="sr-only" for="reservation__form__date">Tanggal</label>
+								<input type="date" class="form-control" id="reservation__form__date" name="tanggal" value="2016-12-31">
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-<<<<<<< Updated upstream
-								<label class="sr-only" for="reservation__form__time">Time</label>
-								<input type="time" class="form-control" id="reservation__form__time" name="reservation__form__time"
-									value="18:00">
-=======
+
 								<label class="sr-only" for="reservation__form__time">Jam</label>
 								<select class="form-control" id="reservation__form__time" name="jam">
 									<option value="10:00">10:00</option>
@@ -157,7 +153,7 @@
 									<option value="15:00">22:00</option>
 								</select>
 								{{-- <input type="time" class="form-control" id="reservation__form__time" name="jam" value="18:00"> --}}
->>>>>>> Stashed changes
+
 								<div class="invalid-feedback"></div>
 							</div>
 
@@ -166,7 +162,7 @@
 
 							<div class="text-center">
 								<button type="submit" class="btn btn-primary">
-									Reserve a table
+									Pesan Sekarang
 								</button>
 							</div>
 
@@ -187,23 +183,15 @@
 			<div class="col-lg-8">
 
 				<p class="font-small text-center">
-					or call us:
+					atau hubungi kami di:
 				</p>
-				<p class="section_phone__number text-center">
-					<a href="tel:+19876543210">+1 987 654 3210</a>
+				<p class="section_phone__number text-center" style="color: black">
+					+62 888 123 4567
 				</p>
 
 			</div>
 		</div> <!-- / .row -->
 	</div> <!-- / .container -->
-</section>
-
-<!-- MAP
-	================================================== -->
-<section class="section section_map">
-	<div class="section_map__map" data-lat="40.7590403" data-lng="-74.0392713" data-zoom="12"
-		data-info="<h4 class='section_map__map__heading text-center'>Touche restaurant</h4><p class='section_map__map__content text-center text-muted'>1234 Altschul, New York, NY 10027-0000<br>+1 987 654 3210</p>">
-	</div>
 </section>
 
 @endsection

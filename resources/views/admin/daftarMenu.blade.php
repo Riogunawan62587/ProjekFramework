@@ -12,7 +12,9 @@
   <link rel="icon" href="/assets/admin/assets/img/brand/favicon.png" type="image/png">
   <!-- Font Awesome 5 -->
   <!-- Sidenav header -->
+
   <link rel="stylesheet" href="/assets/admin/assets/libs/@fortawesome/fontawesome-pro/css/all.min.css">
+
   <!-- Purpose CSS -->
   <link rel="stylesheet" href="/assets/admin/assets/css/purpose.css" id="stylesheet">
 </head>

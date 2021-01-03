@@ -28,9 +28,4 @@ class HomeController extends Controller
     {
         return view('index');
     }
-
-    public function tentang_kami()
-    {
-        return view('about-us');
-    }
 }
