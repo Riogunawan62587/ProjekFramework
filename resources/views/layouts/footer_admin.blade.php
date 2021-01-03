@@ -80,12 +80,13 @@
 <script src="assets/js/theme.min.js"></script>
 <script src="assets/js/custom.js"></script>
 
-<script src="assets/admin/assets/js/purpose.core.js"></script>
 <!-- Page JS -->
 <script src="assets/admin/assets/libs/autosize/dist/autosize.min.js"></script>
 <script src="assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+
 <!-- Purpose JS -->
 <script src="assets/admin/assets/js/purpose.js"></script>
+<script src="assets/admin/assets/js/purpose.core.js"></script>
 
 <script>
   $(document).on('click','#delete-button',function(){

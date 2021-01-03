@@ -135,7 +135,6 @@
 								<div class="invalid-feedback"></div>
 							</div>
 							<div class="form-group">
-
 								<label class="sr-only" for="reservation__form__time">Jam</label>
 								<select class="form-control" id="reservation__form__time" name="jam">
 									<option value="10:00">10:00</option>
@@ -146,14 +145,12 @@
 									<option value="15:00">15:00</option>
 									<option value="16:00">16:00</option>
 									<option value="17:00">17:00</option>
-									<option value="12:00">18:00</option>
-									<option value="13:00">19:00</option>
-									<option value="14:00">20:00</option>
-									<option value="15:00">21:00</option>
-									<option value="15:00">22:00</option>
+									<option value="18:00">18:00</option>
+									<option value="19:00">19:00</option>
+									<option value="20:00">20:00</option>
+									<option value="21:00">21:00</option>
+									<option value="22:00">22:00</option>
 								</select>
-								{{-- <input type="time" class="form-control" id="reservation__form__time" name="jam" value="18:00"> --}}
-
 								<div class="invalid-feedback"></div>
 							</div>
 

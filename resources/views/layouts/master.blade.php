@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
   <link rel="stylesheet" href="assets/plugins/lightbox/css/lightbox.min.css">
   <link rel="stylesheet" href="assets/plugins/flickity/flickity.min.css">
-
   <link rel="stylesheet" href="assets/admin/assets/css/purpose.css" id="stylesheet">
   <link rel="icon" href="/assets/admin/assets/img/brand/favicon.png" type="image/png">
 
