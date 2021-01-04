@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.master_my_reservation')
 
 @section('content')
 
@@ -249,11 +249,10 @@
 				<!-- Blockquote -->
 				<blockquote class="section_quote__blockquote">
 					<p class="text-center">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae ab nobis cupiditate odit repudiandae
-						maiores in et autem voluptate cum.
+						Food is for eating, and good food is to be enjoyed... I think food is, actually, very beautiful in itself.
 					</p>
 					<footer class="text-center">
-						George Bernard Shaw
+						Delia Smith
 					</footer>
 				</blockquote>
 

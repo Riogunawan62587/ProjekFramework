@@ -105,28 +105,6 @@
 			<div class="row align-items-center">
 				<div class="col-md">
 
-					<!-- Social links -->
-					<ul class="section_welcome__footer__social text-center text-lg-left">
-						<li>
-							<a href="index.html#">
-								<i class="fab fa-twitter"></i>
-							</a>
-						</li>
-						<li>
-							<a href="index.html#">
-								<i class="fab fa-facebook-f"></i>
-							</a>
-						</li>
-						<li>
-							<a href="index.html#">
-								<i class="fab fa-instagram"></i>
-							</a>
-						</li>
-					</ul>
-
-				</div>
-				<div class="col-md">
-
 					<!-- Address -->
 					<div class="section_welcome__footer__address text-center text-lg-right">
 						<i class="fas fa-map-marker-alt"></i>Jl. Gajah Mada No. 267, Jember, Jawa Timur
@@ -346,7 +324,7 @@
 
 								<!-- Photo -->
 								<div class="section_testimonials__photo">
-									<img src="assets/img/21.jpg" class="img-fluid" alt="...">
+									<img src="assets/img/Opank.jpg" class="img-fluid" alt="...">
 								</div>
 
 							</div>
@@ -355,9 +333,8 @@
 								<!-- Blockquote -->
 								<blockquote class="section_testimonials__blockquote mx-auto">
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis
-										quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto
-										ratione deleniti sequi.
+										Harganya juga terjangkau, jadi tidak perlu khawatir akan itu. Jadi tunggu
+										apalagi? Segera pesan sekarang juga.
 									</p>
 									<footer class="text-muted">
 										Muhammad Naufal Hafiyyan
@@ -374,7 +351,7 @@
 
 								<!-- Photo -->
 								<div class="section_testimonials__photo">
-									<img src="assets/img/22.jpg" class="img-fluid" alt="...">
+									<img src="assets/img/Dicky.jpg" class="img-fluid" alt="...">
 								</div>
 
 							</div>
@@ -383,9 +360,8 @@
 								<!-- Blockquote -->
 								<blockquote class="section_testimonials__blockquote mx-auto">
 									<p>
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos at veritatis vitae modi ex quis
-										quibusdam error repudiandae adipisci dolore perspiciatis iste, vel fuga a, libero architecto
-										ratione deleniti sequi.
+										Restoran dengan pilihan menu yang menarik, beragam, dan juga memiliki rasa yang lezat, gurih, dan
+										tentunya mengenyangkan.
 									</p>
 									<footer class="text-muted">
 										Dicky Fattah Satria Dwi M

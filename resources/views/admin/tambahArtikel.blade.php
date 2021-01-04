@@ -4,7 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
+  <meta name="description"
+    content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
   <meta name="author" content="Webpixels">
   <title>Purpose – Application UI Kit</title>
   <!-- Favicon -->
@@ -31,7 +32,8 @@
         <h1 class="text-white">Nusantara</h1>
         <div class="ml-auto">
           <!-- Sidenav toggler -->
-          <div class="sidenav-toggler sidenav-toggler-dark d-md-none" data-action="sidenav-unpin" data-target="#sidenav-main">
+          <div class="sidenav-toggler sidenav-toggler-dark d-md-none" data-action="sidenav-unpin"
+            data-target="#sidenav-main">
             <div class="sidenav-toggler-inner">
               <i class="sidenav-toggler-line bg-white"></i>
               <i class="sidenav-toggler-line bg-white"></i>
@@ -45,7 +47,9 @@
         <!-- Avatar -->
         <div>
           <a href="card-listing.html#" class="avatar rounded-circle avatar-xl">
-            <img alt="Image placeholder" src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/theme/light/team-1-800x800.jpg" class="">
+            <img alt="Image placeholder"
+              src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/theme/light/team-1-800x800.jpg"
+              class="">
           </a>
           <div class="mt-4">
             <h5 class="mb-0 text-white">Selamat Datang,</h5>
@@ -87,32 +91,38 @@
       <nav class="navbar navbar-main navbar-expand-lg navbar-dark bg-primary navbar-border" id="navbar-main">
         <div class="container-fluid">
           <!-- Brand + Toggler (for mobile devices) -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse"
+            aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- User's navbar -->
           <div class="navbar-user d-lg-none ml-auto">
             <ul class="navbar-nav flex-row align-items-center">
               <li class="nav-item">
-                <a href="card-listing.html#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="far fa-bars"></i></a>
+                <a href="card-listing.html#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                  data-target="#sidenav-main"><i class="far fa-bars"></i></a>
               </li>
               <li class="nav-item">
-                <a href="card-listing.html#" class="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i class="far fa-search"></i></a>
+                <a href="card-listing.html#" class="nav-link nav-link-icon" data-action="omnisearch-open"
+                  data-target="#omnisearch"><i class="far fa-search"></i></a>
               </li>
               <li class="nav-item dropdown dropdown-animate">
-                <a class="nav-link nav-link-icon" href="card-listing.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-bell"></i></a>
+                <a class="nav-link nav-link-icon" href="card-listing.html#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false"><i class="far fa-bell"></i></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
                   <div class="py-3 px-3">
                     <h5 class="heading h6 mb-0">Notifications</h5>
                   </div>
                   <div class="list-group list-group-flush">
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="2 hrs ago">
                         <div>
                           <span class="avatar bg-primary text-white rounded-circle">AM</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Alex Michael <small class="float-right text-muted">2 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Alex Michael <small class="float-right text-muted">2 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -120,12 +130,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="3 hrs ago">
                         <div>
                           <span class="avatar bg-warning text-white rounded-circle">SW</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Sandra Wayne <small class="float-right text-muted">3 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Sandra Wayne <small class="float-right text-muted">3 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -133,12 +145,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="5 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="5 hrs ago">
                         <div>
                           <span class="avatar bg-info text-white rounded-circle">JM</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Jason Miller <small class="float-right text-muted">5 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Jason Miller <small class="float-right text-muted">5 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -146,12 +160,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="2 hrs ago">
                         <div>
                           <span class="avatar bg-dark text-white rounded-circle">MJ</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Mike Thomson <small class="float-right text-muted">2 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Mike Thomson <small class="float-right text-muted">2 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -159,12 +175,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="3 hrs ago">
                         <div>
                           <span class="avatar bg-primary text-white rounded-circle">RN</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Richard Nixon <small class="float-right text-muted">3 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Richard Nixon <small class="float-right text-muted">3 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -178,7 +196,8 @@
                 </div>
               </li>
               <li class="nav-item dropdown dropdown-animate">
-                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <span class="avatar avatar-sm rounded-circle">
                     <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg">
                   </span>
@@ -215,7 +234,8 @@
             <!-- Right menu -->
             <ul class="navbar-nav ml-lg-auto align-items-center d-none d-lg-flex">
               <li class="nav-item dropdown dropdown-animate">
-                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <div class="media media-pill align-items-center">
                     <span class="avatar rounded-circle">
                       <img alt="Image placeholder" src="/assets/admin/assets/img/theme/light/team-4-800x800.jpg">
@@ -244,10 +264,17 @@
                     <span>Activity</span>
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="card-listing.html#!" class="dropdown-item">
+                  @if (Auth::check() && Auth::user())
+                  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+							document.getElementById('logout-form').submit();">
                     <i class="far fa-sign-out-alt"></i>
                     <span>Logout</span>
                   </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                  </form>
+                  @endif
                 </div>
               </li>
             </ul>
@@ -259,32 +286,34 @@
       <!-- Page content -->
       <div class="page-content">
         <!-- delete modal -->
-        <div class="modal modal-danger fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modal_5" aria-hidden="true">
+        <div class="modal modal-danger fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modal_5"
+          aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-            <form action="/admin/menu/delete" method="post">
-              @csrf
-              <div class="modal-header">
-                <h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="py-3 text-center">
-                  <i class="fas fa-exclamation-circle fa-4x"></i>
-                  <h5 class="heading h4 mt-4">Should we stop now?</h5>
-                  <p>
-                    You can easy create stackable modal boxes. For example, your inline content or Ajax response can contain a gallery:
-                  </p>
-                  <input type="hidden" name="menuid" id="menuid">
+              <form action="/admin/menu/delete" method="post">
+                @csrf
+                <div class="modal-header">
+                  <h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-              </div>
-              <div class="modal-footer">
-                <button type="submit" class="btn btn-sm btn-primary">Hapus</button>
-                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal">Batal</button>
-              </div>
-            </form>
+                <div class="modal-body">
+                  <div class="py-3 text-center">
+                    <i class="fas fa-exclamation-circle fa-4x"></i>
+                    <h5 class="heading h4 mt-4">Should we stop now?</h5>
+                    <p>
+                      You can easy create stackable modal boxes. For example, your inline content or Ajax response can
+                      contain a gallery:
+                    </p>
+                    <input type="hidden" name="menuid" id="menuid">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-sm btn-primary">Hapus</button>
+                  <button type="button" class="btn btn-sm btn-white" data-dismiss="modal">Batal</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -308,7 +337,8 @@
         <div class="row">
           <div class="col-xl-12">
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <strong>Heads up!</strong> This is a info alert with <a href="alerts.html#" class="alert-link">an example link</a> — check it out!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <strong>Heads up!</strong> This is a info alert with <a href="alerts.html#" class="alert-link">an example
+                link</a> — check it out!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
@@ -348,7 +378,8 @@
                   <label class="form-control-label mb-0">
                     Konten artikel
                   </label>
-                  <textarea class="form-control" data-toggle="autosize" name="deskripsi" id="deskripsi" earows="3"></textarea>
+                  <textarea class="form-control" data-toggle="autosize" name="deskripsi" id="deskripsi"
+                    earows="3"></textarea>
                 </div>
                 <!-- Buttons -->
                 <div class="text-right">
@@ -362,33 +393,34 @@
         </div>
         <!-- Load more -->
 
-      <!-- Footer -->
-      <div class="footer pt-5 pb-4 footer-light" id="footer-main">
-        <div class="row text-center text-sm-left align-items-sm-center">
-          <div class="col-sm-6">
-            <p class="text-sm mb-0">&copy; 2021 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+        <!-- Footer -->
+        <div class="footer pt-5 pb-4 footer-light" id="footer-main">
+          <div class="row text-center text-sm-left align-items-sm-center">
+            <div class="col-sm-6">
+              <p class="text-sm mb-0">&copy; 2021 <a href="https://webpixels.io" class="h6 text-sm"
+                  target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Scripts -->
-  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
-  <script src="/assets/admin/assets/js/purpose.core.js"></script>
-  <!-- Page JS -->
-  <script src="/assets/admin/assets/libs/dropzone/dist/min/dropzone.min.js"></script>
-  <script src="/assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-  <script src="/assets/admin/assets/libs/quill/dist/quill.min.js"></script>
-  <script src="/assets/admin/assets/libs/select2/dist/js/select2.min.js"></script>
-  <script src="/assets/admin/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
-  <!-- Purpose JS -->
-  <script src="/assets/admin/assets/js/purpose.js"></script>
-  <!-- Demo JS - remove it when starting your project -->
-  <script src="/assets/admin/assets/js/demo.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104437451-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Scripts -->
+    <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+    <script src="/assets/admin/assets/js/purpose.core.js"></script>
+    <!-- Page JS -->
+    <script src="/assets/admin/assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="/assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="/assets/admin/assets/libs/quill/dist/quill.min.js"></script>
+    <script src="/assets/admin/assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="/assets/admin/assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+    <!-- Purpose JS -->
+    <script src="/assets/admin/assets/js/purpose.js"></script>
+    <!-- Demo JS - remove it when starting your project -->
+    <script src="/assets/admin/assets/js/demo.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104437451-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
     function gtag() {
       dataLayer.push(arguments);
@@ -396,21 +428,21 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-104437451-1');
-  </script>
-  <script>
-    $(document).on('click','#delete-button',function(){
+    </script>
+    <script>
+      $(document).on('click','#delete-button',function(){
         var menuid=$(this).attr('data_menuid');
         $('#menuid').val(menuid);
         $('#delete-modal').modal('show');
     });
-  </script>
-  <script>
+    </script>
+    <script>
       ClassicEditor
           .create( document.querySelector( '#deskripsi' ) )
           .catch( error => {
               console.error( error );
           } );
-  </script>
+    </script>
 </body>
 
 </html>

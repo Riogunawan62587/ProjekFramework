@@ -4,14 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
+  <meta name="description"
+    content="Purpose Application UI is the following chapter we've finished in order to create a complete and robust solution next to the already known Purpose Website UI.">
   <meta name="author" content="Webpixels">
   <title>Nusantara Dashboard</title>
   <!-- Favicon -->
   <link rel="icon" href="/assets/admin/assets/img/brand/favicon.png" type="image/png">
   <!-- Font Awesome 5 -->
   <!-- Sidenav header -->
-  <link rel="stylesheet" href="/assets/admin/assets/libs/@fortawesome/fontawesome-pro/css/all.min.css"><!-- Purpose CSS -->
+  <link rel="stylesheet" href="/assets/admin/assets/libs/@fortawesome/fontawesome-pro/css/all.min.css">
+  <!-- Purpose CSS -->
   <link rel="stylesheet" href="/assets/admin/assets/css/purpose.css" id="stylesheet">
 </head>
 
@@ -27,7 +29,8 @@
         <h1 class="text-white">Nusantara</h1>
         <div class="ml-auto">
           <!-- Sidenav toggler -->
-          <div class="sidenav-toggler sidenav-toggler-dark d-md-none" data-action="sidenav-unpin" data-target="#sidenav-main">
+          <div class="sidenav-toggler sidenav-toggler-dark d-md-none" data-action="sidenav-unpin"
+            data-target="#sidenav-main">
             <div class="sidenav-toggler-inner">
               <i class="sidenav-toggler-line bg-white"></i>
               <i class="sidenav-toggler-line bg-white"></i>
@@ -41,7 +44,9 @@
         <!-- Avatar -->
         <div>
           <a href="card-listing.html#" class="avatar rounded-circle avatar-xl">
-            <img alt="Image placeholder" src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/theme/light/team-1-800x800.jpg" class="">
+            <img alt="Image placeholder"
+              src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/theme/light/team-1-800x800.jpg"
+              class="">
           </a>
           <div class="mt-4">
             <h5 class="mb-0 text-white">Matte</h5>
@@ -83,32 +88,38 @@
       <nav class="navbar navbar-main navbar-expand-lg navbar-dark bg-primary navbar-border" id="navbar-main">
         <div class="container-fluid">
           <!-- Brand + Toggler (for mobile devices) -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-main-collapse"
+            aria-controls="navbar-main-collapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- User's navbar -->
           <div class="navbar-user d-lg-none ml-auto">
             <ul class="navbar-nav flex-row align-items-center">
               <li class="nav-item">
-                <a href="card-listing.html#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin" data-target="#sidenav-main"><i class="far fa-bars"></i></a>
+                <a href="card-listing.html#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                  data-target="#sidenav-main"><i class="far fa-bars"></i></a>
               </li>
               <li class="nav-item">
-                <a href="card-listing.html#" class="nav-link nav-link-icon" data-action="omnisearch-open" data-target="#omnisearch"><i class="far fa-search"></i></a>
+                <a href="card-listing.html#" class="nav-link nav-link-icon" data-action="omnisearch-open"
+                  data-target="#omnisearch"><i class="far fa-search"></i></a>
               </li>
               <li class="nav-item dropdown dropdown-animate">
-                <a class="nav-link nav-link-icon" href="card-listing.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="far fa-bell"></i></a>
+                <a class="nav-link nav-link-icon" href="card-listing.html#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false"><i class="far fa-bell"></i></a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg dropdown-menu-arrow p-0">
                   <div class="py-3 px-3">
                     <h5 class="heading h6 mb-0">Notifications</h5>
                   </div>
                   <div class="list-group list-group-flush">
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="2 hrs ago">
                         <div>
                           <span class="avatar bg-primary text-white rounded-circle">AM</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Alex Michael <small class="float-right text-muted">2 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Alex Michael <small class="float-right text-muted">2 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -116,12 +127,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="3 hrs ago">
                         <div>
                           <span class="avatar bg-warning text-white rounded-circle">SW</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Sandra Wayne <small class="float-right text-muted">3 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Sandra Wayne <small class="float-right text-muted">3 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -129,12 +142,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="5 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="5 hrs ago">
                         <div>
                           <span class="avatar bg-info text-white rounded-circle">JM</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Jason Miller <small class="float-right text-muted">5 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Jason Miller <small class="float-right text-muted">5 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -142,12 +157,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="2 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="2 hrs ago">
                         <div>
                           <span class="avatar bg-dark text-white rounded-circle">MJ</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Mike Thomson <small class="float-right text-muted">2 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Mike Thomson <small class="float-right text-muted">2 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -155,12 +172,14 @@
                       </div>
                     </a>
                     <a href="card-listing.html#" class="list-group-item list-group-item-action">
-                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right" data-title="3 hrs ago">
+                      <div class="d-flex align-items-center" data-toggle="tooltip" data-placement="right"
+                        data-title="3 hrs ago">
                         <div>
                           <span class="avatar bg-primary text-white rounded-circle">RN</span>
                         </div>
                         <div class="flex-fill ml-3">
-                          <div class="h6 text-sm mb-0">Richard Nixon <small class="float-right text-muted">3 hrs ago</small></div>
+                          <div class="h6 text-sm mb-0">Richard Nixon <small class="float-right text-muted">3 hrs
+                              ago</small></div>
                           <p class="text-sm lh-140 mb-0">
                             Some quick example text to build on the card title.
                           </p>
@@ -174,7 +193,8 @@
                 </div>
               </li>
               <li class="nav-item dropdown dropdown-animate">
-                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <span class="avatar avatar-sm rounded-circle">
                     <img alt="Image placeholder" src="../../assets/img/theme/light/team-4-800x800.jpg">
                   </span>
@@ -211,7 +231,8 @@
             <!-- Right menu -->
             <ul class="navbar-nav ml-lg-auto align-items-center d-none d-lg-flex">
               <li class="nav-item dropdown dropdown-animate">
-                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link pr-lg-0" href="card-listing.html#" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
                   <div class="media media-pill align-items-center">
                     <span class="avatar rounded-circle">
                       <img alt="Image placeholder" src="/assets/admin/assets/img/theme/light/team-4-800x800.jpg">
@@ -240,10 +261,17 @@
                     <span>Activity</span>
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="card-listing.html#!" class="dropdown-item">
+                  @if (Auth::check() && Auth::user())
+                  <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+							document.getElementById('logout-form').submit();">
                     <i class="far fa-sign-out-alt"></i>
                     <span>Logout</span>
                   </a>
+
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                  </form>
+                  @endif
                 </div>
               </li>
             </ul>
@@ -282,25 +310,31 @@
                     <div class="col-3">
                       <div class="custom-control custom-checkbox">
                         <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-1">
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-1">Mains</label>
+                        <label class="custom-control-label form-control-label text-muted"
+                          for="radio-project-1">Mains</label>
                       </div>
                     </div>
                     <div class="col-3">
                       <div class="custom-control custom-checkbox">
                         <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-2">
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-2">Lunch</label>
+                        <label class="custom-control-label form-control-label text-muted"
+                          for="radio-project-2">Lunch</label>
                       </div>
                     </div>
                     <div class="col-3">
                       <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3" checked>
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-3">Dinner</label>
+                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3"
+                          checked>
+                        <label class="custom-control-label form-control-label text-muted"
+                          for="radio-project-3">Dinner</label>
                       </div>
                     </div>
                     <div class="col-3">
                       <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3" checked>
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-3">Drinks</label>
+                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3"
+                          checked>
+                        <label class="custom-control-label form-control-label text-muted"
+                          for="radio-project-3">Drinks</label>
                       </div>
                     </div>
                   </div>
@@ -317,7 +351,8 @@
                     <label class="form-control-label">
                       Upload Gambar Menu
                     </label>
-                    <input type="file" name="file-1[]" id="file-1" class="custom-input-file" data-multiple-caption="{count} files selected" multiple="" />
+                    <input type="file" name="file-1[]" id="file-1" class="custom-input-file"
+                      data-multiple-caption="{count} files selected" multiple="" />
                     <label for="file-1">
                       <i class="fa fa-upload"></i>
                       <span>Choose a file…</span>
@@ -335,7 +370,8 @@
         <!-- Page title -->
         <div class="page-title">
           <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+            <div
+              class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
               <!-- Page title + Go Back button -->
               <div class="d-inline-block">
                 <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Daftar Pengguna</h5>
@@ -354,7 +390,8 @@
                 </div>
                 <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ...">
                 <div class="input-group-append">
-                  <a href="table-listing.html#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="far fa-times"></i></a>
+                  <a href="table-listing.html#" class="input-group-text bg-transparent" data-action="search-close"
+                    data-target="#actions-search"><i class="far fa-times"></i></a>
                 </div>
               </div>
             </div>
@@ -363,9 +400,11 @@
                 <h6 class="d-inline-block mb-0">Pengguna</h6>
               </div>
               <div class="col text-right">
-                <div class="actions"><a href="table-listing.html#" class="action-item mr-3" data-action="search-open" data-target="#actions-search"><i class="far fa-search"></i></a>
+                <div class="actions"><a href="table-listing.html#" class="action-item mr-3" data-action="search-open"
+                    data-target="#actions-search"><i class="far fa-search"></i></a>
                   <div class="dropdown mr-3">
-                    <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
                       <i class="far fa-filter"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -399,31 +438,32 @@
               </thead>
               <tbody class="list">
                 @foreach($users as $user)
-                  <tr>
-                    <th scope="row" class="text-center">
-                      {{$user->id}}
-                    </th>
-                    <td class="budget">
-                      {{$user->name}}
-                    </td>
-                    <td>
-                      {{$user->created_at}}
-                    </td>
-                    <td>
-                      {{$user->nomor_telepon}}
-                    </td>
-                    <td class="text-right">
-                      <div class="dropdown" data-toggle="dropdown">
-                        <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <i class="far fa-ellipsis-h"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right">
-                          <a href="table-listing.html#" class="dropdown-item">Lihat</a>
-                          <a href="table-listing.html#" class="dropdown-item">Hapus</a>
-                        </div>
+                <tr>
+                  <th scope="row" class="text-center">
+                    {{$user->id}}
+                  </th>
+                  <td class="budget">
+                    {{$user->name}}
+                  </td>
+                  <td>
+                    {{$user->created_at}}
+                  </td>
+                  <td>
+                    {{$user->nomor_telepon}}
+                  </td>
+                  <td class="text-right">
+                    <div class="dropdown" data-toggle="dropdown">
+                      <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="far fa-ellipsis-h"></i>
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-right">
+                        <a href="table-listing.html#" class="dropdown-item">Lihat</a>
+                        <a href="table-listing.html#" class="dropdown-item">Hapus</a>
                       </div>
-                    </td>
-                  </tr>
+                    </div>
+                  </td>
+                </tr>
                 @endforeach
               </tbody>
             </table>
@@ -431,30 +471,31 @@
         </div>
         <!-- Load more -->
 
-      <!-- Footer -->
-      <div class="footer pt-5 pb-4 footer-light" id="footer-main">
-        <div class="row text-center text-sm-left align-items-sm-center">
-          <div class="col-sm-6">
-            <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+        <!-- Footer -->
+        <div class="footer pt-5 pb-4 footer-light" id="footer-main">
+          <div class="row text-center text-sm-left align-items-sm-center">
+            <div class="col-sm-6">
+              <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm"
+                  target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Scripts -->
-  <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
-  <script src="/assets/admin/assets/js/purpose.core.js"></script>
-  <!-- Page JS -->
-  <script src="/assets/admin/assets/libs/autosize/dist/autosize.min.js"></script>
-  <script src="/assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-  <!-- Purpose JS -->
-  <script src="/assets/admin/assets/js/purpose.js"></script>
-  <!-- Demo JS - remove it when starting your project -->
-  <script src="/assets/admin/assets/js/demo.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104437451-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Scripts -->
+    <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+    <script src="/assets/admin/assets/js/purpose.core.js"></script>
+    <!-- Page JS -->
+    <script src="/assets/admin/assets/libs/autosize/dist/autosize.min.js"></script>
+    <script src="/assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <!-- Purpose JS -->
+    <script src="/assets/admin/assets/js/purpose.js"></script>
+    <!-- Demo JS - remove it when starting your project -->
+    <script src="/assets/admin/assets/js/demo.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104437451-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
     function gtag() {
       dataLayer.push(arguments);
@@ -462,7 +503,7 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-104437451-1');
-  </script>
+    </script>
 </body>
 
 </html>
