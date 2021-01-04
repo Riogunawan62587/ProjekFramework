@@ -62,3 +62,7 @@ Route::post('/admin/artikel/detail','ArticleController@article_detail');
 Route::post('/admin/artikel/edit','ArticleController@show_edit');
 Route::post('/admin/artikel/update','ArticleController@update_article');
 Route::post('/admin/artikel/delete','ArticleController@destroy');
+
+Route::post('/admin/reservasi/detail', 'ReservationController@reservation_detail');
+Route::post('/admin/reservasi','ReservationController@reservation_change_status');
+Route::post('/admin/reservasi/hapus','ReservationController@destroy_reservation_admin');

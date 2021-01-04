@@ -44,8 +44,8 @@
             <img alt="Image placeholder" src="https://preview.webpixels.io/purpose-application-ui-kit/assets/img/theme/light/team-1-800x800.jpg" class="">
           </a>
           <div class="mt-4">
-            <h5 class="mb-0 text-white">Matte</h5>
-            <span class="d-block text-sm text-white opacity-8 mb-3">Admin Restoran</span>
+            <h5 class="mb-0 text-white">Selamat Datang,</h5>
+            <span class="d-block text-sm text-white opacity-8 mb-3">John Snow</span>
           </div>
         </div>
       </div>
@@ -254,218 +254,199 @@
 
       <!-- Page content -->
       <div class="page-content">
-        <!-- Create project modal -->
-        <div class="modal fade" id="modal-project-create" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- delete modal -->
+        <div class="modal modal-danger fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modal_5" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
+            <form action="/admin/artikel/delete" method="post">
+              @csrf
+              <div class="modal-header">
+                <h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
               <div class="modal-body">
-                <!-- Project name -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Nama Menu
-                  </label>
-                  <input type="text" class="form-control">
-                </div>
-                <!-- Project description -->
-                <div class="form-group">
-                  <label class="form-control-label mb-0">
-                    Deskripsi menu
-                  </label>
-                  <textarea class="form-control" data-toggle="autosize" rows="3"></textarea>
-                </div>
-                <!-- Project privacy -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Kategori Produk
-                  </label>
-                  <div class="row">
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-1">
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-1">Mains</label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-2">
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-2">Lunch</label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3" checked>
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-3">Dinner</label>
-                      </div>
-                    </div>
-                    <div class="col-3">
-                      <div class="custom-control custom-checkbox">
-                        <input type="radio" class="custom-control-input" name="project-privacy" id="radio-project-3" checked>
-                        <label class="custom-control-label form-control-label text-muted" for="radio-project-3">Drinks</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Project members -->
-                <div class="form-group">
-                  <label class="form-control-label">
-                    Harga
-                  </label>
-                  <input type="text" class="form-control">
-                </div>
-                <div class="form-group">
-                  <div>
-                    <label class="form-control-label">
-                      Upload Gambar Menu
-                    </label>
-                    <input type="file" name="file-1[]" id="file-1" class="custom-input-file" data-multiple-caption="{count} files selected" multiple="" />
-                    <label for="file-1">
-                      <i class="fa fa-upload"></i>
-                      <span>Choose a file…</span>
-                    </label>
-                  </div>
+                <div class="py-3 text-center">
+                  <i class="fas fa-exclamation-circle fa-4x"></i>
+                  <h5 class="heading h4 mt-4">Should we stop now?</h5>
+                  <p>
+                    You can easy create stackable modal boxes. For example, your inline content or Ajax response can contain a gallery:
+                  </p>
+                  <input type="hidden" name="article_id" id="articleid">
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-sm btn-primary rounded-pill mr-auto">Save</button>
-                <button type="button" class="btn btn-sm btn-link text-danger px-2" data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-sm btn-primary">Hapus</button>
+                <button type="button" class="btn btn-sm btn-white" data-dismiss="modal">Batal</button>
               </div>
-            </div>
-          </div>
-        </div>
-        <!-- Page title -->
-        <div class="page-title">
-          <div class="row justify-content-between align-items-center">
-            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
-              <!-- Page title + Go Back button -->
-              <div class="d-inline-block">
-                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Daftar Reservasi</h5>
-              </div>
+            </form>
             </div>
           </div>
         </div>
 
+        <!-- Create project modal -->
+
+        <!-- Page title -->
+        <div class="page-title">
+          <div class="row justify-content-between align-items-center">
+            <div
+              class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+              <!-- Page title + Go Back button -->
+              <div class="d-inline-block">
+                <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Detail Reservasi</h5>
+              </div>
+            </div>
+            <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
+              <div class="row no-gutters">
+                <div class="text-right col-auto bg-primary-dark py-2 px-5 rounded shadow-sm">
+                  <span class="text-white">{{$table->nama}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project cards -->
         @if(session('success'))
         <div class="row">
           <div class="col-xl-12">
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-              <span>{{Session::get('success')}}</span>
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <strong>Heads up!</strong> This is a info alert with <a href="alerts.html#" class="alert-link">an example link</a> — check it out!<button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
           </div>
         </div>
         @endif
-        <!-- Project cards -->
-        <div class="card">
-          <!-- Card header -->
-          <div class="card-header actions-toolbar border-0">
-            <div class="actions-search" id="actions-search">
-              <div class="input-group input-group-merge input-group-flush">
-                <div class="input-group-prepend">
-                  <span class="input-group-text bg-transparent"><i class="far fa-search"></i></span>
+
+        <div class="row align-items-center">
+          <form class="col-xl-12" action="/admin/reservasi" method="post" enctype="multipart/form-data">
+            @csrf
+            <div class="card">
+              <div class="card-body">
+                <h5>Data Pemesan</h5>
+                <div class="form-group">
+                  <label class="form-control-label">
+                    Nama Pemesan
+                  </label>
+                  <input type="text" name="name" value="{{$user->name}}" class="form-control" disabled>
                 </div>
-                <input type="text" class="form-control form-control-flush" placeholder="Type and hit enter ...">
-                <div class="input-group-append">
-                  <a href="table-listing.html#" class="input-group-text bg-transparent" data-action="search-close" data-target="#actions-search"><i class="far fa-times"></i></a>
+                <div class="form-group">
+                  <label class="form-control-label">
+                    Nomor Telepon
+                  </label>
+                  <input type="text" name="name" value="{{$user->nomor_telepon}}" class="form-control" disabled>
+                </div>
+                <div class="form-group">
+                  <label class="form-control-label">
+                    Email
+                  </label>
+                  <input type="text" name="name" value="{{$user->email}}" class="form-control" disabled>
                 </div>
               </div>
             </div>
-            <div class="row justify-content-between align-items-center">
-              <div class="col">
-                <h6 class="d-inline-block mb-0">Reservasi</h6>
+            <div class="card">
+              <div class="card-body">
+                <h5>Data Reservasi</h5>
+                <div class="row">
+                  <div class="form-group col-5">
+                    <label class="form-control-label">
+                      Tanggal
+                    </label>
+                    <input type="text" name="name" value="{{$reservation->tanggal}}" class="form-control" disabled>
+                  </div>
+                  <div class="form-group col-4">
+                    <label class="form-control-label">
+                      Jam
+                    </label>
+                    <input type="text" name="name" value="{{$reservation->jam}}" class="form-control" disabled>
+                  </div>
+                  <div class="form-group col-3">
+                    <label class="form-control-label">
+                      Jumlah Orang
+                    </label>
+                    <input type="text" name="name" value="{{$reservation->jumlah_orang}}" class="form-control" disabled>
+                  </div>
+                </div>
               </div>
-              <div class="col text-right">
-                <div class="actions"><a href="table-listing.html#" class="action-item mr-3" data-action="search-open" data-target="#actions-search"><i class="far fa-search"></i></a>
-                  <div class="dropdown mr-3">
-                    <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="far fa-filter"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a class="dropdown-item" href="table-listing.html#">
-                        <i class="far fa-sort-amount-down"></i>Newest
-                      </a>
-                      <a class="dropdown-item" href="table-listing.html#">
-                        <i class="far fa-sort-alpha-down"></i>From A-Z
-                      </a>
-                      <a class="dropdown-item" href="table-listing.html#">
-                        <i class="far fa-sort-alpha-up"></i>From Z-A
+            </div>
+
+            <div class="card">
+              <div class="card-body">
+                <h5>Status Pemesanan</h5>
+                <div class="row align-items-center mb-3">
+                  <div class="col-md-6">
+                    <span>Status Pemesanan</span>
+                  </div>
+                  <div class="col-auto bg-primary rounded p-2">
+                    @if($reservation->status == 0)<span class="text-white">Belum diverifikasi</span>@endif
+                    @if($reservation->status == 1)<span class="text-white">Diverifikasi</span>@endif
+                    @if($reservation->status == 2)<span class="text-white">Dibayar</span>@endif
+                  </div>
+                </div>
+                <div class="row align-items-center mb-3">
+                  <div class="col-md-6">
+                    <span>Bukti Pembayaran</span>
+                  </div>
+                  <div class="col-auto">
+                    @if($reservation->bukti_pembayaran == null)<span>Belum ada bukti</span>@endif
+                    @if($reservation->bukti_pembayaran != null)<span>{{$reservation->bukti_pembayaran}}</span>@endif
+                  </div>
+                  @if($reservation->bukti_pembayaran != null)
+                    <div class="col-auto">
+                      <a href="#" id="modal-bukti" class="btn btn-primary">
+                        <img id="imageresource" src="{{ url('/assets/img/'.$reservation->bukti_pembayaran) }}" hidden>
+                        <span>Lihat</span>
                       </a>
                     </div>
-                  </div>
-
+                  @endif
                 </div>
+                <div class="row align-items-center">
+                  <div class="col-md-6">
+                    <span>Ubah Status Verifikasi</span>
+                  </div>
+                  <div id="status-select" class="tab-pane tab-example-result fade show active col-md-6 mb-3 pl-0" role="tabpanel"
+                    aria-labelledby="select-menu-result-tab">
+                    <select class="custom-select" name="status" @if($reservation->status == 2) disabled @endif>
+                      <option selected hidden>Pilih Status</option>
+                      <option value="0" @if($reservation->status == 0) selected @endif>Belum diverifikasi</option>
+                      <option value="1" @if($reservation->status == 1) selected @endif>Verifikasi</option>
+                      <option value="2" @if($reservation->status == 2) selected @endif>Dibayar</option>
+                    </select>
+                  </div>
+                </div>
+
+                @if($reservation->status == 0 || $reservation->status == 1)
+                  <div class="text-right">
+                    <a href="/admin/reservasi" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
+                    <input type="hidden" name="reservation_id" value="{{$reservation->id}}">
+                    <button type="submit" class="btn btn-sm btn-primary rounded-pill">Simpan</button>
+                  </div>
+                @endif
+            </div>
+          </form>
+        </div>
+        <!-- Load more -->
+
+        <!-- bootstrap modal image -->
+        <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              </div>
+              <div class="modal-body">
+                <img src="" id="imagepreview" class="img-fluid">
               </div>
             </div>
           </div>
-          <!-- Table -->
-          <div class="table-responsive">
-            <table class="table align-items-center">
-              <thead>
-                <tr>
-                  <th scope="col" class="sort text-center" data-sort="name">ID</th>
-                  <th scope="col" class="sort" data-sort="budget">Nama Pemesan</th>
-                  <th scope="col" class="sort" data-sort="status">Tanggal</th>
-                  <th scope="col">Jam</th>
-                  <th scope="col" class="sort" data-sort="completion">Status</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody class="list">
-                @foreach($reservations as $reservation)
-                  @foreach($users as $user)
-                      @if($reservation->user_id == $user->id)
-                        <tr>
-                          <th scope="row" class="text-center">
-                            {{$reservation->id}}
-                          </th>
-                          <td class="budget">
-                            {{$user->name}}
-                          </td>
-                          <td>
-                            {{$reservation->tanggal}}
-                          </td>
-                          <td>
-                            {{$reservation->jam}}
-                          </td>
-                          @if($reservation->status == 0) <td>Belum diverifikasi</td>@endif
-                          @if($reservation->status == 1) <td>Diverifikasi</td>@endif
-                          @if($reservation->status == 2) <td>Dibayar</td>@endif
-                          <td class="text-right">
-                            <div class="dropdown" data-toggle="dropdown">
-                              <a href="table-listing.html#" class="action-item" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="far fa-ellipsis-h"></i>
-                              </a>
-                              <div class="dropdown-menu dropdown-menu-right">
-                                <form action="/admin/reservasi/detail" method="post">
-                                  @csrf
-                                  <input type="hidden" name="reservation_id" value="{{$reservation->id}}">
-                                  <button type="submit" class="dropdown-item">Lihat</button>
-                                </form>
-                                <form action="/admin/reservasi/hapus" method="post">
-                                  @csrf
-                                  <input type="hidden" name="reservation_id" value="{{$reservation->id}}">
-                                  <button type="submit" class="dropdown-item">Hapus</button>
-                                </form>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      @endif
-                    @endforeach
-                @endforeach
-
-              </tbody>
-            </table>
-          </div>
         </div>
-        <!-- Load more -->
 
       <!-- Footer -->
       <div class="footer pt-5 pb-4 footer-light" id="footer-main">
         <div class="row text-center text-sm-left align-items-sm-center">
-          <div class="col-sm-6">
-            <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+          <div class="col-sm-12">
+            <p class="text-sm mb-0">&copy; 2021 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -492,6 +473,12 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-104437451-1');
+  </script>
+  <script>
+    $("#modal-bukti").on("click", function() {
+      $('#imagepreview').attr('src', $('#imageresource').attr('src')); // here asign the image to the modal when the user click the enlarge link
+      $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+    });
   </script>
 </body>
 

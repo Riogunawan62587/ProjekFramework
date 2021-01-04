@@ -198,7 +198,7 @@
                     <span>Orders</span>
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="../authentication/login.html" class="dropdown-item">
+                  <a href="{{ route('logout') }}" class="dropdown-item">
                     <i class="far fa-sign-out-alt"></i>
                     <span>Logout</span>
                   </a>
@@ -240,7 +240,7 @@
                     <span>Activity</span>
                   </a>
                   <div class="dropdown-divider"></div>
-                  <a href="card-listing.html#!" class="dropdown-item">
+                  <a href="{{ route('logout') }}" class="dropdown-item">
                     <i class="far fa-sign-out-alt"></i>
                     <span>Logout</span>
                   </a>

@@ -7,6 +7,7 @@ use App\Reservation;
 use App\User;
 use App\Table;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Arr;
 
 class ReservationController extends Controller
 {
@@ -60,5 +61,34 @@ class ReservationController extends Controller
     {
         $reservation = Reservation::where('id', $request->reservasiid)->delete();
         return redirect('/reservasi_saya')->with('success', 'Data berhasil dihapus');
+    }
+
+    public function reservation_detail(Request $request){
+        $reservation = Reservation::where('id',$request->reservation_id)->first();
+        $user = User::where('id',$reservation->user_id)->first();
+        $table = Table::where('id',$reservation->table_id)->first();
+
+        return view('admin.detailReservasi',compact('reservation','user','table'));
+    }
+
+    public function reservation_change_status(Request $request){
+        $reservation = Reservation::where('id',$request->reservation_id)->first();
+
+        $reservation->status = $request->status;
+
+        $booked_table = Reservation::where('tanggal', $reservation->tanggal)->where('jam', $reservation->jam)->where('table_id', '!=', 0)->pluck('table_id');
+        $available_table = Table::whereNotIn('id',$booked_table)->get()->pluck('id')->toArray();
+        $given_table_id = Arr::random($available_table);
+
+        $reservation->table_id = $given_table_id;
+        $reservation->update();
+
+        return redirect('/admin/reservasi')->with('success','Status reservasi berhasil dirubah!');
+    }
+
+    public function destroy_reservation_admin(Request $request){
+      $reservation = Reservation::where('id',$request->reservation_id)->delete();
+
+      return redirect('/admin/reservasi')->with('success','Data reservasi berhasil dihapus!');
     }
 }
