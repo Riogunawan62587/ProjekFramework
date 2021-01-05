@@ -52,6 +52,9 @@ Route::post('/admin/meja/delete', 'TableController@destroy');
 Route::post('admin/meja/update', 'TableController@update');
 
 Route::get('/admin/pengguna', 'UserController@users_list');
+Route::post('/admin/pengguna/detail', 'UserController@user_detail');
+Route::post('/admin/pengguna/hapus', 'UserController@destroy');
+
 
 Route::get('/admin/reservasi', 'ReservationController@reservations_list');
 

@@ -17,7 +17,6 @@ class TableController extends Controller
     public function create(Request $request){
       $table = new Table;
       $table->nama = $request->nama;
-      $table->kapasitas = $request->kapasitas;
       $table->save();
 
       return redirect('/admin/meja')->with('success','Data meja berhasil ditambahkan!');
@@ -33,7 +32,6 @@ class TableController extends Controller
       $table = Table::where('id',$request->id)->first();
 
       $table->nama = $request->nama;
-      $table->kapasitas = $request->kapasitas;
       $table->update();
 
       return redirect('/admin/meja')->with('success','Data meja berhasil diupdate!');

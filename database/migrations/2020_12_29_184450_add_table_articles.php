@@ -15,7 +15,7 @@ class AddTableArticles extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('tanggal');
+            $table->dateTime('tanggal');
             $table->string('judul');
             $table->longText('deskripsi');
             $table->string('gambar');

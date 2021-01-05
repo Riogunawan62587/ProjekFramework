@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use Carbon\Carbon;
 
 class ArticleController extends Controller
 {
@@ -26,6 +27,7 @@ class ArticleController extends Controller
       $article = new Article;
       $article->judul = $request->judul;
       $article->deskripsi = $request->deskripsi;
+      $article->tanggal = Carbon::now('Asia/Jakarta');
       if ($request->hasFile('gambar')) {
         $request->file('gambar')->move('assets/img', $request->file('gambar')->getClientOriginalName());
         $article->gambar = $request->file('gambar')->getClientOriginalName();
