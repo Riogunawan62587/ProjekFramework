@@ -15,6 +15,13 @@ class TableController extends Controller
     }
 
     public function create(Request $request){
+
+      $this->validate($request, [
+        'nama'                    => 'required',
+      ],[
+        'nama.required'           => "Nomor meja tidak boleh kosong!",
+      ]);
+
       $table = new Table;
       $table->nama = $request->nama;
       $table->save();
@@ -31,7 +38,7 @@ class TableController extends Controller
     public function update(Request $request){
       $table = Table::where('id',$request->id)->first();
 
-      $table->nama = $request->nama;
+      $table->nama = $request->nama_edit;
       $table->update();
 
       return redirect('/admin/meja')->with('success','Data meja berhasil diupdate!');

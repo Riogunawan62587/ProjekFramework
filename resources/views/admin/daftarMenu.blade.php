@@ -52,6 +52,9 @@
                 Nama Menu
               </label>
               <input type="text" name="nama" class="form-control">
+              @error('nama')
+                <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <!-- Project description -->
             <div class="form-group">
@@ -59,6 +62,9 @@
                 Deskripsi menu
               </label>
               <textarea class="form-control" data-toggle="autosize" name="deskripsi" rows="3"></textarea>
+              @error('deskripsi')
+                <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <!-- Project privacy -->
             <div class="form-group">
@@ -99,12 +105,18 @@
                   </div>
                 </div>
               </div>
+              @error('tipe')
+                <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="form-group">
               <label class="form-control-label">
                 Harga
               </label>
               <input type="text" name="harga" class="form-control">
+              @error('harga')
+                <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
             <div class="form-group">
               <div>
@@ -116,6 +128,9 @@
                   <i class="fa fa-upload"></i>
                   <span>Choose a file…</span>
                 </label>
+                @error('gambar')
+                  <small class="text-danger">{{ $message }}</small>
+                @enderror
               </div>
             </div>
           </div>
@@ -219,6 +234,7 @@
 
   $(document).ready(function() {
     $("#menu_nav").addClass("active");
+    @if(Session::has('errors')) $('#modal-project-create').modal({show: true}); @endif
   });
 </script>
 @endsection

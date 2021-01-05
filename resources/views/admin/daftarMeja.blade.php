@@ -51,6 +51,9 @@
                 Nomor Meja
               </label>
               <input type="text" name="nama" class="form-control">
+              @error('nama')
+                <small class="text-danger">{{ $message }}</small>
+              @enderror
             </div>
           </div>
           <div class="modal-footer">
@@ -126,20 +129,20 @@
     <div class="modal fade" id="edit-modal-{{$table->id}}" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <form action="/admin/meja/update" method="post">
+          <form action="/admin/meja/update" method="post" id="edit-form">
             @csrf
             <div class="modal-body">
               <!-- Project name -->
               <div class="form-group">
                 <label class="form-control-label">
-                  Nama Meja
+                  Nomor Meja
                 </label>
-                <input type="text" name="nama" value="{{$table->nama}}" class="form-control">
+                <input type="text" name="nama_edit" value="{{$table->nama}}" class="form-control" id="edit_nomor_meja">
               </div>
             </div>
             <div class="modal-footer">
               <input type="hidden" name="id" value="{{$table->id}}">
-              <button type="submit" class="btn btn-sm btn-primary rounded-pill mr-auto">Save</button>
+              <button type="submit" class="btn btn-sm btn-primary rounded-pill mr-auto" id="submit_edit">Save</button>
               <button type="button" class="btn btn-sm btn-link text-danger px-2"
                 data-dismiss="modal">Batal</button>
             </div>
@@ -160,6 +163,7 @@
     </div>
   </div>
 </div>
+
 @endsection
 
 @section('footer')
@@ -170,8 +174,24 @@
     $('#delete-modal').modal('show');
   });
 
+  $('#submit_edit').click(function(){
+    validateForm();
+  })
+
+  function validateForm(){
+    var nomor_meja = $('#edit_nomor_meja').val();
+
+    if (nomor_meja == "") {
+      $('#edit-form').submit(function(e){
+        e.preventDefault();
+      });
+      $('#edit_nomor_meja').after('<small class="text-danger">Nomor Meja tidak boleh kosong!</small>');
+    }
+  }
+
   $(document).ready(function() {
     $("#meja_nav").addClass("active");
+    @if(Session::has('errors')) $('#modal-project-create').modal({show: true}); @endif
   });
 </script>
 @endsection

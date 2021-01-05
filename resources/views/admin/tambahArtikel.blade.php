@@ -35,6 +35,9 @@
                 <i class="fa fa-upload"></i>
                 <span>Choose a file…</span>
               </label>
+              @error('gambar')
+                <small class="text-danger">{{$message}}</small>
+              @enderror
             </div>
           </div>
         </div>
@@ -45,19 +48,24 @@
             <label class="form-control-label">
               Judul artikel
             </label>
-            <input type="text" name="judul" class="form-control">
+            <input type="text" name="judul" class="form-control @error('judul') is-invalid @enderror">
+            @error('judul')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
 
           <div class="form-group">
             <label class="form-control-label mb-0">
               Konten artikel
             </label>
-            <textarea class="form-control" data-toggle="autosize" name="deskripsi" id="deskripsi"
-              earows="3"></textarea>
+            <textarea class="form-control @error('deskripsi') is-invalid @enderror" data-toggle="autosize" name="deskripsi" id="deskripsi" rows="3"></textarea>
+            @error('deskripsi')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
 
           <div class="text-right">
-            <a href="create-new.html#" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
+            <a href="/admin/artikel" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
             <button type="submit" class="btn btn-sm btn-primary rounded-pill">Simpan</button>
           </div>
         </div>

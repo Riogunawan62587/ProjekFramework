@@ -24,6 +24,19 @@ class ArticleController extends Controller
     }
 
     public function add_article(Request $request){
+
+      $this->validate($request, [
+        'judul' => 'required',
+        'deskripsi' => 'required',
+        'gambar' => 'image|required|max:10000',
+      ],[
+        'judul.required'           => "Judul Artikel tidak boleh kosong!",
+        'deskripsi.required'         => "Isi Artikel tidak boleh kosong!",
+        'gambar.max'               => "Ukuran file tidak boleh lebih dari 10MB",
+        'gambar.required'          => "Silahkan upload file gambar terlebih dahulu!",
+        'gambar.image'             => "Tipe file tidak valid. Anda harus mengunggah file berbentuk gambar!",
+      ]);
+
       $article = new Article;
       $article->judul = $request->judul;
       $article->deskripsi = $request->deskripsi;
@@ -50,6 +63,19 @@ class ArticleController extends Controller
     }
 
     public function update_article(Request $request){
+
+      // $this->validate($request, [
+      //   'judul' => 'required',
+      //   'deskripsi' => 'required',
+      //   'gambar' => 'image|max:10000',
+      // ],[
+      //   'judul.required'           => "Judul Artikel tidak boleh kosong!",
+      //   'deskripsi.required'         => "Isi Artikel tidak boleh kosong!",
+      //   'gambar.max'               => "Ukuran file tidak boleh lebih dari 10MB",
+      //   'gambar.image'             => "Tipe file tidak valid. Anda harus mengunggah file berbentuk gambar!",
+      // ]);
+
+
       $article = Article::where('id', $request->article_id)->first();
 
       $article->judul = $request->judul;

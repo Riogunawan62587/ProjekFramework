@@ -64,6 +64,7 @@ Route::group(['middleware' => ['auth','CheckRole:Admin']], function(){
   Route::post('/admin/artikel/tambah','ArticleController@add_article');
   Route::post('/admin/artikel/detail','ArticleController@article_detail');
   Route::post('/admin/artikel/edit','ArticleController@show_edit');
+  // Route::get('/admin/artikel/edit','ArticleController@show_edit');
   Route::post('/admin/artikel/update','ArticleController@update_article');
   Route::post('/admin/artikel/delete','ArticleController@destroy');
 

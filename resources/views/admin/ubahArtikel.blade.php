@@ -6,7 +6,7 @@
 
 @section('page_content')
 <div class="page-content">
-  
+
   <!-- Page title -->
   <div class="page-title">
     <div class="row justify-content-between align-items-center">
@@ -42,6 +42,9 @@
                 <i class="fa fa-upload"></i>
                 <span>Choose a file…</span>
               </label>
+              @error('gambar')
+                <small class="text-danger">{{$message}}</small>
+              @enderror
             </div>
           </div>
         </div>
@@ -52,15 +55,20 @@
             <label class="form-control-label">
               Judul artikel
             </label>
-            <input type="text" name="judul" value="{{$article->judul}}" class="form-control">
+            <input type="text" name="judul" value="{{$article->judul}}" class="form-control @error('judul') is-invalid @enderror">
+            @error('judul')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
 
           <div class="form-group">
             <label class="form-control-label mb-0">
               Konten artikel
             </label>
-            <textarea class="form-control" data-toggle="autosize" name="deskripsi" id="deskripsi"
-              earows="3">{{$article->deskripsi}}</textarea>
+            <textarea class="form-control @error('deskripsi') is-invalid @enderror" data-toggle="autosize" name="deskripsi" id="deskripsi" rows="3">{{$article->deskripsi}}</textarea>
+            @error('deskripsi')
+              <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
           </div>
 
           <div class="text-right">
