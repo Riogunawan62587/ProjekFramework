@@ -98,11 +98,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
                   <h6 class="dropdown-header px-0">Hi, Heather!</h6>
-                  <a href="#" class="dropdown-item">
-                    <i class="far fa-user"></i>
-                    <span>My profile</span>
-                  </a>
-                  <div class="dropdown-divider"></div>
                   @if (Auth::check() && Auth::user())
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                       <i class="far fa-sign-out-alt"></i>
@@ -136,11 +131,6 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
                   <h6 class="dropdown-header px-0">Hi, {{Auth()->user()->name }}!</h6>
-                  <a href="#" class="dropdown-item">
-                    <i class="far fa-user"></i>
-                    <span>My profile</span>
-                  </a>
-                  <div class="dropdown-divider"></div>
                   @if (Auth::check() && Auth::user())
                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                       <i class="far fa-sign-out-alt"></i>
