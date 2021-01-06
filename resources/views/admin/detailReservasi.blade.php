@@ -19,9 +19,11 @@
       </div>
       <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
         <div class="row no-gutters">
+          @if($reservation->table_id != null)
           <div class="text-right col-auto bg-primary-dark py-2 px-5 rounded shadow-sm">
-            <span class="text-white">{{$table->nama}}</span>
+              <span class="text-white">{{$table->nama}}</span>
           </div>
+          @endif
         </div>
       </div>
     </div>
@@ -156,7 +158,7 @@
     <div class="row text-center text-sm-left align-items-sm-center">
       <div class="col-sm-12">
         <p class="text-sm mb-0">&copy; 2021 <a href="https://webpixels.io" class="h6 text-sm"
-            target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+            target="_blank">Kelompok 10B PBF</a>. All rights reserved.</p>
       </div>
     </div>
   </div>

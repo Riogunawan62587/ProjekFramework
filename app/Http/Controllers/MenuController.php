@@ -30,19 +30,18 @@ class MenuController extends Controller
   {
     $this->validate($request, [
       'nama' => 'required',
-      'tipe' => 'required',
+      'kategori' => 'required',
       'deskripsi' => 'required|max:255',
       'harga' => 'required|numeric',
-      'gambar' => 'image|required|max:10000'
+      'gambar' => 'required|max:10000'
     ],[
       'nama.required'           => "Nama tidak boleh kosong!",
-      'tipe.required'           => "Tipe tidak boleh kosong!",
+      'kategori.required'           => "Tipe tidak boleh kosong!",
       'deskripsi.required'      => "Deskripsi tidak boleh kosong!",
       'deskripsi.max'           => "Deskripsi tidak boleh lebih dari 255 karakter!",
       'harga.required'          => "Harga tidak boleh kosong!",
       'harga.numeric'           => "Harga harus berupa angka!",
       'gambar.required'         => "Silahkan upload file gambar terlebih dahulu!",
-      'gambar.image'            => "Tipe file tidak valid. Anda harus mengunggah file berbentuk gambar!",
       'gambar.max'              => "Ukuran file gambar tidak boleh lebih dari 10 mb!",
     ]);
 

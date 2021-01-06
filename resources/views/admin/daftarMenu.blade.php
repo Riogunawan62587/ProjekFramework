@@ -217,7 +217,7 @@
     <div class="row text-center text-sm-left align-items-sm-center">
       <div class="col-sm-6">
         <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm"
-            target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+            target="_blank">Kelompok 10B PBF</a>. All rights reserved.</p>
       </div>
     </div>
   </div>

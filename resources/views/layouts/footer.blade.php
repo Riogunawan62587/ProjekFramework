@@ -51,7 +51,7 @@
 
         <!-- Copyright -->
         <div class="section_footer__copyright">
-          &copy; <span id="js-current-year"></span> Kelompok 7 PBF-B. All rights reserved.
+          &copy; <span id="js-current-year"></span> Kelompok 10B PBF. All rights reserved.
         </div>
 
       </div>

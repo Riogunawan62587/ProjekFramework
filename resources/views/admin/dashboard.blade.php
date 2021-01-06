@@ -98,7 +98,7 @@
     @foreach($reservations as $reservation)
       @foreach($tables as $table)
         @foreach($users as $user)
-          @if($reservation->user_id == $user->id && $reservation->table_id == $table->id || $reservation->table_id == null )
+          @if($reservation->user_id == $user->id || $reservation->table_id == $table->id || $reservation->table_id == null )
           <div class="col-xl-12 col-md-12">
             <div class="card card-stats">
               <!-- Card body -->
@@ -141,7 +141,7 @@
     <div class="row text-center text-sm-left align-items-sm-center">
       <div class="col-sm-6">
         <p class="text-sm mb-0">&copy; 2021 <a href="https://webpixels.io" class="h6 text-sm"
-            target="_blank">Kelompok 7 PBF</a>. All rights reserved.</p>
+            target="_blank">Kelompok 10B PBF</a>. All rights reserved.</p>
       </div>
     </div>
   </div>
