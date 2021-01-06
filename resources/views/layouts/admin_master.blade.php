@@ -43,7 +43,7 @@
           </a>
           <div class="mt-4">
             <h5 class="mb-0 text-white">Selamat Datang,</h5>
-            <span class="d-block text-sm text-white opacity-8 mb-3">{{ auth()->user()->name }}</span>
+            <span class="d-block text-sm text-white opacity-8 mb-3">{{ Auth::user()->name }}</span>
           </div>
         </div>
       </div>
@@ -104,14 +104,15 @@
                   </a>
                   <div class="dropdown-divider"></div>
                   @if (Auth::check() && Auth::user())
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                      <i class="far fa-sign-out-alt"></i>
-                      <span>Logout</span>
-                    </a>
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="far fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                  </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                    </form>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                  </form>
                   @endif
                 </div>
               </li>
@@ -142,14 +143,15 @@
                   </a>
                   <div class="dropdown-divider"></div>
                   @if (Auth::check() && Auth::user())
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                      <i class="far fa-sign-out-alt"></i>
-                      <span>Logout</span>
-                    </a>
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <i class="far fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                  </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                    </form>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                  </form>
                   @endif
                 </div>
               </li>

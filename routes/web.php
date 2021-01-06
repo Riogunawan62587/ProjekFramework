@@ -13,33 +13,34 @@
 
 Auth::routes();
 
-Route::get('/', function () {
-  return view('index');
-})->name('home');
+Route::get('/', 'LandingController@index')->name('landing.index');
 
-// Controller Home
-Route::get('/home', 'HomeController@index')->name('home.index');
+Route::group(['middleware' => ['auth', 'CheckRole:Pengguna']], function () {
 
+  // Controller Home
+  Route::get('/home', 'HomeController@index')->name('home.index');
 
-// Controller Daftar Menu
-Route::get('/menu', 'MenuController@index')->name('menu.index');
+  // Controller Daftar Menu
+  Route::get('/menu', 'MenuController@index')->name('menu.index');
 
-
-// Controller Reservasi & My Reservation
-Route::get('/reservasi', 'ReservationController@index')->name('reservasi.index');
-Route::post('/reservasi', 'ReservationController@simpan_reservasi')->name('reservasi.simpan');
-Route::get('/reservasi_saya', 'ReservationController@my_reservation')->name('reservasi.my_reservation');
-Route::post('/reservasi_saya', 'ReservationController@simpan_bukti_pembayaran')->name('reservasi.my_reservation.simpan');
-Route::post('/reservasi_saya/delete', 'ReservationController@destroy')->name('reservasi.my_reservation.delete');
+  // Controller Reservasi & My Reservation
+  Route::get('/reservasi', 'ReservationController@index')->name('reservasi.index');
+  Route::post('/reservasi', 'ReservationController@simpan_reservasi')->name('reservasi.simpan');
+  Route::get('/reservasi_saya', 'ReservationController@my_reservation')->name('reservasi.my_reservation');
+  Route::post('/reservasi_saya', 'ReservationController@simpan_bukti_pembayaran')->name('reservasi.my_reservation.simpan');
+  Route::post('/reservasi_saya/delete', 'ReservationController@destroy')->name('reservasi.my_reservation.delete');
 
 
-// Controller Artikel
-Route::get('/artikel', 'ArticleController@index')->name('artikel.index');
+  // Controller Artikel
+  Route::get('/artikel', 'ArticleController@index')->name('artikel.index');
+});
 
-Route::group(['middleware' => ['auth','CheckRole:Admin']], function(){
+Route::group(['middleware' => ['auth', 'CheckRole:Admin']], function () {
+
   // Controller Dashboard
   Route::get('/admin/dashboard', 'DashboardController@show_dashboard');
 
+  // Controller Menu
   Route::get('/admin/menu', 'MenuController@index_admin');
   Route::post('/admin/menu', 'MenuController@store');
   Route::post('/admin/menu/delete', 'MenuController@destroy');
@@ -52,23 +53,25 @@ Route::group(['middleware' => ['auth','CheckRole:Admin']], function(){
   Route::post('/admin/meja/delete', 'TableController@destroy');
   Route::post('admin/meja/update', 'TableController@update');
 
+  // Controller User
   Route::get('/admin/pengguna', 'UserController@users_list');
   Route::post('/admin/pengguna/detail', 'UserController@user_detail');
   Route::post('/admin/pengguna/hapus', 'UserController@destroy');
 
-
+  // Controller Reservasi
   Route::get('/admin/reservasi', 'ReservationController@reservations_list');
-
-  Route::get('/admin/artikel', 'ArticleController@articles_list');
-  Route::get('/admin/artikel/tambah','ArticleController@show_create');
-  Route::post('/admin/artikel/tambah','ArticleController@add_article');
-  Route::post('/admin/artikel/detail','ArticleController@article_detail');
-  Route::post('/admin/artikel/edit','ArticleController@show_edit');
-  // Route::get('/admin/artikel/edit','ArticleController@show_edit');
-  Route::post('/admin/artikel/update','ArticleController@update_article');
-  Route::post('/admin/artikel/delete','ArticleController@destroy');
-
   Route::post('/admin/reservasi/detail', 'ReservationController@reservation_detail');
-  Route::post('/admin/reservasi','ReservationController@reservation_change_status');
-  Route::post('/admin/reservasi/hapus','ReservationController@destroy_reservation_admin');
+  Route::post('/admin/reservasi', 'ReservationController@reservation_change_status');
+  Route::post('/admin/reservasi/hapus', 'ReservationController@destroy_reservation_admin');
+
+  // Controller Artikel
+  Route::get('/admin/artikel', 'ArticleController@articles_list');
+  Route::get('/admin/artikel/tambah', 'ArticleController@show_create');
+  Route::post('/admin/artikel/tambah', 'ArticleController@add_article');
+  Route::post('/admin/artikel/detail', 'ArticleController@article_detail');
+  Route::post('/admin/artikel/edit', 'ArticleController@show_edit');
+
+  // Route::get('/admin/artikel/edit','ArticleController@show_edit');
+  Route::post('/admin/artikel/update', 'ArticleController@update_article');
+  Route::post('/admin/artikel/delete', 'ArticleController@destroy');
 });
