@@ -96,37 +96,42 @@
     </div>
     <div class="col-md-12 mb-3"></div>
     @foreach($reservations as $reservation)
-    @foreach($tables as $table)
-    @foreach($users as $user)
-    @if($reservation->user_id == $user->id && $reservation->table_id == $table->id)
-    <div class="col-xl-12 col-md-12">
-      <div class="card card-stats">
-        <!-- Card body -->
-        <div class="card-body">
-          <div class="row">
-            <div class="col">
-              <div class="row align-items-center">
-                <div class="col-auto">
-                  <h6 class="bg-primary rounded text-white p-2">{{$table->nama}}</h6>
+      @foreach($tables as $table)
+        @foreach($users as $user)
+          @if($reservation->user_id == $user->id && $reservation->table_id == $table->id || $reservation->table_id == null )
+          <div class="col-xl-12 col-md-12">
+            <div class="card card-stats">
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        @if($reservation->table_id != null)
+                          <h6 class="bg-primary rounded text-white p-2">{{$table->nama}}</h6>
+                        @endif
+                        @if($reservation->table_id == null)
+                          <h6 class="bg-primary-light rounded text-white p-2">Belum ada nomor</h6>
+                        @endif
+                      </div>
+                      <h6 class="col text-right">{{$reservation->tanggal}} {{$reservation->jam}}</h6>
+                    </div>
+                    <div class="row">
+                      <h6 class="text-muted mb-1 col-xl-6">Nomor Reservasi</h6>
+                      <h6 class="col-xl-6 text-right">{{$reservation->id}}</h6>
+                    </div>
+                    <div class="row">
+                      <h6 class="text-muted mb-1 col-xl-6">Nama Pemesan</h6>
+                      <h6 class="col-xl-6 text-right">{{$user->name}}</h6>
+                    </div>
+                  </div>
                 </div>
-                <h6 class="col text-right">{{$reservation->tanggal}} {{$reservation->jam}}</h6>
-              </div>
-              <div class="row">
-                <h6 class="text-muted mb-1 col-xl-6">Nomor Reservasi</h6>
-                <h6 class="col-xl-6 text-right">{{$reservation->id}}</h6>
-              </div>
-              <div class="row">
-                <h6 class="text-muted mb-1 col-xl-6">Nama Pemesan</h6>
-                <h6 class="col-xl-6 text-right">{{$user->name}}</h6>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    @endif
-    @endforeach
-    @endforeach
+          @endif
+        @endforeach
+      @endforeach
     @endforeach
   </div>
   <!-- Load more -->

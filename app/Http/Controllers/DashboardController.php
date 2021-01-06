@@ -23,6 +23,8 @@ class DashboardController extends Controller
     $users = User::whereIn('id', $users_id)->get();
     $tables = Table::whereIn('id', $tables_id)->get();
 
+    // return($tables);
+
     return view('admin.dashboard', compact('total_foods', 'total_tables', 'total_reservations', 'total_users', 'reservations', 'users', 'tables'));
   }
 }

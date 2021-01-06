@@ -113,7 +113,7 @@
         </div>
         <div class="card-footer">
           <div class="actions d-flex justify-content-between px-4">
-            <a href="#edit-modal-{{$table->id}}" class="action-item" data-toggle="modal" id="edit-button">
+            <a href="#edit-modal-{{$table->id}}" class="action-item" data-toggle="modal" id="edit-button" data_tableid="{{$table->id}}">
               <i class="far fa-pencil"></i>
             </a>
             <a href="#delete-modal" class="action-item text-danger" id="delete-button" data-toggle="modal"
@@ -189,22 +189,39 @@
 
   $(document).ready(function () {
 
-    var table_id = $('#table_id_edit').val();
+    $("#meja_nav").addClass("active");
+    @if(Session::has('errors')) $('#modal-project-create').modal({show: true}); @endif
 
-    $('#edit-form-1-'.table_id).validate({
+    var meja_id;
+    var form_id;
+
+    $(document).on('click','#edit-button',function(){
+      meja_id=$(this).attr('data_tableid');
+      form_id = $("#edit-form-"+meja_id);
+      console.log(form_id);
+    });
+
+    $(document).on("submit",form_id,function(e){
+      form_id.validate({
         errorClass: "error fail-alert",
         validClass: "valid success-alert",
         rules: {
-            nama_edit: {
-                required: true
-            }
+          nama_edit: {
+            required: true
+          }
         },
         messages: {
           nama_edit:{
             required: "Nomor meja tidak boleh kosong!"
           }
         }
-    });
+      });
+      if (form_id.valid()) {
+        form_id.submit();
+      } else {
+        e.preventDefault();
+      }
+    })
   });
 </script>
 @endsection
