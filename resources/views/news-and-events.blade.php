@@ -92,6 +92,7 @@
 
 <!-- INFO
 	================================================== -->
+
 @foreach ($data_artikel as $dt)
 @if ($dt->id % 2 == 1)
 <section class="section section_info section_info_opposite section_no-padding_top section_no-padding_bottom">
@@ -113,22 +114,42 @@
 							$time = strtotime($dt->tanggal);
 							$tanggal = date('F d, Y',$time);
 						?>
-						<time datetime="{{$tanggal}}">{{$tanggal}}</time>
+						<time datetime="{!!$tanggal!!}">{!!$tanggal!!}</time>
 					</h3>
 					<h2 class="section__heading">
 						{{$dt->judul}}
 					</h2>
 					<p class="section__subheading">
-						{{$dt->deskripsi}}
+						@if (strlen($dt->deskripsi) > 200)
+						{!! substr($dt->deskripsi, 0, 200).'...' !!}
+						@else
+						{!! $dt->deskripsi !!}
+						@endif
 					</p>
-					<a href="news-and-events.html#" class="btn btn-primary">
-						Read more...
+					<a href="#modal-read-more1{{$dt->id}}" class="btn btn-primary" data-toggle="modal">
+						Lihat selengkapnya...
 					</a>
 				</div>
 
 			</div>
 		</div> <!-- / .row -->
 	</div> <!-- / .container -->
+
+	{{-- modal --}}
+	<div class="modal fade" id="modal-read-more1{{$dt->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<img src="/assets/img/{{$dt->gambar}}" alt="" id="gambar" class="img-fluid z-depth-1">
+					<label for="gambar" class="mt-3"><b>{!!$dt->judul!!}</b></label>
+					<p>{!!$dt->deskripsi!!}</p>
+				</div>
+				<div class="modal-footer align-self-center">
+					<button type="button" class="btn btn-sm btn-danger rounded-pill mr-auto" data-dismiss="modal">Kembali</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 @else
@@ -151,22 +172,42 @@
 							$time = strtotime($dt->tanggal);
 							$tanggal = date('F d, Y',$time);
 						?>
-						<time datetime="{{$tanggal}}">{{$tanggal}}</time>
+						<time datetime="{!!$tanggal!!}">{!!$tanggal!!}</time>
 					</h3>
 					<h2 class="section__heading">
-						{{$dt->judul}}
+						{!!$dt->judul!!}
 					</h2>
 					<p class="section__subheading">
-						{{$dt->deskripsi}}
+						@if (strlen($dt->deskripsi) > 200)
+						{!! substr($dt->deskripsi, 0, 200).'...' !!}
+						@else
+						{!! $dt->deskripsi !!}
+						@endif
 					</p>
-					<a href="news-and-events.html#" class="btn btn-primary">
-						Read more...
+					<a href="#modal-read-more2{{$dt->id}}" class="btn btn-primary" data-toggle="modal">
+						Lihat selengkapnya...
 					</a>
 				</div>
 
 			</div>
 		</div> <!-- / .row -->
 	</div> <!-- / .container -->
+
+	{{-- modal --}}
+	<div class="modal fade" id="modal-read-more2{{$dt->id}}" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-body">
+					<img src="/assets/img/{{$dt->gambar}}" alt="" id="gambar" class="img-fluid z-depth-1">
+					<label for="gambar" class="mt-3"><b>{!!$dt->judul!!}</b></label>
+					<p>{!!$dt->deskripsi!!}</p>
+				</div>
+				<div class="modal-footer align-self-center">
+					<button type="button" class="btn btn-sm btn-danger rounded-pill mr-auto" data-dismiss="modal">Batal</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 @endif
 @endforeach

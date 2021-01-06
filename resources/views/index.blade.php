@@ -19,7 +19,6 @@
 		<!-- Navbar: Collapse -->
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-			@if (Auth::check() && Auth::user())
 			<!-- Navbar navigation: Left -->
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item">
@@ -29,14 +28,12 @@
 					<a class="nav-link" href="{{route('reservasi.index')}}">Reservasi</a>
 				</li>
 			</ul>
-			@endif
 
 			<!-- Brand name -->
 			<a class="navbar-brand navbar-brand_2 d-none d-lg-flex ml-auto mr-auto" href="{{route('home.index')}}">
 				Nusantara
 			</a>
 
-			@if (Auth::check() && Auth::user())
 			<!-- Navbar navigation: Right -->
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
@@ -46,7 +43,6 @@
 					<a class="nav-link" href="{{route('reservasi.my_reservation')}}">Reservasi Saya</a>
 				</li>
 			</ul>
-			@endif
 		</div> <!-- / .navbar-collapse -->
 
 	</div> <!-- / .container -->
@@ -75,14 +71,6 @@
 					</p>
 
 					<!-- Button -->
-					@if (!Auth::check() && !Auth::user())
-					<div class="text-center">
-						<a href="#section_reservation" class="btn btn-primary text-white">
-							Login Sekarang
-						</a>
-					</div>
-					@endif
-					@if (Auth::check() && Auth::user())
 					<div class="text-center">
 						<a class="btn btn-primary text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
 							document.getElementById('logout-form').submit();">
@@ -93,7 +81,6 @@
 					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 						@csrf
 					</form>
-					@endif
 				</div>
 			</div> <!-- / .row -->
 		</div> <!-- / .container -->
@@ -116,159 +103,6 @@
 	</div>
 
 </section>
-
-<!-- DISCOVER
-	================================================== -->
-<section class="section section_discover section_no-padding_bottom">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-2 align-self-start">
-
-				<!-- Description -->
-				<p class="section_discover__description">
-					Food for the body is not enough. There must be food for the soul.
-					<b>Dorothy Day-</b>
-				</p>
-
-			</div>
-			<div class="col-md-4 align-self-start">
-
-				<!-- Image -->
-				<div class="section_discover__img">
-					<img src="assets/img/2.jpg" class="img-fluid" alt="...">
-				</div>
-
-			</div>
-			<div class="col-md-6 align-self-center">
-
-				<!-- Content -->
-				<h2><em>Ragam Kuliner Nusantara</em></h2>
-				<p>
-					Tersedia berbagai kuliner nusantara yang tentunya dibuat oleh juru masak profesional dengan cita rasa khas
-					yang tiada tara serta pas dengan selera orang
-					Indonesia.
-				</p>
-
-			</div>
-		</div> <!-- / .row -->
-	</div> <!-- / .container -->
-</section>
-
-<!-- DISCOVER
-	================================================== -->
-<section class="section section_discover">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-2 order-md-2 align-self-end">
-
-				<!-- Description -->
-				<p class="section_discover__description">
-					One should eat to live, not live to eat.
-					<b>Moliere-</b>
-				</p>
-
-			</div>
-			<div class="col-md-4 order-md-3 align-self-start">
-
-				<!-- Image -->
-				<div class="section_discover__img alt">
-					<img src="assets/img/7.jpg" class="img-fluid" alt="...">
-				</div>
-
-			</div>
-			<div class="col-md-6 order-md-1 align-self-center">
-
-				<!-- Content -->
-				<h2><em>Makanan Adalah Kebutuhan</em></h2>
-				<p>
-					Penuhi nutrisi tubuh anda dengan kalori yang cukup, vitamin, protein hingga berbagai gizi yang lain. Jangan
-					biarkan tubuh anda
-					kekurangan itu semua agar tubuh selalu vit dimanapun dan kapanpun anda berada.
-				</p>
-
-			</div>
-		</div> <!-- / .row -->
-	</div> <!-- / .container -->
-</section>
-
-<!-- RESERVATION
-	================================================== -->
-@if (!Auth::check() && !Auth::user())
-<section class="section section_reservation section_gray" id="section_reservation">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-
-				<!-- Heading -->
-				<h2 class="section__heading text-center">
-					Login Disini
-				</h2>
-
-				<!-- Subheading -->
-				<p class="section__subheading text-center">
-					Login diperlukan untuk pemesanan untuk alasan keamanan dan pemesanan di website restoran kami
-				</p>
-
-			</div>
-		</div> <!-- / .row -->
-		<div class="row justify-content-lg-center  section_reservation__row">
-			<div class="col-lg-8">
-
-				<!-- Form -->
-				<form method="post" action="{{ route('login') }}">
-					@csrf
-					<div class="row">
-
-						<div class="col-md-12">
-							<div class="form-group">
-								<label class="sr-only" for="email">Email</label>
-								<input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email"
-									placeholder="Email">
-
-								@error('email')
-								<span class="invalid-feedback" role="alert">
-									<strong>{{ $message }}</strong>
-								</span>
-								@enderror
-							</div>
-
-							<div class="form-group">
-								<label class="sr-only" for="password">Password</label>
-								<input type="password" class="form-control @error('password') is-invalid @enderror" id="password"
-									name="password" placeholder="Password">
-
-								@error('password')
-								<span class="invalid-feedback" role="alert">
-									<strong>{{ $message }}</strong>
-								</span>
-								@enderror
-							</div>
-						</div>
-
-						<div class="col">
-							<div class="text-right">
-								<a href="{{ route('register') }}" class="btn btn-primary">Daftar</a>
-							</div>
-						</div>
-
-						<div class="col">
-							<div class="form-group">
-								<div class="text-left">
-									<button type="submit" class="btn btn-primary">
-										{{ __('Login') }}
-									</button>
-								</div>
-							</div>
-						</div>
-
-					</div> <!-- / .row -->
-				</form>
-
-			</div>
-		</div> <!-- / .row -->
-	</div> <!-- / .container -->
-</section>
-@endif
 
 <!-- TESTIMONIALS
 	================================================== -->
