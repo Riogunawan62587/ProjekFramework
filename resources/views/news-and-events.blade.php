@@ -140,7 +140,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-body">
-					<img src="/assets/img/{{$dt->gambar}}" alt="" id="gambar" class="img-fluid z-depth-1">
+					<img src="assets/img/{{$dt->gambar}}" alt="" id="gambar" class="img-fluid z-depth-1">
 					<label for="gambar" class="mt-3"><b>{!!$dt->judul!!}</b></label>
 					<p>{!!$dt->deskripsi!!}</p>
 				</div>
@@ -198,7 +198,7 @@
 		<div class="modal-dialog modal-dialog-centered" role="document">
 			<div class="modal-content">
 				<div class="modal-body">
-					<img src="/assets/img/{{$dt->gambar}}" alt="" id="gambar" class="img-fluid z-depth-1">
+					<img src="assets/img/{{$dt->gambar}}" alt="" id="gambar" class="img-fluid z-depth-1">
 					<label for="gambar" class="mt-3"><b>{!!$dt->judul!!}</b></label>
 					<p>{!!$dt->deskripsi!!}</p>
 				</div>
