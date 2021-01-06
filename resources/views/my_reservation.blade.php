@@ -83,10 +83,16 @@
 
 				<!-- Subheading -->
 				<p class="section__subheading text-center">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia obcaecati sit odio velit culpa aspernatur
-					consectetur natus quidem minima veritatis.
+					Setelah pesanan dikonfirmasi oleh admin. Harap mengupload bukti pembayaran selama 1x24 jam pada nomor rekening
+					di bawah ini untuk mengkonfirmasi nomor meja.
 				</p>
-
+				<h3 class="text-center"><img src="assets/img/BRI.jfif" style="height: 70px"> | 34281783788881 <b>a.n</b> Muhammad Opank
+				</h3>
+				<h3 class="text-center"><img src="assets/img/BNI.webp" style="height: 70px"> | 35281783799991 <b>a.n</b> Muhammad Opank
+				</h3>
+				<h3 class="text-center"><img src="assets/img/BCA.jpg" style="height: 70px"> | 36281783777771 <b>a.n</b> Muhammad Opank
+				</h3>
+				<hr>
 			</div>
 		</div> <!-- / .row -->
 
@@ -106,10 +112,9 @@
 						<div class="modal-body">
 							<div class="py-3 text-center">
 								<i class="fas fa-exclamation-circle fa-4x"></i>
-								<h5 class="heading h4 mt-4">Should we stop now?</h5>
+								<h5 class="heading h4 mt-4">Apakah anda yakin untuk menghapus?</h5>
 								<p>
-									You can easy create stackable modal boxes. For example, your inline content or Ajax response can
-									contain a gallery:
+									Anda harus membuat reservai ulang untuk mengembalikan data yang telah dihapus
 								</p>
 								<input type="hidden" name="reservasiid" id="reservasiid">
 							</div>
