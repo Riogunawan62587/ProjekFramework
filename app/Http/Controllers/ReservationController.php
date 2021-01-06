@@ -18,6 +18,12 @@ class ReservationController extends Controller
 
     public function simpan_reservasi(Request $request)
     {
+        $this->validate($request, [
+            'tanggal' => 'required',
+            'jam' => 'required',
+            'jumlah_orang' => 'required',
+        ]);
+
         $simpan = new Reservation;
         $simpan->tanggal         = $request->tanggal;
         $simpan->jam             = $request->jam;
@@ -63,32 +69,35 @@ class ReservationController extends Controller
         return redirect('/reservasi_saya')->with('success', 'Data berhasil dihapus');
     }
 
-    public function reservation_detail(Request $request){
-        $reservation = Reservation::where('id',$request->reservation_id)->first();
-        $user = User::where('id',$reservation->user_id)->first();
-        $table = Table::where('id',$reservation->table_id)->first();
+    public function reservation_detail(Request $request)
+    {
+        $reservation = Reservation::where('id', $request->reservation_id)->first();
+        $user = User::where('id', $reservation->user_id)->first();
+        $table = Table::where('id', $reservation->table_id)->first();
 
-        return view('admin.detailReservasi',compact('reservation','user','table'));
+        return view('admin.detailReservasi', compact('reservation', 'user', 'table'));
     }
 
-    public function reservation_change_status(Request $request){
-        $reservation = Reservation::where('id',$request->reservation_id)->first();
+    public function reservation_change_status(Request $request)
+    {
+        $reservation = Reservation::where('id', $request->reservation_id)->first();
 
         $reservation->status = $request->status;
 
         $booked_table = Reservation::where('tanggal', $reservation->tanggal)->where('jam', $reservation->jam)->where('table_id', '!=', 0)->pluck('table_id');
-        $available_table = Table::whereNotIn('id',$booked_table)->get()->pluck('id')->toArray();
+        $available_table = Table::whereNotIn('id', $booked_table)->get()->pluck('id')->toArray();
         $given_table_id = Arr::random($available_table);
 
         $reservation->table_id = $given_table_id;
         $reservation->update();
 
-        return redirect('/admin/reservasi')->with('success','Status reservasi berhasil dirubah!');
+        return redirect('/admin/reservasi')->with('success', 'Status reservasi berhasil dirubah!');
     }
 
-    public function destroy_reservation_admin(Request $request){
-      $reservation = Reservation::where('id',$request->reservation_id)->delete();
+    public function destroy_reservation_admin(Request $request)
+    {
+        $reservation = Reservation::where('id', $request->reservation_id)->delete();
 
-      return redirect('/admin/reservasi')->with('success','Data reservasi berhasil dihapus!');
+        return redirect('/admin/reservasi')->with('success', 'Data reservasi berhasil dihapus!');
     }
 }

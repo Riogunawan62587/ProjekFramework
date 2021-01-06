@@ -86,11 +86,14 @@
 					Setelah pesanan dikonfirmasi oleh admin. Harap mengupload bukti pembayaran selama 1x24 jam pada nomor rekening
 					di bawah ini untuk mengkonfirmasi nomor meja.
 				</p>
-				<h3 class="text-center"><img src="assets/img/BRI.jfif" style="height: 70px"> | 34281783788881 <b>a.n</b> Muhammad Opank
+				<h3 class="text-center"><img src="assets/img/BRI.jfif" style="height: 70px"> | 34281783788881 <b>a.n</b>
+					Muhammad Opank
 				</h3>
-				<h3 class="text-center"><img src="assets/img/BNI.webp" style="height: 70px"> | 35281783799991 <b>a.n</b> Muhammad Opank
+				<h3 class="text-center"><img src="assets/img/BNI.webp" style="height: 70px"> | 35281783799991 <b>a.n</b>
+					Muhammad Opank
 				</h3>
-				<h3 class="text-center"><img src="assets/img/BCA.jpg" style="height: 70px"> | 36281783777771 <b>a.n</b> Muhammad Opank
+				<h3 class="text-center"><img src="assets/img/BCA.jpg" style="height: 70px"> | 36281783777771 <b>a.n</b> Muhammad
+					Opank
 				</h3>
 				<hr>
 			</div>
@@ -198,7 +201,7 @@
 														<label class="form-control-label">
 															Upload Bukti Pembayaran
 														</label>
-														<input type="file" name="bukti" id="file-1" class="custom-input-file" style="color: red" />
+														<input type="file" name="bukti" id="file-1" class="custom-input-file" required />
 														<label for="file-1">
 															<i class="fa fa-upload"></i>
 															<span>Choose a file…</span>
