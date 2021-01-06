@@ -12,7 +12,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <form action="/admin/menu/delete" method="post">
+        <form action="{{ url('/admin/menu/delete') }}" method="post">
           @csrf
           <div class="modal-header">
             <h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
-        <a href="/admin/artikel/tambah" class="btn btn-sm btn-white rounded-pill ml-4">
+        <a href="{{ url('/admin/artikel/tambah') }}" class="btn btn-sm btn-white rounded-pill ml-4">
           <span class="btn-inner--icon mr-2"><i class="far fa-plus"></i></span>
           Tambah Artikel
         </a>
@@ -95,7 +95,7 @@
               </div>
               <div class="row">
                 <div class="col-auto">
-                  <form action="/admin/artikel/detail" method="post">
+                  <form action="{{ url('/admin/artikel/detail') }}" method="post">
                     @csrf
                     <input type="hidden" name="article_id" value="{{$article->id}}">
                     <button type="submit" name="button" class="btn btn-primary btn-sm">Lihat Selengkapnya</button>

@@ -11,7 +11,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <form action="/admin/reservasi/hapus" method="post">
+        <form action="{{ url('/admin/reservasi/hapus') }}" method="post">
           @csrf
           <div class="modal-header">
             <h5 class="modal-title h6" id="modal_title_6">Konfirmasi Hapus</h5>
@@ -149,7 +149,7 @@
                   <i class="far fa-ellipsis-h"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <form action="/admin/reservasi/detail" method="post">
+                  <form action="{{ url('/admin/reservasi/detail') }}" method="post">
                     @csrf
                     <input type="hidden" name="reservation_id" value="{{$reservation->id}}">
                     <button type="submit" class="dropdown-item">Lihat</button>

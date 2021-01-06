@@ -19,13 +19,13 @@
   </div>
 
   <div class="row align-items-center">
-    <form class="col-xl-12" action="/admin/artikel/update" method="post" enctype="multipart/form-data" id="edit-form">
+    <form class="col-xl-12" action="{{ url('/admin/artikel/update') }}" method="post" enctype="multipart/form-data" id="edit-form">
       @csrf
       <div class="row">
         <div class="col-auto">
           <div class="card">
             <div class="card-body">
-              <img src="/assets/img/{{$article->gambar}}" alt="">
+              <img src="{{ url('/assets/img/'.$article->gambar) }}" alt="">
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
 
           <div class="text-right">
             <input type="hidden" name="article_id" value="{{$article->id}}">
-            <a href="/admin/artikel" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
+            <a href="{{ url('/admin/artikel') }}" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
             <button type="submit" class="btn btn-sm btn-primary rounded-pill">Simpan</button>
           </div>
         </div>
@@ -90,8 +90,8 @@
 @endsection
 
 @section('footer')
-<script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/assets/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="{{ url('/assets/plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+<script src="{{ url('/assets/plugins/jquery-validation/dist/additional-methods.min.js') }}"></script>
 <script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
 <style>
   label.error.fail-alert {

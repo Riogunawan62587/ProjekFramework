@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Nusantara Dashboard</title>
   <!-- Favicon -->
-  <link rel="icon" href="/assets/admin/assets/img/brand/favicon.png" type="image/png">
+  <link rel="icon" href="{{ url('/assets/admin/assets/img/brand/favicon.png') }}" type="image/png">
   <!-- Font Awesome 5 -->
-  <link rel="stylesheet" href="/assets/admin/assets/libs/@fortawesome/fontawesome-pro/css/all.min.css">
+  <link rel="stylesheet" href="{{ url('/assets/admin/assets/libs/@fortawesome/fontawesome-pro/css/all.min.css') }}">
   <!-- Purpose CSS -->
-  <link rel="stylesheet" href="/assets/admin/assets/css/purpose.css" id="stylesheet">
+  <link rel="stylesheet" href="{{ url('/assets/admin/assets/css/purpose.css') }}" id="stylesheet">
 
   @yield('head')
 </head>
@@ -49,27 +49,27 @@
       </div>
       <!-- Application nav -->
       <div class="nav-application clearfix">
-        <a href="/admin/dashboard" class="btn btn-square text-sm" id="dashboard_nav">
+        <a href="{{ url('/admin/dashboard') }}" class="btn btn-square text-sm" id="dashboard_nav">
           <span class="btn-inner--icon d-block"><i class="far fa-home fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Dashboard</span>
         </a>
-        <a href="/admin/menu" class="btn btn-square text-sm" id="menu_nav">
+        <a href="{{ url('/admin/menu') }}" class="btn btn-square text-sm" id="menu_nav">
           <span class="btn-inner--icon d-block"><i class="far fa-project-diagram fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Menu</span>
         </a>
-        <a href="/admin/meja" class="btn btn-square text-sm" id="meja_nav">
+        <a href="{{ url('/admin/meja') }}" class="btn btn-square text-sm" id="meja_nav">
           <span class="btn-inner--icon d-block"><i class="far fa-tasks fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Meja</span>
         </a>
-        <a href="/admin/reservasi" class="btn btn-square text-sm" id="reservasi_nav">
+        <a href="{{ url('/admin/reservasi') }}" class="btn btn-square text-sm" id="reservasi_nav">
           <span class="btn-inner--icon d-block"><i class="far fa-columns fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Reservasi</span>
         </a>
-        <a href="/admin/pengguna" class="btn btn-square text-sm" id="pengguna_nav">
+        <a href="{{ url('/admin/pengguna') }}" class="btn btn-square text-sm" id="pengguna_nav">
           <span class="btn-inner--icon d-block"><i class="far fa-users-cog fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Pengguna</span>
         </a>
-        <a href="/admin/artikel" class="btn btn-square text-sm" id="artikel_nav">
+        <a href="{{ url('/admin/artikel') }}" class="btn btn-square text-sm" id="artikel_nav">
           <span class="btn-inner--icon d-block"><i class="far fa-newspaper fa-2x"></i></span>
           <span class="btn-inner--icon d-block pt-2">Daftar Artikel</span>
         </a>
@@ -155,14 +155,14 @@
     </div>
     <!-- Scripts -->
     <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
-    <script src="/assets/admin/assets/js/purpose.core.js"></script>
+    <script src="{{ url('/assets/admin/assets/js/purpose.core.js') }}"></script>
     <!-- Page JS -->
-    <script src="/assets/admin/assets/libs/autosize/dist/autosize.min.js"></script>
-    <script src="/assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="{{ url('/assets/admin/assets/libs/autosize/dist/autosize.min.js') }}"></script>
+    <script src="{{ url('/assets/admin/assets/libs/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
     <!-- Purpose JS -->
-    <script src="/assets/admin/assets/js/purpose.js"></script>
+    <script src="{{ url('/assets/admin/assets/js/purpose.js') }}"></script>
     <!-- Demo JS - remove it when starting your project -->
-    <script src="/assets/admin/assets/js/demo.js"></script>
+    <script src="{{ url('/assets/admin/assets/js/demo.js') }}"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-104437451-1"></script>
     <script>

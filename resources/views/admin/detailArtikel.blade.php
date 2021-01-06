@@ -11,7 +11,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <form action="/admin/artikel/delete" method="post">
+        <form action="{{ url('/admin/artikel/delete') }}" method="post">
           @csrf
           <div class="modal-header">
             <h5 class="modal-title h6" id="modal_title_6">Konfirmasi hapus</h5>
@@ -83,14 +83,14 @@
               </div>
               <div class="row mb-3 mt-2">
                 <div class="col-md-12 text-center">
-                  <img src="/assets/img/{{$article->gambar}}" class="img-fluid rounded">
+                  <img src="{{ url('/assets/img/'.$article->gambar) }}" class="img-fluid rounded">
                 </div>
               </div>
               <div class="row">
                 <h6 class="text-muted mb-1 col-xl-12">{!! $article->deskripsi !!}</h6>
               </div>
               <div class="row justify-content-end align-items-center">
-                <form class="col-auto" action="/admin/artikel/edit" method="post">
+                <form class="col-auto" action="{{ url('/admin/artikel/edit')}}" method="post">
                   @csrf
                   <input type="hidden" name="article_id" value="{{$article->id}}">
                   <button type="submit" name="button" class="btn btn-primary btn-sm">Edit</button>

@@ -63,7 +63,7 @@
             <input type="text" name="name" value="{{$user->email}}" class="form-control" disabled>
           </div>
           <div class="text-right">
-            <a href="/admin/pengguna" class="btn btn-primary btn-sm ">Kembali</a>
+            <a href="{{ url('/admin/pengguna') }}" class="btn btn-primary btn-sm ">Kembali</a>
           </div>
         </div>
       </div>

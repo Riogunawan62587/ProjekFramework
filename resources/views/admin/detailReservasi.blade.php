@@ -30,7 +30,7 @@
   </div>
 
   <div class="row align-items-center">
-    <form class="col-xl-12" action="/admin/reservasi" method="post" enctype="multipart/form-data">
+    <form class="col-xl-12" action="{{ url('/admin/reservasi') }}" method="post" enctype="multipart/form-data">
       @csrf
       <div class="card">
         <div class="card-body">
@@ -128,7 +128,7 @@
 
           @if($reservation->status == 0 || $reservation->status == 1)
           <div class="text-right">
-            <a href="/admin/reservasi" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
+            <a href="{{ url('/admin/reservasi')}}" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
             <input type="hidden" name="reservation_id" value="{{$reservation->id}}">
             <button type="submit" class="btn btn-sm btn-primary rounded-pill">Simpan</button>
           </div>

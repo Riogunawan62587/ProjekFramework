@@ -92,7 +92,7 @@
   <div class="row align-items-center">
     <h5 class="col-md-6 text-white mb-0">Pesanan Terbaru</h5>
     <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-end">
-      <a href="/admin/reservasi" class="btn btn-sm btn-white rounded-pill">Lihat Selengkapnya</a>
+      <a href="{{ url('/admin/reservasi') }}" class="btn btn-sm btn-white rounded-pill">Lihat Selengkapnya</a>
     </div>
     <div class="col-md-12 mb-3"></div>
     @foreach($reservations as $reservation)

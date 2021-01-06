@@ -38,40 +38,38 @@ Route::group(['middleware' => ['auth', 'CheckRole:Pengguna']], function () {
 Route::group(['middleware' => ['auth', 'CheckRole:Admin']], function () {
 
   // Controller Dashboard
-  Route::get('/admin/dashboard', 'DashboardController@show_dashboard');
+  Route::get('/admin/dashboard', 'DashboardController@show_dashboard') ->name('admin-dashboard');
 
   // Controller Menu
-  Route::get('/admin/menu', 'MenuController@index_admin');
-  Route::post('/admin/menu', 'MenuController@store');
-  Route::post('/admin/menu/delete', 'MenuController@destroy');
-  Route::post('admin/menu/edit', 'MenuController@edit');
-  Route::post('admin/menu/update', 'MenuController@update');
+  Route::get('/admin/menu', 'MenuController@index_admin')->name('menu_list');
+  Route::post('/admin/menu', 'MenuController@store') ->name('menu_create');
+  Route::post('/admin/menu/delete', 'MenuController@destroy')->name('menu_delete');
+  Route::post('admin/menu/edit', 'MenuController@edit')->name('menu_edit');
+  Route::post('admin/menu/update', 'MenuController@update')->name('menu_update');
 
   //  Controller Table
-  Route::get('/admin/meja', 'TableController@index_admin');
-  Route::post('/admin/meja', 'TableController@create');
-  Route::post('/admin/meja/delete', 'TableController@destroy');
-  Route::post('admin/meja/update', 'TableController@update');
+  Route::get('/admin/meja', 'TableController@index_admin') ->name('meja_list');
+  Route::post('/admin/meja', 'TableController@create') ->name('meja_create');
+  Route::post('/admin/meja/delete', 'TableController@destroy') ->name('meja_delete');
+  Route::post('admin/meja/update', 'TableController@update') ->name('meja_update');
 
   // Controller User
-  Route::get('/admin/pengguna', 'UserController@users_list');
-  Route::post('/admin/pengguna/detail', 'UserController@user_detail');
-  Route::post('/admin/pengguna/hapus', 'UserController@destroy');
+  Route::get('/admin/pengguna', 'UserController@users_list') ->name('pengguna_list');
+  Route::post('/admin/pengguna/detail', 'UserController@user_detail')->name('pengguna_detail');
+  Route::post('/admin/pengguna/hapus', 'UserController@destroy') ->name('pengguna_delete');
 
   // Controller Reservasi
-  Route::get('/admin/reservasi', 'ReservationController@reservations_list');
-  Route::post('/admin/reservasi/detail', 'ReservationController@reservation_detail');
-  Route::post('/admin/reservasi', 'ReservationController@reservation_change_status');
-  Route::post('/admin/reservasi/hapus', 'ReservationController@destroy_reservation_admin');
+  Route::get('/admin/reservasi', 'ReservationController@reservations_list')->name('reservasi_list');
+  Route::post('/admin/reservasi/detail', 'ReservationController@reservation_detail') ->name('reservasi_detail');
+  Route::post('/admin/reservasi', 'ReservationController@reservation_change_status') ->name('reservasi_update');
+  Route::post('/admin/reservasi/hapus', 'ReservationController@destroy_reservation_admin') ->name('reservasi_delete');
 
   // Controller Artikel
-  Route::get('/admin/artikel', 'ArticleController@articles_list');
-  Route::get('/admin/artikel/tambah', 'ArticleController@show_create');
-  Route::post('/admin/artikel/tambah', 'ArticleController@add_article');
-  Route::post('/admin/artikel/detail', 'ArticleController@article_detail');
-  Route::post('/admin/artikel/edit', 'ArticleController@show_edit');
-
-  // Route::get('/admin/artikel/edit','ArticleController@show_edit');
-  Route::post('/admin/artikel/update', 'ArticleController@update_article');
-  Route::post('/admin/artikel/delete', 'ArticleController@destroy');
+  Route::get('/admin/artikel', 'ArticleController@articles_list')->name('artikel_list');
+  Route::get('/admin/artikel/tambah', 'ArticleController@show_create') ->name('artikel_show_create');
+  Route::post('/admin/artikel/tambah', 'ArticleController@add_article')->name('artikel_create');
+  Route::post('/admin/artikel/detail', 'ArticleController@article_detail') ->name('artikel_detail');
+  Route::post('/admin/artikel/edit', 'ArticleController@show_edit')->name('artikel_edit');
+  Route::post('/admin/artikel/update', 'ArticleController@update_article') ->name('artikel_update');
+  Route::post('/admin/artikel/delete', 'ArticleController@destroy')->name('artikel_delete');
 });

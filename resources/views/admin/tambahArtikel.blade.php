@@ -21,7 +21,7 @@
   </div>
 
   <div class="row align-items-center">
-    <form class="col-xl-12" action="/admin/artikel/tambah" method="post" enctype="multipart/form-data">
+    <form class="col-xl-12" action="{{ url('/admin/artikel/tambah') }}" method="post" enctype="multipart/form-data">
       @csrf
       <div class="card">
         <div class="card-body">
@@ -65,7 +65,7 @@
           </div>
 
           <div class="text-right">
-            <a href="/admin/artikel" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
+            <a href="{{ url('/admin/artikel') }}" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
             <button type="submit" class="btn btn-sm btn-primary rounded-pill">Simpan</button>
           </div>
         </div>

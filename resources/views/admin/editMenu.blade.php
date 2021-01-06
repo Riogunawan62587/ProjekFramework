@@ -26,7 +26,7 @@
             <h5>Gambar</h5>
           </div>
           <div class="card-body">
-            <img src="/assets/img/{{$food->gambar}}" alt="" class="img-fluid">
+            <img src="{{ url('/assets/img/'.$food->gambar) }}" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -144,8 +144,8 @@
 @endsection
 
 @section('footer')
-<script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
-<script src="/assets/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="{{ url('/assets/plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+<script src="{{ url('/assets/plugins/jquery-validation/dist/additional-methods.min.js') }}"></script>
 <style>
   label.error.fail-alert {
     color: red;

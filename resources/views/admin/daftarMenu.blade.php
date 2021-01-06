@@ -12,7 +12,7 @@
     aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <form action="/admin/menu/delete" method="post">
+        <form action="{{ url('/admin/menu/delete') }}" method="post">
           @csrf
           <div class="modal-header">
             <h5 class="modal-title h6" id="modal_title_6">Konfirmasi hapus</h5>
@@ -43,7 +43,7 @@
   <div class="modal fade" id="modal-project-create" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <form class="" action="/admin/menu" method="post" enctype="multipart/form-data">
+        <form class="" action="{{ url('/admin/menu') }}" method="post" enctype="multipart/form-data">
           @csrf
           <div class="modal-body">
             <!-- Project name -->
@@ -188,7 +188,7 @@
         </div>
         <div class="card-body text-center">
           <div class="avatar avatar-lg hover-translate-y-n3 mb-3">
-            <img src="/assets/img/{{$food->gambar}}" alt="" class="img-fluid">
+            <img src="{{ url('/assets/img/'.$food->gambar) }}" alt="" class="img-fluid">
           </div>
           <h5 class="h2"><a href="card-listing.html#">{{$food->nama}}</a></h5>
           <h5 class="h6"><a href="card-listing.html#">Rp. {{$food->harga}}</a></h5>
@@ -196,7 +196,7 @@
         </div>
         <div class="card-footer">
           <div class="actions d-flex justify-content-between px-4">
-            <form action="/admin/menu/edit" method="post">
+            <form action="{{ url('/admin/menu/edit') }}" method="post">
               @csrf
               <input type="hidden" name="menuid" value="{{$food->id}}">
               <button type="submit" class="action-item"><i class="far fa-pencil"></i></button>

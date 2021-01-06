@@ -10,7 +10,7 @@
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <form action="/admin/meja/delete" method="post">
+      <form action="{{ url('/admin/meja/delete') }}" method="post">
         @csrf
         <div class="modal-header">
           <h5 class="modal-title h6" id="modal_title_6">Hapus Data Meja</h5>
@@ -42,7 +42,7 @@
   <div class="modal fade" id="modal-project-create" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <form action="/admin/meja" method="post">
+        <form action="{{ url('/admin/meja') }}" method="post">
           @csrf
           <div class="modal-body">
             <!-- meja name -->
@@ -105,7 +105,7 @@
       <div class="card hover-shadow-lg">
         <div class="card-body text-center">
           <a href="card-listing.html#" class="avatar rounded-circle avatar-lg hover-translate-y-n3 mb-3">
-            <img alt="Image placeholder" src="/assets/admin/assets/img/theme/light/brand-avatar-1.png">
+            <img alt="Image placeholder" src="{{ url('/assets/admin/assets/img/theme/light/brand-avatar-1.png')}}">
           </a>
           <h5 class="h2">{{$table->nama}}</h5>
           <span class="clearfix"></span>
@@ -129,7 +129,7 @@
     <div class="modal fade" id="edit-modal-{{$table->id}}" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <form action="/admin/meja/update" method="post" id="edit-form-{{$table->id}}">
+          <form action="{{ url('/admin/meja/update') }}" method="post" id="edit-form-{{$table->id}}">
             @csrf
             <div class="modal-body">
               <!-- Project name -->
@@ -167,7 +167,7 @@
 @endsection
 
 @section('footer')
-<script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="{{ url('/assets/plugins/jquery-validation/dist/jquery.validate.min.js')}}"></script>
 <style>
   label.error.fail-alert {
     color: red;
