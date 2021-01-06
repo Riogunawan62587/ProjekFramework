@@ -1,7 +1,7 @@
 @extends('layouts.admin_master')
 
 @section('head')
-<script src="https://cdn.ckeditor.com/ckeditor5/23.1.0/classic/ckeditor.js"></script>
+
 @endsection
 
 @section('page_content')
@@ -19,7 +19,7 @@
   </div>
 
   <div class="row align-items-center">
-    <form class="col-xl-12" action="/admin/artikel/update" method="post" enctype="multipart/form-data">
+    <form class="col-xl-12" action="/admin/artikel/update" method="post" enctype="multipart/form-data" id="edit-form">
       @csrf
       <div class="row">
         <div class="col-auto">
@@ -42,9 +42,7 @@
                 <i class="fa fa-upload"></i>
                 <span>Choose a file…</span>
               </label>
-              @error('gambar')
-                <small class="text-danger">{{$message}}</small>
-              @enderror
+              <div class="text-danger" id="gambar-error"></div>
             </div>
           </div>
         </div>
@@ -55,25 +53,21 @@
             <label class="form-control-label">
               Judul artikel
             </label>
-            <input type="text" name="judul" value="{{$article->judul}}" class="form-control @error('judul') is-invalid @enderror">
-            @error('judul')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <input type="text" name="judul" value="{{$article->judul}}" class="form-control">
+            <div class="text-danger" id="judul-error"></div>
           </div>
 
           <div class="form-group">
             <label class="form-control-label mb-0">
               Konten artikel
             </label>
-            <textarea class="form-control @error('deskripsi') is-invalid @enderror" data-toggle="autosize" name="deskripsi" id="deskripsi" rows="3">{{$article->deskripsi}}</textarea>
-            @error('deskripsi')
-              <div class="invalid-feedback">{{ $message }}</div>
-            @enderror
+            <textarea class="ckeditor" name="deskripsi" id="deskripsi">{{$article->deskripsi}}</textarea>
+            <div class="text-danger" id="deskripsi-error"></div>
           </div>
 
           <div class="text-right">
             <input type="hidden" name="article_id" value="{{$article->id}}">
-            <a href="create-new.html#" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
+            <a href="/admin/artikel" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
             <button type="submit" class="btn btn-sm btn-primary rounded-pill">Simpan</button>
           </div>
         </div>
@@ -96,15 +90,73 @@
 @endsection
 
 @section('footer')
+<script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/assets/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<style>
+  label.error.fail-alert {
+    color: red;
+  }
+  input.error.fail-alert{
+    border: 2px solid red;
+  }
+  input.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+  }
+</style>
 <script>
-  ClassicEditor
-      .create( document.querySelector( '#deskripsi' ) )
-      .catch( error => {
-          console.error( error );
-      } );
-
   $(document).ready(function() {
     $("#artikel_nav").addClass("active");
   });
+</script>
+<script>
+$(document).ready(function () {
+
+  $('#edit-form').validate({
+      ignore: [],
+      debug: false,
+      errorClass: "error fail-alert",
+      validClass: "valid success-alert",
+      rules: {
+          judul: {
+              required: true,
+              maxlength: 255
+          },
+          gambar:{
+            extension: "png|jpg|jpeg"
+          },
+          deskripsi:{
+              required: function()
+              {
+                CKEDITOR.instances.deskripsi.updateElement();
+              },
+              minlength:10
+          }
+      },
+      messages: {
+        judul:{
+          required: "Judul tidak boleh kosong!",
+          maxlength: "Judul tidak boleh melebihi 255 karakter!"
+        },
+        gambar:{
+          extension: "Format file anda tidak didukung. Silahkan masukkan gambar dengan format .png .jpg .jpeg!"
+        },
+        deskripsi:{
+          required:"Isi Artikel tidak boleh kosong!",
+          minlength:"Isi Artikel tidak valid!"
+        }
+      },
+      errorPlacement: function(error, element) {
+        if (element.attr("name") == "judul") {
+          error.appendTo("#judul-error");
+        } else if (element.attr("name") == "gambar") {
+          error.appendTo("#gambar-error");
+        } else if (element.attr("name") == "deskripsi") {
+          error.appendTo("#deskripsi-error");
+        }
+      }
+  });
+});
 </script>
 @endsection

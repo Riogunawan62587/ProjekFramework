@@ -33,7 +33,7 @@
     </div>
 
     <div class="col-xl-7">
-      <form action="/admin/menu/update" enctype="multipart/form-data" method="post">
+      <form action="/admin/menu/update" enctype="multipart/form-data" method="post" id="edit-form">
         @csrf
         <div class="card">
           <div class="card-header">
@@ -45,14 +45,16 @@
                 Nama Menu
               </label>
               <input type="text" name="nama" value="{{$food->nama}}" class="form-control">
+              <div class="text-danger" id="nama-error"></div>
             </div>
+
             <!-- description -->
             <div class="form-group">
               <label class="form-control-label mb-0">
                 Deskripsi menu
               </label>
-              <textarea class="form-control" data-toggle="autosize" name="deskripsi"
-                rows="3">{{$food->deskripsi}}</textarea>
+              <textarea class="form-control" data-toggle="autosize" name="deskripsi" rows="3">{{$food->deskripsi}}</textarea>
+              <div class="text-danger" id="deskripsi-error"></div>
             </div>
 
             <!-- category -->
@@ -94,6 +96,7 @@
                   </div>
                 </div>
               </div>
+              <div class="text-danger" id="kategori-error"></div>
             </div>
 
             <div class="form-group">
@@ -101,6 +104,7 @@
                 Harga
               </label>
               <input type="text" name="harga" value="{{$food->harga}}" class="form-control">
+              <div class="text-danger" id="harga-error"></div>
             </div>
             <div class="form-group">
               <div>
@@ -112,6 +116,7 @@
                   <i class="fa fa-upload"></i>
                   <span>Choose a file…</span>
                 </label>
+                <div class="text-danger" id="gambar-error"></div>
               </div>
             </div>
             <input type="hidden" name="menuid" value="{{$food->id}}">
@@ -139,9 +144,87 @@
 @endsection
 
 @section('footer')
+<script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/assets/plugins/jquery-validation/dist/additional-methods.min.js"></script>
+<style>
+  label.error.fail-alert {
+    color: red;
+  }
+  input.error.fail-alert{
+    border: 2px solid red;
+  }
+  input.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+  }
+</style>
 <script>
   $(document).ready(function() {
     $("#menu_nav").addClass("active");
   });
+</script>
+<script>
+$(document).ready(function () {
+
+  $('#edit-form').validate({
+      ignore: [],
+      debug: false,
+      errorClass: "error fail-alert",
+      validClass: "valid success-alert",
+      rules: {
+          nama: {
+              required: true,
+              maxlength: 255
+          },
+          gambar:{
+            extension: "png|jpg|jpeg"
+          },
+          deskripsi:{
+              required: true,
+              minlength: 10
+          },
+          kategori:{
+            required: true
+          },
+          harga:{
+            required: true,
+            digits: true
+          }
+      },
+      messages: {
+        nama:{
+          required: "Nama menu boleh kosong!",
+          maxlength: "Nama menu tidak boleh melebihi 255 karakter!"
+        },
+        gambar:{
+          extension: "<span>Format file anda tidak didukung. Silahkan masukkan gambar dengan format .png .jpg .jpeg!</span>"
+        },
+        deskripsi:{
+          required:"Deskripsi menu tidak boleh kosong!",
+          minlength:"Deskripsi menu tidak valid!"
+        },
+        kategori:{
+          required: "Silahkan pilih kategori menu!"
+        },
+        harga:{
+          required: "Harga tidak boleh kosong!",
+          digits: "Harga harus berupa angka!"
+        }
+      },
+      errorPlacement: function(error, element) {
+        if (element.attr("name") == "gambar") {
+          error.appendTo("#gambar-error");
+        } else if (element.attr("name") == "nama") {
+          error.appendTo("#nama-error");
+        } else if (element.attr("name") == "deskripsi") {
+          error.appendTo("#deskripsi-error");
+        } else if (element.attr("name") == "kategori") {
+          error.appendTo("#kategori-error");
+        } else if (element.attr("name") == "harga") {
+          error.appendTo("#harga-error");
+        }
+      }
+  });
+});
 </script>
 @endsection

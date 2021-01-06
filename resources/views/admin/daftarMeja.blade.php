@@ -25,7 +25,7 @@
             <p>
               Anda akan menghapus data. Langkah ini tidak dapat dikembalikan!
             </p>
-            <input type="hidden" name="menuid" id="menuid">
+            <input type="hidden" name="tableid" id="tableid">
           </div>
         </div>
         <div class="modal-footer">
@@ -113,7 +113,7 @@
         </div>
         <div class="card-footer">
           <div class="actions d-flex justify-content-between px-4">
-            <a href="#edit-modal-{{$table->id}}" class="action-item" data-toggle="modal">
+            <a href="#edit-modal-{{$table->id}}" class="action-item" data-toggle="modal" id="edit-button">
               <i class="far fa-pencil"></i>
             </a>
             <a href="#delete-modal" class="action-item text-danger" id="delete-button" data-toggle="modal"
@@ -129,11 +129,11 @@
     <div class="modal fade" id="edit-modal-{{$table->id}}" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <form action="/admin/meja/update" method="post" id="edit-form">
+          <form action="/admin/meja/update" method="post" id="edit-form-{{$table->id}}">
             @csrf
             <div class="modal-body">
               <!-- Project name -->
-              <div class="form-group">
+              <div class="form-group mb-0">
                 <label class="form-control-label">
                   Nomor Meja
                 </label>
@@ -141,7 +141,7 @@
               </div>
             </div>
             <div class="modal-footer">
-              <input type="hidden" name="id" value="{{$table->id}}">
+              <input type="hidden" name="id" value="{{$table->id}}" id="table_id_edit">
               <button type="submit" class="btn btn-sm btn-primary rounded-pill mr-auto" id="submit_edit">Save</button>
               <button type="button" class="btn btn-sm btn-link text-danger px-2"
                 data-dismiss="modal">Batal</button>
@@ -167,31 +167,44 @@
 @endsection
 
 @section('footer')
+<script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<style>
+  label.error.fail-alert {
+    color: red;
+  }
+  input.error.fail-alert{
+    border: 2px solid red;
+  }
+  input.valid.success-alert {
+    border: 2px solid #4CAF50;
+    color: green;
+  }
+</style>
 <script>
   $(document).on('click','#delete-button',function(){
-    var tableid=$(this).attr('data_tableid');
-    $('#tableid').val(tableid);
+    var meja_id=$(this).attr('data_tableid');
+    $('#tableid').val(meja_id);
     $('#delete-modal').modal('show');
   });
 
-  $('#submit_edit').click(function(){
-    validateForm();
-  })
+  $(document).ready(function () {
 
-  function validateForm(){
-    var nomor_meja = $('#edit_nomor_meja').val();
+    var table_id = $('#table_id_edit').val();
 
-    if (nomor_meja == "") {
-      $('#edit-form').submit(function(e){
-        e.preventDefault();
-      });
-      $('#edit_nomor_meja').after('<small class="text-danger">Nomor Meja tidak boleh kosong!</small>');
-    }
-  }
-
-  $(document).ready(function() {
-    $("#meja_nav").addClass("active");
-    @if(Session::has('errors')) $('#modal-project-create').modal({show: true}); @endif
+    $('#edit-form-1-'.table_id).validate({
+        errorClass: "error fail-alert",
+        validClass: "valid success-alert",
+        rules: {
+            nama_edit: {
+                required: true
+            }
+        },
+        messages: {
+          nama_edit:{
+            required: "Nomor meja tidak boleh kosong!"
+          }
+        }
+    });
   });
 </script>
 @endsection
