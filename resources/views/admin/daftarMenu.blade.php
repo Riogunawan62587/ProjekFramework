@@ -53,7 +53,7 @@
               </label>
               <input type="text" name="nama" class="form-control">
               @error('nama')
-                <small class="text-danger">{{ $message }}</small>
+              <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
             <!-- Project description -->
@@ -63,7 +63,7 @@
               </label>
               <textarea class="form-control" data-toggle="autosize" name="deskripsi" rows="3"></textarea>
               @error('deskripsi')
-                <small class="text-danger">{{ $message }}</small>
+              <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
             <!-- Project privacy -->
@@ -74,39 +74,35 @@
               <div class="row">
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-1"
-                      value="1">
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-1" value="mains">
                     <label class="custom-control-label form-control-label text-muted"
                       for="radio-project-1">Mains</label>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-2"
-                      value="2">
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-2" value="lunch">
                     <label class="custom-control-label form-control-label text-muted"
                       for="radio-project-2">Lunch</label>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-3"
-                      value="3">
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-3" value="dinner">
                     <label class="custom-control-label form-control-label text-muted"
                       for="radio-project-3">Dinner</label>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-3"
-                      value="4">
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-4" value="drinks">
                     <label class="custom-control-label form-control-label text-muted"
-                      for="radio-project-3">Drinks</label>
+                      for="radio-project-4">Drinks</label>
                   </div>
                 </div>
               </div>
               @error('tipe')
-                <small class="text-danger">{{ $message }}</small>
+              <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
             <div class="form-group">
@@ -115,7 +111,7 @@
               </label>
               <input type="text" name="harga" class="form-control">
               @error('harga')
-                <small class="text-danger">{{ $message }}</small>
+              <small class="text-danger">{{ $message }}</small>
               @enderror
             </div>
             <div class="form-group">
@@ -129,7 +125,7 @@
                   <span>Choose a file…</span>
                 </label>
                 @error('gambar')
-                  <small class="text-danger">{{ $message }}</small>
+                <small class="text-danger">{{ $message }}</small>
                 @enderror
               </div>
             </div>
@@ -146,8 +142,7 @@
   <!-- Page title -->
   <div class="page-title">
     <div class="row justify-content-between align-items-center">
-      <div
-        class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+      <div class="col-md-6 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
         <!-- Page title + create menu -->
         <div class="d-inline-block">
           <h5 class="h4 d-inline-block font-weight-400 mb-0 text-white">Daftar Menu</h5>
@@ -216,8 +211,8 @@
   <div class="footer pt-5 pb-4 footer-light" id="footer-main">
     <div class="row text-center text-sm-left align-items-sm-center">
       <div class="col-sm-6">
-        <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm"
-            target="_blank">Kelompok 10B PBF</a>. All rights reserved.</p>
+        <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok
+            10B PBF</a>. All rights reserved.</p>
       </div>
     </div>
   </div>

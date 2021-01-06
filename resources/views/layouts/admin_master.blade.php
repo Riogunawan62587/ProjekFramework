@@ -39,7 +39,7 @@
         <!-- Avatar -->
         <div>
           <a href="#" class="avatar rounded-circle avatar-xl">
-            <img src="/assets/img/user.png">
+            <img src="../assets/img/user.png">
           </a>
           <div class="mt-4">
             <h5 class="mb-0 text-white">Selamat Datang,</h5>
@@ -123,7 +123,7 @@
                   aria-haspopup="true" aria-expanded="false">
                   <div class="media media-pill align-items-center">
                     <span class="avatar rounded-circle">
-                      <img alt="Image placeholder" src="/assets/img/user.png">
+                      <img alt="Image placeholder" src="../assets/img/user.png">
                     </span>
                     <div class="ml-2 d-none d-lg-block">
                       <span class="mb-0 text-sm  font-weight-bold">{{Auth()->user()->name}}</span>
