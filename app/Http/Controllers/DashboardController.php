@@ -17,7 +17,7 @@ class DashboardController extends Controller
     $total_reservations = Reservation::all()->count();
     $total_users = User::all()->count();
 
-    $reservations = Reservation::orderBy('tanggal', 'desc')->get();
+    $reservations = Reservation::where('table_id',null)->orderBy('tanggal', 'desc')->get();
     $users_id = Reservation::all()->pluck('user_id');
     $tables_id = Reservation::all()->pluck('table_id');
     $users = User::whereIn('id', $users_id)->get();
