@@ -98,6 +98,19 @@
   </div>
   @endif
 
+  @if(session('fail'))
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <span>{{Session::get('fail')}}</span>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  @endif
+
   <!-- meja cards -->
   <div class="row">
     @foreach($tables as $table)

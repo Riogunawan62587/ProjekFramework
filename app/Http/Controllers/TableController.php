@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Table;
+use App\Reservation;
 
 class TableController extends Controller
 {
@@ -30,9 +31,12 @@ class TableController extends Controller
     }
 
     public function destroy(Request $request){
-      $table = Table::where('id',$request->tableid)->delete();
-
-      return redirect('/admin/meja')->with('success','Data berhasil dihapus');
+      if(Reservation::where('table_id',$request->tableid)->exists()){
+        return redirect('/admin/meja')->with('fail','Anda tidak bisa menghapus table yang sedang direservasi!');
+      } else {
+        $table = Table::where('id',$request->tableid)->delete();
+        return redirect('/admin/meja')->with('success','Data berhasil dihapus');
+      }
     }
 
     public function update(Request $request){

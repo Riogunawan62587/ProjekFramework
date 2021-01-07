@@ -98,7 +98,7 @@
     @foreach($reservations as $reservation)
       @foreach($tables as $table)
         @foreach($users as $user)
-          @if($reservation->user_id == $user->id || $reservation->table_id == $table->id || $reservation->table_id == null )
+          @if($reservation->user_id == $user->id && ($reservation->table_id == $table->id || $reservation->table_id == null))
           <div class="col-xl-12 col-md-12">
             <div class="card card-stats">
               <!-- Card body -->
