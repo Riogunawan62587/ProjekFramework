@@ -18,13 +18,9 @@ class DashboardController extends Controller
     $total_users = User::all()->count();
 
     $reservations = Reservation::where('table_id',null)->orderBy('tanggal', 'desc')->get();
-    $users_id = Reservation::all()->pluck('user_id');
-    $tables_id = Reservation::all()->pluck('table_id');
+    $users_id = $reservations->pluck('user_id');
     $users = User::whereIn('id', $users_id)->get();
-    $tables = Table::whereIn('id', $tables_id)->get();
 
-    // return($tables);
-
-    return view('admin.dashboard', compact('total_foods', 'total_tables', 'total_reservations', 'total_users', 'reservations', 'users', 'tables'));
+    return view('admin.dashboard', compact('total_foods', 'total_tables', 'total_reservations', 'total_users', 'reservations', 'users'));
   }
 }
