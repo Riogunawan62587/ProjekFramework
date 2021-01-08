@@ -96,9 +96,8 @@
     </div>
     <div class="col-md-12 mb-3"></div>
     @foreach($reservations as $reservation)
-      @foreach($tables as $table)
-        @foreach($users as $user)
-          @if($reservation->user_id == $user->id)
+      @foreach($users as $user)
+        @if($reservation->user_id == $user->id)
           <div class="col-xl-12 col-md-12">
             <div class="card card-stats">
               <!-- Card body -->
@@ -107,12 +106,7 @@
                   <div class="col">
                     <div class="row align-items-center">
                       <div class="col-auto">
-                        @if($reservation->table_id != null)
-                          <h6 class="bg-primary rounded text-white p-2">{{$table->nama}}</h6>
-                        @endif
-                        @if($reservation->table_id == null)
-                          <h6 class="bg-primary-light rounded text-white p-2">Belum ada nomor</h6>
-                        @endif
+                        <h6 class="bg-primary-light rounded text-white p-2">Belum ada nomor</h6>
                       </div>
                       <h6 class="col text-right">{{$reservation->tanggal}} {{$reservation->jam}}</h6>
                     </div>
@@ -129,8 +123,7 @@
               </div>
             </div>
           </div>
-          @endif
-        @endforeach
+        @endif
       @endforeach
     @endforeach
   </div>
