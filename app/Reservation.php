@@ -10,6 +10,11 @@ class Reservation extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'tanggal','jam','jumlah_orang','status','table_id','user_id'
+        'tanggal', 'jam', 'jumlah_orang', 'status', 'table_id', 'user_id'
     ];
+
+    public function table()
+    {
+        return $this->belongsTo('App\Table', 'table_id');
+    }
 }

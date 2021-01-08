@@ -83,6 +83,14 @@
 <!-- Purpose JS -->
 <script src="assets/admin/assets/js/purpose.js"></script>
 
+<script>
+  $(document).on('click','#delete-button',function(){
+    var reservasiid=$(this).attr('data_reservasiid');
+    $('#reservasiid').val(reservasiid);
+    $('#delete-modal').modal('show');
+});
+</script>
+
 </body>
 
 </html>

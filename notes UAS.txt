@@ -1,0 +1,5 @@
+Admin : email = admin@gmail.com
+	password = admin123
+
+Pengguna : email = riogunawan@gmail.com	
+	   password = qweqweqwe

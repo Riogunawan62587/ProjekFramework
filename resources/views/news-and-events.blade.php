@@ -61,6 +61,7 @@
 				<h1 class="section__heading section_header__heading text-center">
 					Artikel
 				</h1>
+				<p class="text-center text-white">Untuk Menu Logout Silahkan Klik "Nusantara" Di Atas</p>
 
 			</div>
 		</div> <!-- / .row -->

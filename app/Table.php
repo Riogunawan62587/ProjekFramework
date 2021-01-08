@@ -14,4 +14,9 @@ class Table extends Model
     ];
 
     public $timestamps = true;
+
+    public function reservation()
+    {
+        return $this->hasMany('App\Reservation', 'table_id');
+    }
 }

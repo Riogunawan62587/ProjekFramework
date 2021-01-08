@@ -36,8 +36,9 @@ class ReservationController extends Controller
 
     public function my_reservation()
     {
+        $data_meja = Table::pluck('nama', 'id');
         $reservasi_saya = Reservation::where('user_id', Auth::user()->id)->get();
-        return view('my_reservation', compact('reservasi_saya'));
+        return view('my_reservation', compact('reservasi_saya', 'data_meja'));
     }
 
     public function simpan_bukti_pembayaran(Request $request)

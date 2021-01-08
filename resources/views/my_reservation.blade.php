@@ -63,6 +63,7 @@
 				<h1 class="section__heading section_header__heading text-center">
 					Reservasi Saya
 				</h1>
+				<p class="text-center text-white">Untuk Menu Logout Silahkan Klik "Nusantara" Di Atas</p>
 
 			</div>
 		</div> <!-- / .row -->
@@ -107,7 +108,7 @@
 					<form action="{{route('reservasi.my_reservation.delete')}}" method="post">
 						@csrf
 						<div class="modal-header">
-							<h5 class="modal-title h6" id="modal_title_6">This is way to dangerous</h5>
+							<h5 class="modal-title h6" id="modal_title_6">Konfirmasi Hapus</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 							</button>
@@ -228,10 +229,16 @@
 								</a>
 							</div>
 
-							@elseif($rsv->bukti_pembayaran != null)
+							@elseif($rsv->table_id == null)
 
 							<div class="actions d-flex justify-content-center text-center">
 								<h5 style="color: white"><b>Anda sudah mengupload bukti pembayaran</b></h5>
+							</div>
+
+							@elseif($rsv->bukti_pembayaran != null && $rsv->table_id != null)
+
+							<div class="actions d-flex justify-content-center text-center">
+								<h5 style="color: white"><b>Nama Meja : {{$rsv->table->nama}}</b></h5>
 							</div>
 
 							@endif
@@ -243,8 +250,9 @@
 					</div>
 				</div>
 				@endforeach
-			</div> <!-- / .row -->
-		</div> <!-- / .container -->
+			</div>
+		</div><!-- / .row -->
+	</div> <!-- / .container -->
 </section>
 
 <!-- QUOTE

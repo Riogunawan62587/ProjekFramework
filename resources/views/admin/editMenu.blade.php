@@ -33,7 +33,7 @@
     </div>
 
     <div class="col-xl-7">
-      <form action="/admin/menu/update" enctype="multipart/form-data" method="post" id="edit-form">
+      <form action="{{url('/admin/menu/update')}}" enctype="multipart/form-data" method="post" id="edit-form">
         @csrf
         <div class="card">
           <div class="card-header">
@@ -53,7 +53,8 @@
               <label class="form-control-label mb-0">
                 Deskripsi menu
               </label>
-              <textarea class="form-control" data-toggle="autosize" name="deskripsi" rows="3">{{$food->deskripsi}}</textarea>
+              <textarea class="form-control" data-toggle="autosize" name="deskripsi"
+                rows="3">{{$food->deskripsi}}</textarea>
               <div class="text-danger" id="deskripsi-error"></div>
             </div>
 
@@ -65,32 +66,32 @@
               <div class="row">
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-1"
-                      value="1" @if($food->tipe == 1) checked @endif>
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-1" value="mains"
+                      @if($food->tipe == 1) checked @endif>
                     <label class="custom-control-label form-control-label text-muted"
                       for="radio-project-1">Mains</label>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-2"
-                      value="2" @if($food->tipe == 2) checked @endif>
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-2" value="lunch"
+                      @if($food->tipe == 2) checked @endif>
                     <label class="custom-control-label form-control-label text-muted"
                       for="radio-project-2">Lunch</label>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-3"
-                      value="3" @if($food->tipe == 3) checked @endif>
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-3" value="dinner"
+                      @if($food->tipe == 3) checked @endif>
                     <label class="custom-control-label form-control-label text-muted"
                       for="radio-project-3">Dinner</label>
                   </div>
                 </div>
                 <div class="col-3">
                   <div class="custom-control custom-checkbox">
-                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-4"
-                      value="4" @if($food->tipe == 4) checked @endif>
+                    <input type="radio" class="custom-control-input" name="kategori" id="radio-project-4" value="drinks"
+                      @if($food->tipe == 4) checked @endif>
                     <label class="custom-control-label form-control-label text-muted"
                       for="radio-project-4">Drinks</label>
                   </div>
@@ -121,7 +122,7 @@
             </div>
             <input type="hidden" name="menuid" value="{{$food->id}}">
             <div class="text-right">
-              <a href="/admin/menu" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
+              <a href="{{url('/admin/menu')}}" class="btn btn-link text-sm text-muted font-weight-bold">Batal</a>
               <button type="submit" class="btn btn-sm btn-primary rounded-pill">Update</button>
             </div>
           </div>
@@ -134,8 +135,8 @@
   <div class="footer pt-5 pb-4 footer-light" id="footer-main">
     <div class="row text-center text-sm-left align-items-sm-center">
       <div class="col-sm-6">
-        <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm"
-            target="_blank">Kelompok 10B PBF</a>. All rights reserved.</p>
+        <p class="text-sm mb-0">&copy; 2020 <a href="https://webpixels.io" class="h6 text-sm" target="_blank">Kelompok
+            10B PBF</a>. All rights reserved.</p>
       </div>
     </div>
   </div>
@@ -150,9 +151,11 @@
   label.error.fail-alert {
     color: red;
   }
-  input.error.fail-alert{
+
+  input.error.fail-alert {
     border: 2px solid red;
   }
+
   input.valid.success-alert {
     border: 2px solid #4CAF50;
     color: green;
@@ -164,7 +167,7 @@
   });
 </script>
 <script>
-$(document).ready(function () {
+  $(document).ready(function () {
 
   $('#edit-form').validate({
       ignore: [],

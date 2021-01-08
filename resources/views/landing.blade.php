@@ -49,7 +49,7 @@
           <!-- Button -->
           <div class="text-center">
             @if (Auth::check() && Auth::user()->role == 'Admin')
-            <a href="/admin/dashboard" class="btn btn-primary text-white">
+            <a href="{{url('/admin/dashboard')}}" class="btn btn-primary text-white">
               Kembali ke Dashboard
             </a>
             @elseif (Auth::check() && Auth::user()->role == 'Pengguna')
@@ -231,6 +231,19 @@
 
           </div> <!-- / .row -->
         </form>
+
+        <div class="row justify-content-center text-center">
+          <div class="col">
+            <p><b>Admin(Halaman Admin) :</b></p>
+            <p><b>Email</b> = admin@gmail.com</p>
+            <p><b>Password</b> = admin123</p>
+          </div>
+          <div class="col">
+            <p><b>Pengguna(Halaman Pengguna) :</b></p>
+            <p><b>Email</b> = riogunawan@gmail.com</p>
+            <p><b>Password</b> = qweqweqwe</p>
+          </div>
+        </div>
 
       </div>
     </div> <!-- / .row -->
